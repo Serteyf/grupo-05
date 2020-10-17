@@ -24,7 +24,7 @@ _Completar bio._
 
 #### **Santiago Novara**
 
-_Completar bio._
+Estudiante de programación web full stack y de traductorado en alemán. Fan acérrimo de los videojuegos desde muy temprana edad, particularmente de Nintendo y de las consolas retro.
 
 #### **Marcos Della Vecchia**
 
@@ -42,7 +42,7 @@ Tiene en claro quienes son sus clientes y no intenta abarcar todo el mercado de 
 
 #### Por los productos que ofrece.
 
-Tiene disponible un catálogo de productos que gira en torno a las consolas de sobremesa tanto de la generación actual como de generaciones anteriores. No ofrece otros productos ajenos a esta temática como componentes de gaming para PC ni gadgets tecnológicos.
+Tiene disponible un catálogo de productos que gira en torno a las consolas de sobremesa, tanto de la generación actual como de generaciones anteriores. No ofrece otros productos ajenos a esta temática como componentes de gaming para PC ni gadgets tecnológicos.
 
 ### Max Gaming (www.maxgaming.com)
 

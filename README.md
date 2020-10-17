@@ -4,7 +4,7 @@
 
 ### Oferta de productos y servicios
 
-Nuestro e-ecommerce estará enfocado en la industria de los videojuegos, ofreciendo productos físicos tales como:
+Nuestro e-ecommerce estará enfocado en la industria de los videojuegos de sobremesa (consolas), ofreciendo productos físicos tales como:
 
 - Consolas de videojuegos
 - Periféricos
@@ -18,18 +18,28 @@ También buscamos cubrir la demanda de productos "retro" y ediciones especiales 
 
 ### Integrantes del equipo
 
-#### **Damián Monti**: _Completar bio._
+#### **Damián Monti**
 
-#### **Santiago Novara**: _Completar bio._
+_Completar bio._
 
-#### **Marcos Della Vecchia**: Contador público apasionado por la tecnología y el desarrollo web. Trabajé en proyectos propios realizando posicionamiento orgánico en buscadores (SEO) y tuve la posibilidad de fundar una agencia de marketing digital enfocada en impulsar la digitalización de pequeñas empresas y emprendimientos locales.
+#### **Santiago Novara**
+
+_Completar bio._
+
+#### **Marcos Della Vecchia**
+
+Contador público apasionado por la tecnología y el desarrollo web. Trabajé en proyectos propios realizando posicionamiento orgánico en buscadores (SEO) y tuve la posibilidad de fundar una agencia de marketing digital enfocada en impulsar la digitalización de pequeñas empresas y emprendimientos locales.
 
 ## Referentes del mercado que nos inspiran
 
-### Por el público al que apunta: **Hadriática** (www.hadriatica.com)
+### Hadriática (www.hadriatica.com)
+
+#### Por el público al que apunta.
 
 Tiene en claro quienes son sus clientes y no intenta abarcar todo el mercado de videojuegos. Por el contrario, se enfoca en satisfacer la demanda de usuarios fanáticos de Nintendo principalmente y apela a la nostalgia a través de productos retro.
 
-### Por los productos que ofrece: **Videogamers** (www.videogamers.com.ar)
+### Videogamers (www.videogamers.com.ar)
 
-Ofrece un catálogo de productos que gira en torno a las consolas de sobremesa tanto de la generación actual como de generaciones anteriores. No ofrece otros productos ajenos a esta temática como componentes de gaming para PC ni gadgets tecnológicos.
+#### Por los productos que ofrece.
+
+Tiene disponible un catálogo de productos que gira en torno a las consolas de sobremesa tanto de la generación actual como de generaciones anteriores. No ofrece otros productos ajenos a esta temática como componentes de gaming para PC ni gadgets tecnológicos.

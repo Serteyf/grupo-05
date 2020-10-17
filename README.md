@@ -36,7 +36,7 @@ Contador público apasionado por la tecnología y el desarrollo web. Trabajé en
 
 #### Por el público al que apunta.
 
-Tiene en claro quienes son sus clientes y no intenta abarcar todo el mercado de videojuegos. Por el contrario, se enfoca en satisfacer la demanda de usuarios fanáticos de Nintendo principalmente y apela a la nostalgia a través de productos retro.
+Tiene en claro quienes son sus clientes y no intenta abarcar todo el mercado de videojuegos. Por el contrario, se enfoca en satisfacer la demanda de usuarios fanáticos de Nintendo y Playstation principalmente y apela a la nostalgia a través de productos retro.
 
 ### Videogamers (www.videogamers.com.ar)
 

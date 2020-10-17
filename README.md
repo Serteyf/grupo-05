@@ -20,7 +20,7 @@ También buscamos cubrir la demanda de productos "retro" y ediciones especiales 
 
 #### **Damián Monti**
 
-Diseñador gráfico, músico y estudiante de programación web full stack. Me encanta el desarrollo web para poder aplicarlo a mis conocimientos de diseño, y poder lograr una app que se vea de maravilla, tanto en su funcionamiento como en su estética. 
+Diseñador gráfico, músico y estudiante de programación web full stack. Me encanta el desarrollo web para poder aplicarlo a mis conocimientos de diseño, y poder lograr una app que se vea de maravilla, tanto en su funcionamiento como en su estética.
 
 #### **Santiago Novara**
 
@@ -60,4 +60,4 @@ Tipografía de estilo caricaturezco que acompaña la temática, sin descuidar un
 
 #### Por las funcionalidades que ofrece.
 
-Menú de tipo "hamburguer" a partir del cual de despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.
+Diseño responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual de despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.

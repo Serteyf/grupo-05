@@ -48,4 +48,4 @@ Tiene disponible un catálogo de productos que gira en torno a las consolas de s
 
 #### Por las funcionalidades que ofrece.
 
-Con un diseño simple y ligero, este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras rápido y efectivo.
+Con un diseño simple y ligero, este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras ágil y efectivo.

@@ -20,7 +20,7 @@ También buscamos cubrir la demanda de productos "retro" y ediciones especiales 
 
 #### **Damián Monti**
 
-_Completar bio._
+Diseñador gráfico, músico y estudiante de programación web full stack. Me encanta el desarrollo web para poder aplicarlo a mis conocimientos de diseño, y poder lograr una app que se vea de maravilla, tanto en su funcionamiento como en su estética. 
 
 #### **Santiago Novara**
 

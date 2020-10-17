@@ -43,3 +43,9 @@ Tiene en claro quienes son sus clientes y no intenta abarcar todo el mercado de 
 #### Por los productos que ofrece.
 
 Tiene disponible un catálogo de productos que gira en torno a las consolas de sobremesa tanto de la generación actual como de generaciones anteriores. No ofrece otros productos ajenos a esta temática como componentes de gaming para PC ni gadgets tecnológicos.
+
+### Max Gaming (www.maxgaming.com)
+
+#### Por las funcionalidades que ofrece.
+
+Con un diseño simple y ligero, este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras rápido y efectivo.

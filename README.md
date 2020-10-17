@@ -60,4 +60,4 @@ Tipografía de estilo caricaturezco que acompaña la temática, sin descuidar un
 
 #### Por las funcionalidades que ofrece.
 
-Diseño responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual de despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.
+Diseño responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.

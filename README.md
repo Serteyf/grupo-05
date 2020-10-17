@@ -48,4 +48,16 @@ Tiene disponible un catálogo de productos que gira en torno a las consolas de s
 
 #### Por las funcionalidades que ofrece.
 
-Con un diseño simple y ligero, este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras ágil y efectivo.
+Con un diseño simple y ligero (desarrollado en React), este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras ágil y efectivo.
+
+### Humble Bundle (www.humblebundle.com)
+
+#### Por la estética que presenta.
+
+Tipografía de estilo caricaturezco que acompaña la temática, sin descuidar una estética sobria y simple. Paleta de colores con pocas variaciones y una interfaz amigable.
+
+### CDMarket (www.cdmarket.com.ar)
+
+#### Por las funcionalidades que ofrece.
+
+Menú de tipo "hamburguer" a partir del cual de despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.

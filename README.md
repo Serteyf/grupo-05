@@ -1,5 +1,3 @@
-<img src='https://i.imgur.com/M4tQbUc.png' alt='Grupo 05 - Proyecto Digital House' />
-
 # Grupo 05 - Proyecto Integrador Full Stack Node
 
 ## Temática del Marketplace

@@ -1,6 +1,6 @@
-# Grupo 05 - Proyecto integrador Digital House
-
 ![Logo de Digital House](https://i.imgur.com/jcdyRWz.png)
+
+# Grupo 05 - Proyecto Integrador Full Stack Node
 
 ## Temática del Marketplace
 

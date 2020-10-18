@@ -1,4 +1,4 @@
-<img src='https://i.imgur.com/jcdyRWz.png' height='100' alt='Redux Logo' aria-label='redux.js.org' />
+<img src='https://i.imgur.com/M4tQbUc.png' alt='Grupo 05 - Proyecto Digital House' />
 
 # Grupo 05 - Proyecto Integrador Full Stack Node
 

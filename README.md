@@ -50,14 +50,14 @@ Tiene disponible un catálogo de productos que gira en torno a las consolas de s
 
 Con un diseño simple y ligero (desarrollado en React), este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras ágil y efectivo.
 
-### Humble Bundle (www.humblebundle.com)
+### Razer (www.razer.com/)
 
 #### Por la estética que presenta.
 
-Tipografía de estilo caricaturezco que acompaña la temática, sin descuidar una estética sobria y simple. Paleta de colores con pocas variaciones y una interfaz amigable.
+Diseño sobrio y elegante. Paleta de colores con pocas variaciones y una interfaz simple y amigable.
 
 ### CDMarket (www.cdmarket.com.ar)
 
 #### Por las funcionalidades que ofrece.
 
-Diseño responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.
+Sitio web responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.

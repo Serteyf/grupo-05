@@ -1,5 +1,7 @@
 # Grupo 05 - Proyecto integrador Digital House
 
+![Logo de Digital House](https://i.imgur.com/jcdyRWz.png)
+
 ## Temática del Marketplace
 
 ### Oferta de productos y servicios
@@ -50,7 +52,7 @@ Tiene disponible un catálogo de productos que gira en torno a las consolas de s
 
 Con un diseño simple y ligero (desarrollado en React), este marketplace permite navegar de manera rápida e intuitiva a través de los distintos productos sin demorarnos ni perdernos en el sitio. Además posee una pantalla de login sencilla y un carrito de compras ágil y efectivo.
 
-### Razer (www.razer.com/)
+### Razer (www.razer.com)
 
 #### Por la estética que presenta.
 

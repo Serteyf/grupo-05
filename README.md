@@ -1,4 +1,4 @@
-![Logo de Digital House](https://i.imgur.com/jcdyRWz.png)
+# <center><img src='https://i.imgur.com/jcdyRWz.png' height='120' alt='Redux Logo' aria-label='redux.js.org' /></center>
 
 # Grupo 05 - Proyecto Integrador Full Stack Node
 

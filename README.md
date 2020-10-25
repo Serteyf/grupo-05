@@ -60,4 +60,4 @@ Diseño sobrio y elegante. Paleta de colores con pocas variaciones y una interfa
 
 #### Por las funcionalidades que ofrece.
 
-Sitio web responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página.
+Sitio web responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página, lo cual podría ser una alternativa a considerar.

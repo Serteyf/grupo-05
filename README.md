@@ -24,7 +24,7 @@ Diseñador gráfico, músico y estudiante de programación web full stack. Me en
 
 #### **Santiago Novara**
 
-Estudiante de programación web full stack y de traductorado en alemán. Fan acérrimo de los videojuegos desde muy temprana edad, particularmente de Nintendo y de las consolas retro.
+Estudiante de programación web full stack y de traductorado en alemán. Soy un fan acérrimo de los videojuegos desde muy temprana edad, particularmente de Nintendo y de las consolas retro.
 
 #### **Marcos Della Vecchia**
 

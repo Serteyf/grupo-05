@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 
 // Hace que los archivos de /public se vuelvan disponibles para el HTML
-app.use(express.static("public"));
+app.use(express.static("site/public"));
 
 app.listen(3000, () => {
   console.log("Server running on port 3000.");

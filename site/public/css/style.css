@@ -1,0 +1,84 @@
+/* Colores
+Negro #000000
+Gris oscuro #FBAAFF
+Verde agua #91D2BE
+Rosa #FBAAFF
+Amarillo #F9EF64
+*/
+
+body {
+  background-color: #231f20;
+  font-family: "Titillium Web", sans-serif;
+}
+
+img {
+  width: 200px;
+}
+
+header {
+  margin: 15px;
+}
+
+header a {
+  color: #fbaaff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.fa-shopping-cart {
+  color: #fbaaff;
+}
+
+.fa-bars {
+  color: #91d2be;
+}
+
+.search-form {
+  display: inline;
+}
+
+.search-form button {
+  background-color: #000000;
+  color: #f9ef64;
+  border: none;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.destacados h2 {
+  color: #f9ef64;
+  font-weight: 400;
+}
+
+.destacados img {
+  width: 170px;
+}
+
+footer {
+  background-color: #000000;
+  color: #91d2be;
+  font-size: 14px;
+  padding: 8px;
+}
+
+footer h4 {
+  color: #f9ef64;
+}
+
+.social a,
+.contact a {
+  text-decoration: none;
+}
+
+.social li,
+.contact li {
+  list-style-type: none;
+  color: #f9ef64;
+}
+
+.social i,
+.contact i {
+  color: #91d2be;
+}

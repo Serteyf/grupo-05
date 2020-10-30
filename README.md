@@ -1,6 +1,6 @@
 # Grupo 05 - Proyecto Integrador Full Stack Node
 
-## Temática del Marketplace
+## Level Up Games
 
 ### Oferta de productos y servicios
 

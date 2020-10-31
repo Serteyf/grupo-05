@@ -6,6 +6,10 @@ Rosa #FBAAFF
 Amarillo #F9EF64
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #231f20;
   font-family: "Titillium Web", sans-serif;
@@ -105,4 +109,3 @@ footer h4 {
 .contact i {
   color: #91d2be;
 }
-

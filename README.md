@@ -1,8 +1,6 @@
-# Grupo 05 - Proyecto Integrador Full Stack Node
+# Grupo 05 - Level Up Games
 
-## Level Up Games
-
-### Oferta de productos y servicios
+## Oferta de productos y servicios
 
 Nuestro e-ecommerce estará enfocado en la industria de los videojuegos de sobremesa (consolas), ofreciendo productos físicos tales como:
 
@@ -16,17 +14,17 @@ Con esta oferta de productos buscamos apuntar a un público apasionado por el ga
 
 También buscamos cubrir la demanda de productos "retro" y ediciones especiales de colección con el fin de atraer a un público apasionado por el gaming de culto y fanáticos de marcas emblemáticas como Nintendo o Sega.
 
-### Integrantes del equipo
+## Integrantes del equipo
 
-#### **Damián Monti**
+### **Damián Monti**
 
 Diseñador gráfico, músico y estudiante de programación web full stack. Me encanta el desarrollo web para poder aplicarlo a mis conocimientos de diseño, y poder lograr una app que se vea de maravilla, tanto en su funcionamiento como en su estética.
 
-#### **Santiago Novara**
+### **Santiago Novara**
 
 Estudiante de programación web full stack y de traductorado en alemán. Soy un fan acérrimo de los videojuegos desde muy temprana edad, particularmente de Nintendo y de las consolas retro.
 
-#### **Marcos Della Vecchia**
+### **Marcos Della Vecchia**
 
 Contador público apasionado por la tecnología y el desarrollo web. Trabajé en proyectos propios realizando posicionamiento orgánico en buscadores (SEO) y tuve la posibilidad de fundar una agencia de marketing digital enfocada en impulsar la digitalización de pequeñas empresas y emprendimientos locales.
 
@@ -61,3 +59,9 @@ Diseño sobrio y elegante. Paleta de colores con pocas variaciones y una interfa
 #### Por las funcionalidades que ofrece.
 
 Sitio web responsive bien adaptado a dispositivos móviles. Menú de tipo "hamburguer" a partir del cual se despliegan las distintas categorías. Barra de búsqueda de productos en la página principal. Pantalla de login y registro en la misma página, lo cual podría ser una alternativa a considerar.
+
+## Tablero de trabajo
+
+A la hora de organizar nuestras tareas y facilitar la dinámica del trabajo en equipo utilizamos un tablero en la plataforma Trello. Esto nos permite separar cada tarea a realizar en tarjetas y dar seguimiento a los objetivos propuestos en cada sprint.
+
+**[Link al tablero de Level-Up Games](https://trello.com/b/1Y0GDd5d/0920-grupo05-level-up-games)**

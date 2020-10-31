@@ -15,6 +15,10 @@ img {
   width: 200px;
 }
 
+.logo {
+  margin-right: 30px;
+}
+
 header {
   margin: 15px;
 }
@@ -41,26 +45,45 @@ header a {
   background-color: #000000;
   color: #f9ef64;
   border: none;
+  letter-spacing: 8px;
+  height: 23px;
+}
+
+.search-box {
+  width: 184px;
+}
+
+.search {
+  margin-top: 12px;
+}
+
+.ingresar {
+  margin-right: 9px;
 }
 
 .banner img {
-  width: 100%;
+  width: 92%;
+  margin-left: 13px;
 }
 
 .destacados h2 {
   color: #f9ef64;
   font-weight: 400;
+  line-height: 1;
+  margin-left: 13px;
 }
 
 .destacados img {
-  width: 170px;
+  width: 157px;
+  margin-left: 12px;
 }
 
 footer {
   background-color: #000000;
   color: #91d2be;
   font-size: 14px;
-  padding: 8px;
+  padding: 10px;
+  margin: 12px;
 }
 
 footer h4 {
@@ -82,3 +105,4 @@ footer h4 {
 .contact i {
   color: #91d2be;
 }
+

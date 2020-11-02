@@ -15,11 +15,8 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-img {
-  width: 200px;
-}
-
 .logo {
+  width: 55%;
   margin-right: 30px;
 }
 
@@ -49,12 +46,13 @@ header a {
   background-color: #000000;
   color: #f9ef64;
   border: none;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   height: 23px;
+  width: 32%;
 }
 
 .search-box {
-  width: 184px;
+  width: 60%;
 }
 
 .search {
@@ -70,16 +68,20 @@ header a {
   margin-left: 13px;
 }
 
+.destacados {
+  text-align: center;
+}
+
 .destacados h2 {
   color: #f9ef64;
   font-weight: 400;
   line-height: 1;
   margin-left: 13px;
+  text-align: left;
 }
 
 .destacados img {
-  width: 157px;
-  margin-left: 12px;
+  width: 150px;
 }
 
 footer {
@@ -92,6 +94,15 @@ footer {
 
 footer h4 {
   color: #f9ef64;
+}
+
+.btn {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: none;
+  background-color: #231f20;
+  color: #91d2be !important;
+  padding: 5px;
 }
 
 .social a,
@@ -109,66 +120,3 @@ footer h4 {
 .contact i {
   color: #91d2be;
 }
-
-.login input {
-  display: block;
-}
-
-.register input {
-  display: block;
-}
-
-.register,
-.login {
-  width: 90%;
-  min-width: 288px;
-  max-width: 400px;
-  height: auto;
-  padding: 20px;
-  background-color: #000000;
-  margin: auto;
-}
-
-.register input,
-.login input {
-  margin: 8px 0px;
-  width: 100%;
-  background-color: #231f20;
-  border: none;
-  padding: 10px;
-}
-
-.register input::placeholder,
-.login input::placeholder {
-  color: #F9EF64;
-}
-
-.register button,
-.login button {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border: none;
-  background-color: #231f20;
-  color: #91D2BE;
-  padding: 5px;
-}
-
-.register h2,
-.login h2 {
-  color: #FBAAFF;
-}
-
-.login a {
-  color: #FBAAFF;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.redes {
-  color: #f9ef64; 
-}
-
-.redes i {
-  margin: 0px 10px 15px 0px;
-}
-

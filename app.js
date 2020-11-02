@@ -13,11 +13,11 @@ app.all("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "site/views/index.html"));
 });
 
-app.all("/login", (req, res) => {
+app.get("/login", (req, res) => {
   res.sendFile(path.resolve(__dirname, "site/views/login.html"));
 });
 
-app.all("/register", (req, res) => {
+app.get("/register", (req, res) => {
   res.sendFile(path.resolve(__dirname, "site/views/register.html"));
 });
 

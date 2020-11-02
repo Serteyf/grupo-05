@@ -1,6 +1,6 @@
 /* Colores
 Negro #000000
-Gris oscuro #FBAAFF
+Gris oscuro #231f20
 Verde agua #91D2BE
 Rosa #FBAAFF
 Amarillo #F9EF64
@@ -109,3 +109,66 @@ footer h4 {
 .contact i {
   color: #91d2be;
 }
+
+.login input {
+  display: block;
+}
+
+.register input {
+  display: block;
+}
+
+.register,
+.login {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
+  background-color: #000000;
+  margin: auto;
+}
+
+.register input,
+.login input {
+  margin: 8px 0px;
+  width: 100%;
+  background-color: #231f20;
+  border: none;
+  padding: 10px;
+}
+
+.register input::placeholder,
+.login input::placeholder {
+  color: #F9EF64;
+}
+
+.register button,
+.login button {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: none;
+  background-color: #231f20;
+  color: #91D2BE;
+  padding: 5px;
+}
+
+.register h2,
+.login h2 {
+  color: #FBAAFF;
+}
+
+.login a {
+  color: #FBAAFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.redes {
+  color: #f9ef64; 
+}
+
+.redes i {
+  margin: 0px 10px 15px 0px;
+}
+

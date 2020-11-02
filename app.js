@@ -13,6 +13,14 @@ app.all("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "site/views/index.html"));
 });
 
+app.all("/login", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "site/views/login.html"));
+});
+
+app.all("/register", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "site/views/register.html"));
+});
+
 app.get("*", (req, res) => {
   res.send("Houston, tenemos un error 404!");
 });

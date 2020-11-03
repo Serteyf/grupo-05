@@ -2,7 +2,8 @@
   display: block;
 }
 
-.register-back, .login-back {
+.register-back,
+.login-back {
   display: flex;
   width: 100%;
   height: auto;
@@ -34,6 +35,7 @@
   background-color: #231f20;
   border: none;
   padding: 10px;
+  color: #f9ef64;
 }
 
 .register input::placeholder,

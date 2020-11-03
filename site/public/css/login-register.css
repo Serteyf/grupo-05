@@ -2,6 +2,16 @@
   display: block;
 }
 
+.register-back, .login-back {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-image: url("../images/benner_reg_log.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .register input {
   display: block;
 }
@@ -9,10 +19,10 @@
 .register,
 .login {
   width: 90%;
-  min-width: 288px;
+  min-width: 250px;
   max-width: 400px;
   height: auto;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   background-color: #000000;
   margin: auto;
 }
@@ -50,6 +60,14 @@
   color: #fbaaff;
   text-decoration: none;
   font-size: 14px;
+}
+
+.login p {
+  margin-top: 1px;
+}
+
+.login hr {
+  margin: 6px 0;
 }
 
 .redes {

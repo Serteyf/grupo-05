@@ -85,11 +85,7 @@ header a {
   margin-bottom: 15px;
 }
 
-.destacados {
-  text-align: center;
-}
-
-.destacados h2 {
+.featured h2 {
   color: #f9ef64;
   font-weight: 400;
   line-height: 1;
@@ -97,8 +93,18 @@ header a {
   text-align: left;
 }
 
-.destacados img {
-  width: 150px;
+.featured-gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 5px;
+}
+
+.featured-gallery img {
+  width: 45%;
+}
+
+.featured {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -107,7 +113,6 @@ footer {
   color: #91d2be;
   font-size: 14px;
   padding: 10px;
-  margin: 10px 0;
 }
 
 footer h4 {

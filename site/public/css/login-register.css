@@ -19,10 +19,13 @@
 
 .register,
 .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 90%;
   min-width: 250px;
   max-width: 400px;
-  height: auto;
+  height: 400px;
   padding: 0px 20px 20px 20px;
   background-color: #000000;
   margin: auto;
@@ -58,6 +61,18 @@
   color: #fbaaff;
 }
 
+.terms {
+  color: #fbaaff;
+  font-size: 14px;
+  display: flex;
+  margin: 15px 0px;
+}
+
+.terms input[type="checkbox"] {
+  width: auto;
+  margin: 5px;
+}
+
 .login a {
   color: #fbaaff;
   text-decoration: none;
@@ -72,10 +87,20 @@
   margin: 6px 0;
 }
 
-.redes {
+.login-social {
   color: #f9ef64;
 }
 
-.redes i {
-  margin: 0px 10px 15px 0px;
+.login-social i {
+  margin: 10px 10px 15px 0px;
+}
+
+.btn-register {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  width: 110px;
+  border: none;
+  background-color: #231f20;
+  color: #91d2be !important;
+  padding: 5px;
 }

@@ -6,21 +6,21 @@ const path = require("path");
 app.use(express.static("site/public"));
 
 app.listen(3000, () => {
-  console.log("Server running on port 3000.");
+    console.log("Server running on port 3000.");
 });
 
 app.all("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "site/views/index.html"));
+    res.sendFile(path.resolve(__dirname, "site/views/index.html"));
 });
 
 app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "site/views/login.html"));
+    res.sendFile(path.resolve(__dirname, "site/views/login.html"));
 });
 
 app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "site/views/register.html"));
+    res.sendFile(path.resolve(__dirname, "site/views/register.html"));
 });
 
 app.get("*", (req, res) => {
-  res.send("Houston, tenemos un error 404!");
+    res.send("Houston, tenemos un error 404!");
 });

@@ -1,106 +1,106 @@
 .login input {
-  display: block;
+    display: block;
 }
 
 .register-back,
 .login-back {
-  display: flex;
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  background-image: url("../images/benner_reg_log.png");
-  background-position: center;
-  background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/benner_reg_log.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .register input {
-  display: block;
+    display: block;
 }
 
 .register,
 .login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
-  min-width: 250px;
-  max-width: 400px;
-  height: 400px;
-  padding: 0px 20px 20px 20px;
-  background-color: #000000;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 400px;
+    padding: 0px 20px 20px 20px;
+    background-color: #000000;
+    margin: auto;
 }
 
 .register input,
 .login input {
-  margin: 8px 0px;
-  width: 100%;
-  background-color: #231f20;
-  border: none;
-  padding: 10px;
-  color: #f9ef64;
+    margin: 8px 0px;
+    width: 100%;
+    background-color: #231f20;
+    border: none;
+    padding: 10px;
+    color: #f9ef64;
 }
 
 .register input::placeholder,
 .login input::placeholder {
-  color: #f9ef64;
+    color: #f9ef64;
 }
 
 .register button,
 .login button {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  border: none;
-  background-color: #231f20;
-  color: #91d2be;
-  padding: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
 }
 
 .register h2,
 .login h2 {
-  color: #fbaaff;
+    color: #fbaaff;
 }
 
 .terms {
-  color: #fbaaff;
-  font-size: 14px;
-  display: flex;
-  margin: 15px 0px;
+    color: #fbaaff;
+    font-size: 14px;
+    display: flex;
+    margin: 15px 0px;
 }
 
 .terms input[type="checkbox"] {
-  width: auto;
-  margin: 5px;
+    width: auto;
+    margin: 5px;
 }
 
 .login a {
-  color: #fbaaff;
-  text-decoration: none;
-  font-size: 14px;
+    color: #fbaaff;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .login p {
-  margin-top: 1px;
+    margin-top: 1px;
 }
 
 .login hr {
-  margin: 6px 0;
+    margin: 6px 0;
 }
 
 .login-social {
-  color: #f9ef64;
+    color: #f9ef64;
 }
 
 .login-social i {
-  margin: 10px 10px 15px 0px;
+    margin: 10px 10px 15px 0px;
 }
 
 .btn-register {
-  margin-top: 15px;
-  margin-bottom: 8px;
-  width: 110px;
-  border: none;
-  background-color: #231f20;
-  color: #91d2be !important;
-  padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    width: 110px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be !important;
+    padding: 5px;
 }

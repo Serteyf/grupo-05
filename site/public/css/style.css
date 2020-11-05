@@ -157,6 +157,10 @@ footer h4 {
     padding: 5px;
 }
 
+.social {
+    margin: 15px 0px;
+}
+
 .social a,
 .contact a {
     text-decoration: none;

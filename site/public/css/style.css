@@ -85,6 +85,10 @@ header a {
   margin-bottom: 15px;
 }
 
+.featured {
+  margin-bottom: 20px;
+}
+
 .featured h2 {
   color: #f9ef64;
   font-weight: 400;
@@ -100,11 +104,35 @@ header a {
 }
 
 .featured-gallery img {
-  width: 45%;
+  width: 80%;
 }
 
-.featured {
-  margin-bottom: 20px;
+.featured-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-header {
+  position: relative;
+  top: 24px;
+  background-color: #000000;
+  color: #fbaaff;
+  width: 80%;
+}
+
+.featured-price {
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.featured-price p {
+  font-weight: 700;
+  color: #91d2be;
 }
 
 footer {

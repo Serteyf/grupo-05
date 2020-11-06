@@ -21,6 +21,14 @@ app.get("/register", (req, res) => {
     res.sendFile(path.resolve(__dirname, "site/views/register.html"));
 });
 
+app.get("/product", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "site/views/product.html"));
+});
+
+app.get("/checkout", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "site/views/checkout.html"));
+});
+
 app.get("*", (req, res) => {
     res.send("Houston, tenemos un error 404!");
 });

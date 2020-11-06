@@ -85,11 +85,11 @@ header a {
     margin-bottom: 15px;
 }
 
-.featured {
+.featured, .suggested {
     margin-bottom: 20px;
 }
 
-.featured h2 {
+.featured h2, .suggested h2 {
     color: #f9ef64;
     font-weight: 400;
     line-height: 1;
@@ -97,24 +97,24 @@ header a {
     text-align: left;
 }
 
-.featured-gallery {
+.featured-gallery, .suggested-gallery {
     display: flex;
     justify-content: space-around;
     margin: 0px 5px;
 }
 
-.featured-gallery img {
+.featured-gallery img, .suggested-gallery img {
     width: 80%;
 }
 
-.featured-item {
+.featured-item, .suggested-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.featured-header {
+.featured-header, .suggested-header {
     position: relative;
     top: 24px;
     background-color: #000000;
@@ -124,7 +124,7 @@ header a {
     padding-left: 3%;
 }
 
-.featured-price {
+.featured-price, .suggested-price {
     width: 80%;
     margin-top: 10px;
     display: flex;
@@ -132,7 +132,7 @@ header a {
     align-items: center;
 }
 
-.featured-price p {
+.featured-price p, .suggested-price p {
     font-weight: 700;
     color: #91d2be;
 }
@@ -176,4 +176,70 @@ footer h4 {
 .social i,
 .contact i {
     color: #91d2be;
+}
+
+.btn-buy {
+    margin: 8px 8px 8px 0px;
+    border: none;
+    background-color: #000000;
+    color: #91d2be !important;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    width: 110px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-description {
+    border: 1px solid #F9EF64;
+    width: 90%;
+    color: #91D2BE;
+    margin: 20px 0px;
+}
+
+.product-description h4 {
+    border: 1px solid #F9EF64;
+    background-color: #000000;
+    padding: 10px;
+}
+
+.product-description p {
+    padding: 10px;
+}
+
+.product-img {
+    width: 90%;
+}
+
+.product-img img {
+    width: 100%;
+}
+
+.product-info {
+    width: 90%;
+    color: #F9EF64;
+}
+
+.product-price {
+    color: #91D2BE;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.product-code {
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+.product-buy {
+    display: flex;
+    align-items: center;
 }

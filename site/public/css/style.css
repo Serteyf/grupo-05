@@ -112,6 +112,7 @@ header a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 3%;
 }
 
 .featured-header {
@@ -121,6 +122,7 @@ header a {
     border: 1px solid #000000;
     color: #fbaaff;
     width: 80%;
+    padding-left: 3%;
 }
 
 .featured-price {

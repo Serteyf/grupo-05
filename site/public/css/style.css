@@ -230,4 +230,8 @@ footer h4 {
     .ingresar {
         display: none;
     }
+
+    .search-form button {
+        width: 22%;
+    }
 }

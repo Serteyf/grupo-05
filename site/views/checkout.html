@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/checkout.css">
+        <link rel="stylesheet" href="/css/checkout.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -35,19 +35,28 @@
                     <input class="search-box" type="text" name="buscar" />
                     <button type="search">BUSCAR</button>
                 </form>
+                <nav id="menu">
+                    <ul>
+                        <li>Consolas</li>
+                        <li>Videojuegos</li>
+                        <li>Accesorios</li>
+                        <li>Merchandising</li>
+                        <li>Contacto</li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
         <main class="checkout">
             <section class="checkout-product">
                 <div class="checkout-product-left">
-                    <img src="/images/product-crash_bandicoot.jpeg" alt="">
+                    <img src="/images/product-crash_bandicoot.jpeg" alt="" />
                     <a class="checkout-product-btn" href="#">BORRAR</a>
                 </div>
                 <div class="checkout-product-right">
                     <h2>Nombre Producto</h2>
                     <p class="checkout-product-description">Descripción</p>
-                    <P class="checkout-product-right-quantity">CANTIDAD</P>
+                    <p class="checkout-product-right-quantity">CANTIDAD</p>
                     <span>
                         <select name="quantity" id="quantity">
                             <option value="1">1</option>
@@ -65,13 +74,13 @@
             </section>
             <section class="checkout-product">
                 <div class="checkout-product-left">
-                    <img src="/images/product-dos.png" alt="">
+                    <img src="/images/product-dos.png" alt="" />
                     <a class="checkout-product-btn" href="#">BORRAR</a>
                 </div>
                 <div class="checkout-product-right">
                     <h2>Nombre Producto</h2>
                     <p class="checkout-product-description">Descripción</p>
-                    <P class="checkout-product-right-quantity">CANTIDAD</P>
+                    <p class="checkout-product-right-quantity">CANTIDAD</p>
                     <span>
                         <select name="quantity" id="quantity">
                             <option value="1">1</option>
@@ -89,16 +98,20 @@
             </section>
 
             <section class="checkout-shipp">
-                    <p>MÉTODO DE ENVÍO</p>
-                    <hr>
-                    <div class="checkout-shipp-radio">
-                        <input type="radio" name="ship" value="">  En el local <br> GRATIS
-                        <label for=""></label><br>
-                        <input type="radio" name="ship" value="">  Envío rápido <br> $500
-                        <label for=""></label><br>
-                        <input type="radio" name="ship" value="">  Ennvío standard <br> $300
-                        <label for=""></label>    
-                    </div>
+                <p>MÉTODO DE ENVÍO</p>
+                <hr />
+                <div class="checkout-shipp-radio">
+                    <input type="radio" name="ship" value="" /> En el local
+                    <br />
+                    GRATIS <label for=""></label><br />
+                    <input type="radio" name="ship" value="" /> Envío rápido
+                    <br />
+                    $500 <label for=""></label><br />
+                    <input type="radio" name="ship" value="" /> Ennvío standard
+                    <br />
+                    $300
+                    <label for=""></label>
+                </div>
             </section>
             <section class="checkout-sum">
                 <div class="checkout-sum-subtotal">
@@ -111,15 +124,17 @@
                         <p>$300</p>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="checkout-sum-total">
                     <p class="checkout-sum-total-left">TOTAL</p>
                     <p class="checkout-sum-total-right">$10.499</p>
                 </div>
                 <div class="checkout-sum-pay">
                     <a class="checkout-sum-pay-btn" href="#">COMPRAR</a>
-                    <a class="checkout-sum-pay-continue" href="/"><p>Continuar comprando</p></a>
-                    <hr>
+                    <a class="checkout-sum-pay-continue" href="/"
+                        ><p>Continuar comprando</p></a
+                    >
+                    <hr />
                 </div>
             </section>
         </main>

@@ -32,6 +32,10 @@ header a {
     font-weight: 700;
 }
 
+#menu ul {
+    display: none;
+}
+
 .logo-login {
     display: flex;
     flex-direction: row;
@@ -43,7 +47,7 @@ header a {
     color: #fbaaff;
 }
 
-.fa-bars {
+.search .fa-bars {
     color: #91d2be;
 }
 
@@ -191,4 +195,39 @@ footer h4 {
 .social i,
 .contact i {
     color: #91d2be;
+}
+
+/* Menu para pantallas desde 768px */
+@media (min-width: 768px) {
+    .search .fa-bars {
+        display: none;
+    }
+
+    #menu {
+        margin-top: 15px;
+    }
+
+    #menu ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    #menu li {
+        margin: 0px 25px;
+        color: #91d2be;
+    }
+}
+
+/* Logo y barra de busqueda en pantallas desde 768px */
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .ingresar {
+        display: none;
+    }
 }

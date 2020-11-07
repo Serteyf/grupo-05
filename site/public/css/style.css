@@ -52,11 +52,13 @@ header a {
 }
 
 .search-form button {
+    font-size: 13px;
     background-color: #000000;
     color: #f9ef64;
-    border: none;
-    letter-spacing: 4px;
-    height: 23px;
+    border: 1px solid #f9ef64;
+    border-radius: 8%;
+    letter-spacing: 3px;
+    height: 19px;
     width: 32%;
 }
 
@@ -70,6 +72,7 @@ header a {
 }
 
 .ingresar {
+    font-weight: 300;
     margin: 50px 20px 0px 0px;
 }
 
@@ -85,13 +88,11 @@ header a {
     margin-bottom: 15px;
 }
 
-.featured,
-.suggested {
+.featured {
     margin-bottom: 20px;
 }
 
-.featured h2,
-.suggested h2 {
+.featured h2 {
     color: #f9ef64;
     font-weight: 400;
     line-height: 1;
@@ -99,28 +100,24 @@ header a {
     text-align: left;
 }
 
-.featured-gallery,
-.suggested-gallery {
+.featured-gallery {
     display: flex;
     justify-content: space-around;
     margin: 0px 5px;
 }
 
-.featured-gallery img,
-.suggested-gallery img {
+.featured-gallery img {
     width: 80%;
 }
 
-.featured-item,
-.suggested-item {
+.featured-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.featured-header,
-.suggested-header {
+.featured-header {
     position: relative;
     top: 24px;
     background-color: #000000;
@@ -130,8 +127,7 @@ header a {
     padding-left: 3%;
 }
 
-.featured-price,
-.suggested-price {
+.featured-price {
     width: 80%;
     margin-top: 10px;
     display: flex;
@@ -139,8 +135,7 @@ header a {
     align-items: center;
 }
 
-.featured-price p,
-.suggested-price p {
+.featured-price p {
     font-weight: 700;
     color: #91d2be;
 }

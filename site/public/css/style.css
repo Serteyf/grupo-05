@@ -72,8 +72,12 @@ header a {
 }
 
 .ingresar {
-    font-weight: 300;
     margin: 50px 20px 0px 0px;
+    color: #fbaaff;
+}
+
+.ingresar a {
+    font-weight: 300;
 }
 
 .banner {

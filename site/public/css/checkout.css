@@ -1,0 +1,176 @@
+.checkout {
+    width: 100%;
+}
+
+.checkout-product {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+}
+
+.checkout-product-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.checkout-product-left img {
+    width: 110px;
+}
+
+.checkout-product-btn {
+    margin: 8px 8px 8px 0px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    width: 110px;
+    text-align: center;
+}
+
+
+.checkout-product-left a {
+    position: relative;
+    top: 30px;
+}
+
+.checkout-product-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 5px;
+}
+
+.checkout-product-right h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #F9EF64;
+}
+
+.checkout-product-description {
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    margin: 5px 0px;
+}
+
+.checkout-product-right-quantity {
+    color: #F9EF64;
+    font-size: 12px;
+}
+
+.checkout-product-right span {
+    font-size: 13px;
+    color: #F9EF64;
+}
+
+.checkout-product-title {
+    font-size: 13px;
+    color: #fbaaff;
+    margin-top: 10px;
+}
+
+.checkout-product-price {
+    color: #91D2BE;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.checkout-shipp {
+    color: #F9EF64;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.checkout-shipp hr {
+    margin: 6px 0px;
+}
+
+.checkout-shipp-radio {
+    display: flex;
+    justify-content: space-between;
+    line-height: 14px;
+}
+
+.checkout-sum {
+    padding: 20px;
+    background-color: black;
+}
+
+.checkout-sum-subtotal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.checkout-sum-subtotal-left {
+    color: #fbaaff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    width: 50%;
+}
+
+.checkout-sum-subtotal-right {
+    width: 50%;
+    padding-left: 5px;
+    color: #91D2BE;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.checkout-sum-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.checkout-sum-total-left {
+    color: #fbaaff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    width: 50%;
+}
+
+.checkout-sum-total-right {
+    width: 50%;
+    padding-left: 5px;
+    color: #91D2BE;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.checkout-sum-pay p{
+    color: #F9EF64;
+}
+
+.checkout-sum-pay-btn {
+    margin: 8px 8px 8px 0px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.checkout-sum-pay-continue {
+    text-decoration: none;
+}
+
+.checkout-sum-pay hr {
+    margin: 15px 0px;
+}

@@ -75,6 +75,10 @@ header a {
     width: 60%;
 }
 
+.ingresar-desktop {
+    display: none;
+}
+
 .ingresar {
     margin: 50px 20px 0px 0px;
     color: #fbaaff;
@@ -92,8 +96,7 @@ header a {
 
 .banner img {
     width: 100%;
-    margin-top: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .featured,
@@ -209,12 +212,14 @@ footer h4 {
 
     #menu ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         list-style: none;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     #menu li {
-        margin: 0px 25px;
         color: #91d2be;
     }
 }
@@ -231,6 +236,24 @@ footer h4 {
         display: none;
     }
 
+    .ingresar-desktop {
+        display: flex;
+        margin: 50px 20px 0px 0px;
+        color: #fbaaff;
+    }
+
+    .ingresar-desktop a {
+        font-weight: 300;
+        display: inline;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search-box {
+        width: 50%;
+    }
     .search-form button {
         width: 22%;
     }

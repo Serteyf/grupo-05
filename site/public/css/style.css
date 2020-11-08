@@ -149,6 +149,7 @@ header a {
 
 .featured-gallery img,
 .suggested-gallery img {
+    object-fit: cover;
     width: 80%;
 }
 

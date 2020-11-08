@@ -170,6 +170,7 @@ header a {
     color: #fbaaff;
     width: 80%;
     padding-left: 3%;
+    font-size: 15px;
 }
 
 .featured-price,
@@ -185,6 +186,12 @@ header a {
 .suggested-price p {
     font-weight: 700;
     color: #91d2be;
+}
+
+/* Featured items que se esconden en version mobile */
+
+.featured-item-desktop {
+    display: none;
 }
 
 footer {
@@ -284,5 +291,17 @@ footer h4 {
     }
     .search-form button {
         width: 22%;
+    }
+}
+
+/* Featured items que se muestran solo en pantallas > 768px */
+
+@media (min-width: 768px) {
+    .featured-item-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
     }
 }

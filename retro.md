@@ -1,5 +1,7 @@
 # Retrospectiva Grupo 05 - Level Up Games
 
+# Sprint 1
+
 ## Comenzar a hacer
 
 ### Programar en conjunto (pair programming)
@@ -16,7 +18,7 @@ Pudimos resolver rápido el primer sprint dado que logramos ponernos de acuerdo 
 
 ### Trello
 
-Queremos continuar trabajando de manera colaborativa en Trello para estar al tanto del estado actual de los objetivos que tenemos que alcanzar en cada sprint.
+Queremos continuar trabajando de manera colaborativa en Trello para estar al tanto del estado actual de los objetivos que tenemos que alcanzar en cada etapa.
 
 ### Comunicación por Discord (canal texto)
 
@@ -24,7 +26,7 @@ Discord nos parece un medio conveniente para expresar nuestras ideas y comentari
 
 ## Hacer menos
 
--
+Durante la puesta en común no logramos encontrar acciones que consieremos necesario realizar en menor medida. Posiblemente las mismas surjan conforme continuemos trabajando juntos a lo largo de los siguientes sprints.
 
 ## Dejar de hacer
 

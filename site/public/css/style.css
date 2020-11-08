@@ -158,12 +158,12 @@ header a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 .featured-header,
 .suggested-header {
-    position: relative;
-    top: 24px;
+    margin-top: 24px;
     background-color: #000000;
     border: 1px solid #000000;
     color: #fbaaff;

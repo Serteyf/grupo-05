@@ -49,6 +49,9 @@ header a {
 
 .search .fa-bars {
     color: #91d2be;
+    font-size: 19px;
+    position: relative;
+    top: 3px;
 }
 
 .fa-bars-menu {
@@ -100,11 +103,13 @@ header a {
 }
 
 .fa-search {
-    background-color: #f9ef64;
     color: #231f20;
-    border-radius: 50%;
     padding: 3px;
     margin-left: 3px;
+    position: relative;
+    right: 35px;
+    top: 2px;
+    font-size: 16px;
 }
 
 .ingresar-desktop {

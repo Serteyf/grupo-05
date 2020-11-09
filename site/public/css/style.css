@@ -82,24 +82,27 @@ header a {
     display: inline;
 }
 
-.search-form button {
-    font-size: 13px;
-    background-color: #000000;
-    color: #f9ef64;
-    border: 1px solid #f9ef64;
-    border-radius: 8%;
-    letter-spacing: 3px;
-    height: 19px;
-    width: 32%;
-}
-
 .search {
     margin-top: 12px;
     text-align: center;
+    width: 100%;
 }
 
 .search-box {
-    width: 60%;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.search-box::placeholder {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.fa-search {
+    background-color: #f9ef64;
+    color: #231f20;
+    border-radius: 50%;
+    padding: 3px;
 }
 
 .ingresar-desktop {
@@ -305,24 +308,13 @@ footer h4 {
 
     .ingresar-desktop {
         display: flex;
-        margin: 50px 20px 0px 0px;
+        margin: -20px 20px 0px 0px;
         color: #fbaaff;
     }
 
     .ingresar-desktop a {
         font-weight: 300;
         display: inline;
-    }
-
-    .search {
-        width: 100%;
-    }
-
-    .search-box {
-        width: 50%;
-    }
-    .search-form button {
-        width: 22%;
     }
 }
 

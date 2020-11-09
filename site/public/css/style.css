@@ -126,6 +126,38 @@ header a {
     margin-bottom: 10px;
 }
 
+.banner-shipping {
+    width: 100%;
+    height: 40px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background: rgb(249, 239, 100);
+    background: linear-gradient(
+        90deg,
+        rgba(249, 239, 100, 1) 0%,
+        rgba(241, 255, 0, 1) 100%
+    );
+}
+
+.banner-shipping h3 {
+    font-size: 14px;
+    padding-top: 3px;
+    text-align: center;
+    color: #231f20;
+}
+
+.banner-shipping p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: -5px;
+    color: #eb0000;
+    font-weight: 700;
+}
+
+.banner-shipping h4 {
+    display: none;
+}
+
 .featured,
 .suggested {
     margin-bottom: 20px;
@@ -291,6 +323,28 @@ footer h4 {
     }
     .search-form button {
         width: 22%;
+    }
+}
+
+/* Banner de envios en pantallas > 768px */
+@media (min-width: 768px) {
+    .banner-shipping {
+        height: 55px;
+    }
+
+    .banner-shipping h3 {
+        font-size: 16px;
+        text-align: center;
+        color: #231f20;
+    }
+
+    .banner-shipping p {
+        display: none;
+    }
+
+    .banner-shipping h4 {
+        display: block;
+        text-align: center;
     }
 }
 

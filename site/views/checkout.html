@@ -71,22 +71,31 @@
                     <a class="checkout-product-btn" href="#">BORRAR</a>
                 </div>
                 <div class="checkout-product-right">
-                    <h2>Nombre Producto</h2>
-                    <p class="checkout-product-description">Descripción</p>
-                    <p class="checkout-product-right-quantity">CANTIDAD</p>
-                    <span>
-                        <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </span>
-                    <p class="checkout-product-title">PRECIO</p>
-                    <p class="checkout-product-price">$8.999</p>
-                    <p class="checkout-product-title">TOTAL</p>
-                    <p class="checkout-product-price">$8.999</p>
+                    <div>
+                        <h2>Nombre Producto</h2>
+                        <p class="checkout-product-description">Descripción</p>
+                        <a class="checkout-product-btn-desktop" href="#">BORRAR</a>
+                    </div>
+                    <div>
+                        <p class="checkout-product-right-quantity">CANTIDAD</p>
+                        <span>
+                            <select name="quantity" id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="checkout-product-title">PRECIO</p>
+                        <p class="checkout-product-price">$8.999</p>
+                    </div>
+                    <div>
+                        <p class="checkout-product-title">TOTAL</p>
+                        <p class="checkout-product-price">$8.999</p>
+                    </div>
                 </div>
             </section>
             <section class="checkout-product">
@@ -95,65 +104,76 @@
                     <a class="checkout-product-btn" href="#">BORRAR</a>
                 </div>
                 <div class="checkout-product-right">
-                    <h2>Nombre Producto</h2>
-                    <p class="checkout-product-description">Descripción</p>
-                    <p class="checkout-product-right-quantity">CANTIDAD</p>
-                    <span>
-                        <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </span>
-                    <p class="checkout-product-title">PRECIO</p>
-                    <p class="checkout-product-price">$5.900</p>
-                    <p class="checkout-product-title">TOTAL</p>
-                    <p class="checkout-product-price">$5.900</p>
+                    <div>
+                        <h2>Nombre Producto</h2>
+                        <p class="checkout-product-description">Descripción</p>
+                        <a class="checkout-product-btn-desktop" href="#">BORRAR</a>
+                    </div>
+                    <div>
+                        <p class="checkout-product-right-quantity">CANTIDAD</p>
+                        <span>
+                            <select name="quantity" id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="checkout-product-title">PRECIO</p>
+                        <p class="checkout-product-price">$5.900</p>
+                    </div>
+                    <div>
+                        <p class="checkout-product-title">TOTAL</p>
+                        <p class="checkout-product-price">$5.900</p>
+                    </div>
                 </div>
+            </section>
+            <section class="checkout-shipp-sum">
+                <section class="checkout-shipp">
+                    <p>MÉTODO DE ENVÍO</p>
+                    <hr />
+                    <div class="checkout-shipp-radio">
+                        <input type="radio" name="ship" value="" /> En el local
+                        <br />
+                        GRATIS <label for=""></label><br />
+                        <input type="radio" name="ship" value="" /> Envío rápido
+                        <br />
+                        $500 <label for=""></label><br />
+                        <input type="radio" name="ship" value="" /> Envío standard
+                        <br />
+                        $300
+                        <label for=""></label>
+                    </div>
+                </section>
+                <section class="checkout-sum">
+                    <div class="checkout-sum-subtotal">
+                        <div class="checkout-sum-subtotal-left">
+                            <p>SUBTOTAL</p>
+                            <p>ENVÍO</p>
+                        </div>
+                        <div class="checkout-sum-subtotal-right">
+                            <p>$10.199</p>
+                            <p>$300</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="checkout-sum-total">
+                        <p class="checkout-sum-total-left">TOTAL</p>
+                        <p class="checkout-sum-total-right">$10.499</p>
+                    </div>
+                    <div class="checkout-sum-pay">
+                        <a class="checkout-sum-pay-btn" href="#">COMPRAR</a>
+                        <a class="checkout-sum-pay-continue" href="/"
+                            ><p>Continuar comprando</p></a
+                        >
+                        <hr />
+                    </div>
+                </section>
             </section>
 
-            <section class="checkout-shipp">
-                <p>MÉTODO DE ENVÍO</p>
-                <hr />
-                <div class="checkout-shipp-radio">
-                    <input type="radio" name="ship" value="" /> En el local
-                    <br />
-                    GRATIS <label for=""></label><br />
-                    <input type="radio" name="ship" value="" /> Envío rápido
-                    <br />
-                    $500 <label for=""></label><br />
-                    <input type="radio" name="ship" value="" /> Envío standard
-                    <br />
-                    $300
-                    <label for=""></label>
-                </div>
-            </section>
-            <section class="checkout-sum">
-                <div class="checkout-sum-subtotal">
-                    <div class="checkout-sum-subtotal-left">
-                        <p>SUBTOTAL</p>
-                        <p>ENVÍO</p>
-                    </div>
-                    <div class="checkout-sum-subtotal-right">
-                        <p>$10.199</p>
-                        <p>$300</p>
-                    </div>
-                </div>
-                <hr />
-                <div class="checkout-sum-total">
-                    <p class="checkout-sum-total-left">TOTAL</p>
-                    <p class="checkout-sum-total-right">$10.499</p>
-                </div>
-                <div class="checkout-sum-pay">
-                    <a class="checkout-sum-pay-btn" href="#">COMPRAR</a>
-                    <a class="checkout-sum-pay-continue" href="/"
-                        ><p>Continuar comprando</p></a
-                    >
-                    <hr />
-                </div>
-            </section>
         </main>
 
         <footer>

@@ -33,6 +33,18 @@
     text-align: center;
 }
 
+.checkout-product-btn-desktop {
+    display: none;
+    margin: 15px 8px 8px 0px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
+    text-decoration: none;
+    width: 110px;
+    text-align: center;
+}
+
 
 .checkout-product-left a {
     position: relative;
@@ -173,4 +185,58 @@
 
 .checkout-sum-pay hr {
     margin: 15px 0px;
+}
+
+/* se adapta a medidas superiores a 768 */
+
+@media (min-width: 768px) {
+    .checkout-product-left {
+        width: 25%;
+    }
+
+    .checkout-product-right {
+        flex-direction: row;
+        width: 75%;
+        justify-content: space-between;
+        margin-right: 50px;
+    }
+
+    .checkout-product-btn-desktop {
+        display: block;
+    }
+
+    .checkout-product-btn {
+        display: none;
+    }
+
+    .checkout-product-title {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .checkout-product-right-quantity {
+        margin-bottom: 10px;
+    } 
+
+    .checkout-product-right h2 {
+        margin-bottom: 10px;
+    }
+
+    .checkout-shipp-sum {
+        display: flex;
+    }
+
+    .checkout-shipp {
+        width: 24%;
+        padding-left: 9%;
+    }
+
+    .checkout-sum {
+        width: 76%;
+    }
+
+    .checkout-shipp-radio {
+        flex-direction: column;
+        justify-content: center;
+    }
 }

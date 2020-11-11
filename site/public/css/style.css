@@ -450,11 +450,18 @@ footer h4 {
 
     .featured-price p,
     .suggested-price p {
-        font-weight: 700;
-        color: #91d2be;
         font-size: 18px;
     }
 }
+
+@media (min-width: 1024px) {
+    .featured-price p,
+    .suggested-price p {
+        font-size: 20px;
+    }
+}
+
+/* Se agrandan iconos y fonts a medida que crece el width de la pantalla */
 
 @media (min-width: 1024px) {
     .featured-price,
@@ -464,6 +471,17 @@ footer h4 {
 
     .fa-shopping-cart,
     .fa-user {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .fa-shopping-cart,
+    .fa-user {
+        font-size: 20px;
+    }
+
+    #menu ul {
         font-size: 18px;
     }
 }
@@ -481,6 +499,13 @@ footer h4 {
     #menu ul {
         padding-left: 20%;
         padding-right: 20%;
+    }
+}
+
+@media (min-width: 1440px) {
+    #menu ul {
+        padding-left: 25%;
+        padding-right: 25%;
     }
 }
 

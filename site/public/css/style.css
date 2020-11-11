@@ -147,16 +147,16 @@ header a {
 }
 
 .banner ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: cambio 20s infinite alternate linear;
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate linear;
 }
 
 .banner li {
-	width: 100%;
-	list-style: none;
+    width: 100%;
+    list-style: none;
 }
 
 .banner img {
@@ -232,7 +232,8 @@ header a {
     width: 50%;
 }
 
-.featured-item:hover, .featured-item-desktop:hover {
+.featured-item:hover,
+.featured-item-desktop:hover {
     opacity: 85%;
 }
 
@@ -401,6 +402,17 @@ footer h4 {
     }
 }
 
+/* Se aumenta el padding left/right del header y footer en pantallas > 1024px */
+
+@media (min-width: 1024px) {
+    header {
+        padding: 0 5%;
+    }
+    footer {
+        padding: 20px 5%;
+    }
+}
+
 /* Banner de envios en pantallas > 768px */
 @media (min-width: 768px) {
     .banner-shipping {
@@ -498,15 +510,31 @@ footer h4 {
 
 /* keyframe del slide de movimiento del banner */
 @keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
 }

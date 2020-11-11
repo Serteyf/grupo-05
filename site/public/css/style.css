@@ -421,6 +421,11 @@ footer h4 {
     .suggested-price {
         padding: 0px 15%;
     }
+
+    .fa-shopping-cart,
+    .fa-user {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1024px) {

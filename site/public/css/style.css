@@ -468,12 +468,23 @@ footer h4 {
     }
 }
 
+/* Aumenta el padding de la barra de menu a medida que la pantalla se hace mas ancha */
+
 @media (min-width: 1024px) {
     #menu ul {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 }
+
+@media (min-width: 1200px) {
+    #menu ul {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+/* Media queries del footer */
 
 @media (min-width: 902px) {
     .info {

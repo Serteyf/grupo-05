@@ -486,26 +486,35 @@ footer h4 {
     }
 }
 
-/* Aumenta el padding de la barra de menu a medida que la pantalla se hace mas ancha */
+/* Aumenta el padding del navbar y main a medida que la pantalla se hace mas ancha */
 
 @media (min-width: 1024px) {
     #menu ul {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding: 0 15%;
+    }
+
+    main {
+        padding: 0 5%;
     }
 }
 
 @media (min-width: 1200px) {
     #menu ul {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding: 0 20%;
+    }
+
+    main {
+        padding: 0 10%;
     }
 }
 
 @media (min-width: 1440px) {
     #menu ul {
-        padding-left: 25%;
-        padding-right: 25%;
+        padding: 0 25%;
+    }
+
+    main {
+        padding: 0 15%;
     }
 }
 

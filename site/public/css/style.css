@@ -220,7 +220,7 @@ header a {
 .featured-gallery img,
 .suggested-gallery img {
     object-fit: cover;
-    width: 80%;
+    width: 85%;
 }
 
 .featured-item,
@@ -233,7 +233,9 @@ header a {
 }
 
 .featured-item:hover,
-.featured-item-desktop:hover {
+.featured-item-desktop:hover,
+.suggested-item:hover,
+.suggested-item-desktop:hover {
     opacity: 85%;
 }
 
@@ -243,7 +245,7 @@ header a {
     background-color: #000000;
     border: 1px solid #000000;
     color: #fbaaff;
-    width: 80%;
+    width: 85%;
     padding-left: 3%;
     font-size: 15px;
 }
@@ -265,7 +267,8 @@ header a {
 
 /* Featured items que se esconden en version mobile */
 
-.featured-item-desktop {
+.featured-item-desktop,
+.suggested-item-desktop {
     display: none;
 }
 
@@ -439,7 +442,8 @@ footer h4 {
 /* Featured items que se muestran solo en pantallas > 768px */
 
 @media (min-width: 768px) {
-    .featured-item-desktop {
+    .featured-item-desktop,
+    .suggested-item-desktop {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -468,6 +472,11 @@ footer h4 {
     .featured-price,
     .suggested-price {
         padding: 0px 15%;
+    }
+
+    .featured-header,
+    .suggested-header {
+        font-size: 20px;
     }
 
     .fa-shopping-cart,

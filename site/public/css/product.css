@@ -6,7 +6,7 @@
     padding: 5px;
     text-decoration: none;
     display: block;
-    width: 110px;
+    width: 40%;
     text-align: center;
 }
 
@@ -63,4 +63,71 @@
 .product-buy {
     display: flex;
     align-items: center;
+}
+
+/* Se adapta a medidas superiores a 768px */
+@media (min-width: 768px) {
+    .product {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .product-img {
+        width: 45%;
+    }
+
+    .product-info {
+        width: 45%;
+        padding: 5% 0% 5% 5%;
+    }
+
+    .product-info h2 {
+        font-size: 32px;
+    }
+
+    .product-code {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 38px;
+    }
+
+    .product-info span {
+        font-size: 18px;
+    }
+
+    .btn-buy {
+        font-size: 20px;
+    }
+
+    .btn-buy {
+        width: 60%;
+    }
+}
+
+/* Se adapta a medidas superiores a 1024px */
+
+@media (min-width: 1024px) {
+    .product {
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+
+    .product-img {
+        width: 30%;
+        align-self: center;
+    }
+
+    .product-info {
+        width: 30%;
+        padding: 2% 2%;
+    }
+
+    .product-description {
+        width: 30%;
+        margin: 0;
+    }
 }

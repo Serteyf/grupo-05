@@ -45,7 +45,6 @@
     text-align: center;
 }
 
-
 .checkout-product-left a {
     position: relative;
     top: 30px;
@@ -61,7 +60,7 @@
 .checkout-product-right h2 {
     font-size: 16px;
     line-height: 16px;
-    color: #F9EF64;
+    color: #f9ef64;
 }
 
 .checkout-product-description {
@@ -72,13 +71,13 @@
 }
 
 .checkout-product-right-quantity {
-    color: #F9EF64;
+    color: #f9ef64;
     font-size: 12px;
 }
 
 .checkout-product-right span {
     font-size: 13px;
-    color: #F9EF64;
+    color: #f9ef64;
 }
 
 .checkout-product-title {
@@ -88,14 +87,14 @@
 }
 
 .checkout-product-price {
-    color: #91D2BE;
+    color: #91d2be;
     font-size: 20px;
     font-weight: 700;
     line-height: 20px;
 }
 
 .checkout-shipp {
-    color: #F9EF64;
+    color: #f9ef64;
     font-size: 13px;
     font-weight: 400;
     padding: 20px;
@@ -134,7 +133,7 @@
 .checkout-sum-subtotal-right {
     width: 50%;
     padding-left: 5px;
-    color: #91D2BE;
+    color: #91d2be;
     font-size: 20px;
     font-weight: 700;
 }
@@ -158,13 +157,13 @@
 .checkout-sum-total-right {
     width: 50%;
     padding-left: 5px;
-    color: #91D2BE;
+    color: #91d2be;
     font-size: 30px;
     font-weight: 700;
 }
 
-.checkout-sum-pay p{
-    color: #F9EF64;
+.checkout-sum-pay p {
+    color: #f9ef64;
 }
 
 .checkout-sum-pay-btn {
@@ -187,7 +186,7 @@
     margin: 15px 0px;
 }
 
-/* se adapta a medidas superiores a 768 */
+/* Se adapta a pantallas superiores a 768px */
 
 @media (min-width: 768px) {
     .checkout-product-left {
@@ -216,7 +215,7 @@
 
     .checkout-product-right-quantity {
         margin-bottom: 10px;
-    } 
+    }
 
     .checkout-product-right h2 {
         margin-bottom: 10px;

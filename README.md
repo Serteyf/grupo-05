@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/KzhLJhx.png" width="199" height="131" />
+<img src="https://i.imgur.com/KzhLJhx.png" width="180" height="118" />
 
 # Grupo 05 - Level Up Games
 

@@ -1,14 +1,16 @@
 # Grupo 05 - Level Up Games
 
+<img src="https://i.imgur.com/KzhLJhx.png" width="199" height="131" />
+
 ## Oferta de productos y servicios
 
 Nuestro e-ecommerce estará enfocado en la industria de los videojuegos de sobremesa (consolas), ofreciendo productos físicos tales como:
 
-- Consolas de videojuegos
-- Periféricos
-- Juegos físicos
-- Consolas y accesorios retro
-- Juguetes y merchandising
+-   Consolas de videojuegos
+-   Periféricos
+-   Juegos físicos
+-   Consolas y accesorios retro
+-   Juguetes y merchandising
 
 Con esta oferta de productos buscamos apuntar a un público apasionado por el gaming en consolas, esto incluye tanto a usuarios casuales como a jugadores "hardcore" de estas plataformas.
 

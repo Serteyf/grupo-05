@@ -1,6 +1,6 @@
-# Grupo 05 - Level Up Games
-
 <img src="https://i.imgur.com/KzhLJhx.png" width="199" height="131" />
+
+# Grupo 05 - Level Up Games
 
 ## Oferta de productos y servicios
 

@@ -112,22 +112,26 @@
 
 @media (min-width: 1024px) {
     .product {
-        flex-wrap: nowrap;
-        align-items: stretch;
+        padding: 3% 5%;
     }
 
-    .product-img {
-        width: 30%;
-        align-self: center;
+    .product-info h2 {
+        font-size: 34px;
     }
 
-    .product-info {
-        width: 30%;
-        padding: 2% 2%;
+    .product-code {
+        font-size: 15px;
     }
 
-    .product-description {
-        width: 30%;
-        margin: 0;
+    .product-price {
+        font-size: 40px;
+    }
+
+    .product-info span {
+        font-size: 20px;
+    }
+
+    .btn-buy {
+        font-size: 22px;
     }
 }

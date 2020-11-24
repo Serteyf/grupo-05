@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
-const path = require("path");
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "/site/views"));
+app.set("views", __dirname + "/site/views");
 
 app.use(express.static("site/public"));
 

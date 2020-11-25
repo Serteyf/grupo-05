@@ -33,3 +33,21 @@ Durante la puesta en común no logramos encontrar acciones que consieremos neces
 ### Apurarnos y no aprovechar el plazo dado
 
 En la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos innecesariamente en completar las tareas dadas. De ahora en más vamos a intentar aprovechar mejor el tiempo estipulado para cada sprint.
+
+# Sprint 2
+
+## Comenzar a hacer
+
+...
+
+## Hacer más
+
+...
+
+## Hacer menos
+
+...
+
+## Dejar de hacer
+
+..

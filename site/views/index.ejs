@@ -15,53 +15,8 @@
         <title>Level-Up Games</title>
     </head>
     <body>
-        <header>
-            <div class="logo-login">
-                <a href="/"
-                    ><img
-                        class="logo"
-                        src="/images/logo.png"
-                        alt="Logo de Level Up Games"
-                /></a>
-                <div class="ingresar">
-                    <a href="/login"><i class="far fa-user"></i></a>
-                    <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <div class="search">
-                <i class="fas fa-bars">
-                    <ul class="fa-bars-menu">
-                        <li>Consolas</li>
-                        <li>Videojuegos</li>
-                        <li>Accesorios</li>
-                        <li>Merchandising</li>
-                        <li>Contacto</li>
-                    </ul>
-                </i>
-                <form class="search-form" action="">
-                    <input
-                        class="search-box"
-                        type="text"
-                        name="buscar"
-                        placeholder="Encontrá el producto que buscás..."
-                    />
-                </form>
-                <i class="fas fa-search"></i>
-                <nav id="menu">
-                    <ul>
-                        <li>Consolas</li>
-                        <li>Videojuegos</li>
-                        <li>Accesorios</li>
-                        <li>Merchandising</li>
-                        <li>Contacto</li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="ingresar-desktop">
-                <a href="/login"><i class="far fa-user"></i></a>
-                <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </header>
+
+        <%- include("partials/header.ejs") %>
 
         <div class="banner">
             <ul>
@@ -206,65 +161,7 @@
             </section>
         </main>
 
-        <footer>
-            <a href="/">
-                <img
-                    class="logo-footer"
-                    src="/images/logo_footer.png"
-                    alt="Logo de Level Up Games"
-                /></a>
-                <section class="info">
-                    <section class="info-description">
-                        <p>
-                            Level-Up Games | Líderes en venta de consolas, videojuegos y artículos del universo gamer.<br>
-                            Con nuestro extenso catálogo, sistema de pagos seguros y atención personalizada, buscamos ofrecerte la mejor experiencia de compra online.
-                        </p>
-                </section>
-    
-                <section class="info-social">
-                    <section class="social">
-                        <h4>Seguinos en:</h4>
-                        <ul>
-                            <a href="#"
-                                ><li>
-                                    <i class="fab fa-facebook"> </i> @levelup.games
-                                </li></a
-                            >
-                            <a href="#"
-                                ><li>
-                                    <i class="fab fa-twitter"> </i> @levelup.games
-                                </li></a
-                            >
-                            <a href="#"
-                                ><li>
-                                    <i class="fab fa-instagram"> </i> @levelup.games
-                                </li></a
-                            >
-                        </ul>
-                    </section class="datos-contact">
-                        <section class="contact">
-                            <h4>Informacion de contacto</h4>
-                            <ul>
-                                <a href="#"
-                                    ><li>
-                                        <i class="fas fa-map-marker-alt"></i> Av. Monroe
-                                        860, CABA
-                                    </li></a
-                                >
-                                <a href="#"
-                                    ><li>
-                                        <i class="fas fa-envelope"></i> levelup@games.com.ar
-                                    </li></a
-                                >
-                                <a href="#"
-                                    ><li>
-                                        <i class="fas fa-phone-alt"></i> (011) 5263-7400
-                                    </li></a
-                                >
-                            </ul>
-                        </section>
-                    </section>
-                </section>
-        </footer>
+        <%- include("partials/footer.ejs") %>
+        
     </body>
 </html>

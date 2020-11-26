@@ -508,6 +508,12 @@ footer h4 {
     main {
         padding: 0 3%;
     }
+    .banner {
+        height: 300px;
+    }
+    .banner-shipping {
+        position: relative;
+    }
 }
 
 @media (min-width: 1200px) {

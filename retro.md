@@ -44,10 +44,18 @@ En la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos inn
 
 ...
 
+## Continuar haciendo
+
+Seguir trabajando en conjunto, ya sea en reuniones por videollamadas, programando en conjunto (pair programming), o comunicándonos constantemente por discord para hablar del proyecto o despejar dudas que se nos presentan.
+
 ## Hacer menos
 
 ...
 
 ## Dejar de hacer
+
+## Apurarnos en los plazos de entrega
+
+Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos nuevamente en completar las tareas dadas. Esto nos hizo correr un poco con los tiempos, pero a la vez nos dio más tiempo para avanzar en otras cuestiones.
 
 ..

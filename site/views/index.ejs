@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <title>Level-Up Games</title>
+        <%- include("partials/head-base.ejs", {title: "Level-Up Games"}) %>
     </head>
     <body>
-
-        <%- include("partials/header.ejs") %>
-
+        <header><%- include("partials/header.ejs") %></header>
         <div class="banner">
             <ul>
                 <li>
@@ -39,17 +26,15 @@
                 Envíos sin cargo a todo el país <i class="fas fa-truck"></i>
             </h3>
             <h4>
-                <span style="color: #eb0000">#QuedateEnCasa</span> |
-                Llamanos al (011) 5263-7400 | Entrega en 24 hs.
+                <span style="color: #eb0000">#QuedateEnCasa</span> | Llamanos al
+                (011) 5263-7400 | Entrega en 24 hs.
             </h4>
             <p>#QuedateEnCasa</p>
         </div>
 
         <main>
             <section class="featured">
-                <h2>
-                    Destacados <b>GAMES</b>
-                </h2>
+                <h2>Destacados <b>GAMES</b></h2>
 
                 <div class="featured-gallery">
                     <div class="featured-item">
@@ -103,9 +88,7 @@
 
                 <br />
 
-                <h2>
-                    Destacados <b>CONSOLAS</b>
-                </h2>
+                <h2>Destacados <b>CONSOLAS</b></h2>
 
                 <div class="featured-gallery">
                     <div class="featured-item">
@@ -158,8 +141,6 @@
                 </div>
             </section>
         </main>
-
-        <%- include("partials/footer.ejs") %>
-        
+        <footer><%- include("partials/footer.ejs") %></footer>
     </body>
 </html>

@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <%- include("partials/head-base.ejs", {title: "Carrito de compras"}) %>
         <link rel="stylesheet" href="/css/checkout.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <title>Level-Up Games - Carrito de compras</title>
     </head>
     <body>
+        <header><%- include("partials/header.ejs") %></header>
 
-        <%- include("partials/header.ejs") %>
-        
         <main class="checkout">
             <section class="checkout-product">
                 <div class="checkout-product-left">
@@ -29,7 +17,9 @@
                     <div>
                         <h2>Nombre Producto</h2>
                         <p class="checkout-product-description">Descripción</p>
-                        <a class="checkout-product-btn-desktop" href="#">BORRAR</a>
+                        <a class="checkout-product-btn-desktop" href="#"
+                            >BORRAR</a
+                        >
                     </div>
                     <div>
                         <p class="checkout-product-right-quantity">CANTIDAD</p>
@@ -62,7 +52,9 @@
                     <div>
                         <h2>Nombre Producto</h2>
                         <p class="checkout-product-description">Descripción</p>
-                        <a class="checkout-product-btn-desktop" href="#">BORRAR</a>
+                        <a class="checkout-product-btn-desktop" href="#"
+                            >BORRAR</a
+                        >
                     </div>
                     <div>
                         <p class="checkout-product-right-quantity">CANTIDAD</p>
@@ -97,7 +89,8 @@
                         <input type="radio" name="ship" value="" /> Envío rápido
                         <br />
                         $500 <label for=""></label><br />
-                        <input type="radio" name="ship" value="" /> Envío standard
+                        <input type="radio" name="ship" value="" /> Envío
+                        standard
                         <br />
                         $300
                         <label for=""></label>
@@ -128,10 +121,8 @@
                     </div>
                 </section>
             </section>
-
         </main>
 
-        <%- include("partials/footer.ejs") %>
-
+        <footer><%- include("partials/footer.ejs") %></footer>
     </body>
 </html>

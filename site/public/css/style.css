@@ -601,3 +601,23 @@ footer h4 {
         margin-left: -300%;
     }
 }
+
+/* Error 404 */
+.error-404 {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-404 h1 {
+    color: #f9ef64;
+    font-size: 32px;
+}
+
+.error-404 p {
+    color: #fbaaff;
+    font-size: 18px;
+    text-align: center;
+}

@@ -6,6 +6,7 @@ app.set("views", [
     __dirname + "/site/views",
     __dirname + "/site/views/users",
     __dirname + "/site/views/products",
+    __dirname + "/site/views/partials",
 ]);
 
 app.use(express.static("site/public"));
@@ -26,6 +27,6 @@ app.use("/register", registerRoutes);
 app.use("/product", productRoutes);
 app.use("/checkout", checkoutRoutes);
 
-app.get("*", (req, res) => {
-    res.send("Houston, tenemos un error 404!");
+app.use((req, res, next) => {
+    res.status(404).render("not-found");
 });

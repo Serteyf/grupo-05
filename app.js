@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const methodOverride = require("method-override");
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -26,6 +27,7 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/product", productRoutes);
 app.use("/checkout", checkoutRoutes);
+app.use(methodOverride("_method"));
 
 app.use((req, res, next) => {
     res.status(404).render("not-found");

@@ -3,19 +3,19 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", [
-    __dirname + "/site/views",
-    __dirname + "/site/views/users",
-    __dirname + "/site/views/products",
-    __dirname + "/site/views/partials",
+    __dirname + "/views",
+    __dirname + "/views/users",
+    __dirname + "/views/products",
+    __dirname + "/views/partials",
 ]);
 
-app.use(express.static("site/public"));
+app.use(express.static("public"));
 
-const mainRoutes = require("./site/routes/mainRoutes");
-const loginRoutes = require("./site/routes/loginRoutes");
-const registerRoutes = require("./site/routes/registerRoutes");
-const productRoutes = require("./site/routes/productRoutes");
-const checkoutRoutes = require("./site/routes/checkoutRoutes");
+const mainRoutes = require("./routes/mainRoutes");
+const loginRoutes = require("./routes/loginRoutes");
+const registerRoutes = require("./routes/registerRoutes");
+const productRoutes = require("./routes/productRoutes");
+const checkoutRoutes = require("./routes/checkoutRoutes");
 
 app.listen(3000, () => {
     console.log("Server running on port 3000.");

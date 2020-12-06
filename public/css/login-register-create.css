@@ -1,4 +1,6 @@
-.login input {
+.login input,
+.register input,
+.create input {
     display: block;
 }
 
@@ -13,12 +15,19 @@
     background-repeat: no-repeat;
 }
 
-.register input {
-    display: block;
+.create-back {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/banner-create.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .register,
-.login {
+.login,
+.create {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,8 +50,49 @@
     color: #f9ef64;
 }
 
+.create .caja {
+    margin: 8px 0px;
+    width: 100%;
+    background-color: #231f20;
+    border: none;
+    padding: 10px;
+    color: #f9ef64;
+}
+
+.create textarea {
+    margin: 0px 0px -5px 0px;
+    width: 100%;
+    background-color: #231f20;
+    border: none;
+    padding: 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    color: #f9ef64;
+}
+
+.create .photo {
+    border: none;
+    color: #91d2be;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.create .cartel {
+    top: 6px;
+    border: none;
+    color: #91d2be;
+    padding: 5px;
+    background-color: #231f20;
+    position: relative;
+}
+
 .register input::placeholder,
-.login input::placeholder {
+.login input::placeholder,
+.create input::placeholder,
+.create textarea::placeholder
+ {
     color: #f9ef64;
 }
 
@@ -56,8 +106,18 @@
     padding: 5px;
 }
 
+.create button {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
+}
+
 .register h2,
-.login h2 {
+.login h2,
+.create h2 {
     color: #fbaaff;
 }
 

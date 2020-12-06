@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("partials/head-base.ejs", {title: "Crear cuenta"}) %>
+        <link rel="stylesheet" href="/css/login-register-create.css" />
+    </head>
+
+    <body>
+        <header><%- include("partials/header.ejs") %></header>
+
+        <main>
+            <section class="create-back">
+                <div class="create">
+                    <h2>CREAR PRODUCTO</h2>
+                    <form action="/" method="POST">
+                        <input class="caja" type="text" placeholder="Nombre del producto" name="name" />
+                        <textarea placeholder="Descripción" name="description"></textarea>
+                        <input class="caja" type="text" placeholder="Precio" name="price" />
+                        <input class="caja" type="text" placeholder="Categoría" name="price" />
+                        <label class="cartel" for="photo">SUBIR FOTO
+                        <input class="photo" type="file" name="photo" placeholder="Foto producto"> 
+                        </label>
+                        <br>
+                        <button type="submit">CREAR</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer><%- include("partials/footer.ejs") %></footer>
+    </body>
+</html>

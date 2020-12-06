@@ -17,6 +17,7 @@ const loginRoutes = require("./routes/loginRoutes");
 const registerRoutes = require("./routes/registerRoutes");
 const productRoutes = require("./routes/productRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
+const createRoutes = require("./routes/createRoutes");
 
 app.listen(3000, () => {
     console.log("Server running on port 3000.");
@@ -27,6 +28,7 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/product", productRoutes);
 app.use("/checkout", checkoutRoutes);
+app.use("/create", createRoutes);
 app.use(methodOverride("_method"));
 
 app.use((req, res, next) => {

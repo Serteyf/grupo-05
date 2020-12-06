@@ -54,7 +54,7 @@ Seguir trabajando en conjunto, ya sea en reuniones por videollamadas, programand
 
 ## Dejar de hacer
 
-## Apurarnos en los plazos de entrega
+### Apurarnos en los plazos de entrega
 
 Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos nuevamente en completar las tareas dadas. Esto nos hizo correr un poco con los tiempos, pero a la vez nos dio más tiempo para avanzar en otras cuestiones.
 

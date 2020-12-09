@@ -27,6 +27,8 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/product", productRoutes);
 app.use("/checkout", checkoutRoutes);
+
+// Middlewares
 app.use(methodOverride("_method"));
 
 app.use((req, res, next) => {

@@ -2,11 +2,17 @@ productController = {
     main: (req, res) => {
         res.render("product");
     },
-    create: (req, res) => {
+    showCreate: (req, res) => {
         res.render("product-create");
     },
-    edit: (req, res) => {
+    showEdit: (req, res) => {
         res.render("product-edit");
+    },
+    create: (req, res) => {
+        res.send("Producto creado!");
+    },
+    edit: (req, res) => {
+        res.send("Producto editado!");
     },
 };
 

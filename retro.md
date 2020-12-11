@@ -1,6 +1,6 @@
 # Retrospectiva Grupo 05 - Level Up Games
 
-# Sprint 1
+# Sprint 2
 
 ## Comenzar a hacer
 
@@ -26,7 +26,7 @@ Discord nos parece un medio conveniente para expresar nuestras ideas y comentari
 
 ## Hacer menos
 
-Durante la puesta en común no logramos encontrar acciones que consieremos necesario realizar en menor medida. Posiblemente las mismas surjan conforme continuemos trabajando juntos a lo largo de los siguientes sprints.
+Durante la puesta en común no logramos encontrar acciones que consideremos necesario realizar en menor medida. Posiblemente las mismas surjan conforme continuemos trabajando juntos a lo largo de los siguientes sprints.
 
 ## Dejar de hacer
 
@@ -34,15 +34,15 @@ Durante la puesta en común no logramos encontrar acciones que consieremos neces
 
 En la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos innecesariamente en completar las tareas dadas. De ahora en más vamos a intentar aprovechar mejor el tiempo estipulado para cada sprint.
 
-# Sprint 2
+# Sprint 3
 
 ## Comenzar a hacer
 
-...
+Poner mayor énfasis en la asignación de tareas a realizar por parte de cada integrante a la hora de recibir las tareas de cada Sprint.
 
 ## Hacer más
 
-...
+Habiendo establecido un día fijo para reuniones semanales, creemos que nos ayudaría a ser más productivos el hecho de dedicar más tiempo a trabajar en cuestiones técnicas y de código mientras estamos reunidos.
 
 ## Continuar haciendo
 
@@ -50,7 +50,7 @@ Seguir trabajando en conjunto, ya sea en reuniones por videollamadas, programand
 
 ## Hacer menos
 
-...
+Durante la puesta en común no logramos encontrar acciones que consieremos necesario realizar en menor medida. Posiblemente las mismas surjan conforme continuemos trabajando juntos a lo largo de los siguientes sprints.
 
 ## Dejar de hacer
 

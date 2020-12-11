@@ -46,3 +46,17 @@ Nuestro único impedimento fue la falta de práctica a la hora de implementar ru
 ## Qué se va a hacer la semana próxima
 
 Establecimos un día fijo para reunirnos y trabajar bajo la modalidad pair programming. Durante la semana próxima nos vamos a encargar de finalizar las vistas de creación y edición de productos para posteriormente darle las funcionalidades HTTP correspondientes trabajando en equipo de forma sincrónica.
+
+# Reunión 11/12
+
+## Qué se hizo la semana pasada
+
+Se completaron las páginas de creación y edición de productos. Se dejaron listas las rutas get, post y put de dichas vistas para poder implementar las funcionalidades que correspondan en el siguiente Sprint.
+
+## Impedimentos con los cuales nos encontramos
+
+A la hora de probar que las rutas funcionaran nos encontrmaos con un inconveniente en el método PUT. La solución fue subir la línea de código `app.use(methodOverride("_method")); ` del archivo app.js para que la misma fuera leida antes de requerir las rutas.
+
+## Qué se va a hacer la semana próxima
+
+Durante la semana próxima vamos a empezar a trabajar con el Sprint 4 (el cual se lanza a partir del lunes 14/12).

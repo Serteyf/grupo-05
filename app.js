@@ -12,6 +12,8 @@ app.set("views", [
 
 app.use(express.static("public"));
 
+app.use(methodOverride("_method"));
+
 const mainRoutes = require("./routes/mainRoutes");
 const loginRoutes = require("./routes/loginRoutes");
 const registerRoutes = require("./routes/registerRoutes");
@@ -27,9 +29,6 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/product", productRoutes);
 app.use("/checkout", checkoutRoutes);
-
-// Middlewares
-app.use(methodOverride("_method"));
 
 app.use((req, res, next) => {
     res.status(404).render("not-found");

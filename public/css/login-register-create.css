@@ -86,13 +86,14 @@
     padding: 5px;
     background-color: #231f20;
     position: relative;
+    display: block;
+    width: 150px;
 }
 
 .register input::placeholder,
 .login input::placeholder,
 .create input::placeholder,
-.create textarea::placeholder
- {
+.create textarea::placeholder {
     color: #f9ef64;
 }
 

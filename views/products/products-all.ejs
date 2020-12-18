@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("partials/head-base.ejs", {title: "Página de producto"}) %>
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body>
+        <header><%- include("partials/header.ejs") %></header>
+
+        <main>
+            <section class="products-section">
+                <h2>Descubrí todos nuestros <b>productos</b></h2>
+
+                <% for (let i = 0; i < products.length; i++) { %> <%-
+                include("partials/product-card", { product: products[i] }) %> <%
+                } %>
+            </section>
+        </main>
+
+        <footer><%- include("partials/footer.ejs") %></footer>
+    </body>
+</html>

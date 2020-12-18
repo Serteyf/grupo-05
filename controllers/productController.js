@@ -1,4 +1,10 @@
+const getProducts = require("../utils/getProducts");
+
 productController = {
+    all: (req, res) => {
+        const products = getProducts();
+        res.render("products-all", { products: products });
+    },
     main: (req, res) => {
         res.render("product");
     },

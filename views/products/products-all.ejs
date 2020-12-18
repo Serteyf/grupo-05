@@ -10,10 +10,13 @@
         <main>
             <section class="products-section">
                 <h2>Descubrí todos nuestros <b>productos</b></h2>
+                <div class="product-gallery">
+
 
                 <% for (let i = 0; i < products.length; i++) { %> <%-
                 include("partials/product-card", { product: products[i] }) %> <%
                 } %>
+                </div>
             </section>
         </main>
 

@@ -220,6 +220,10 @@ header a {
     margin: 0px 5px;
 }
 
+.product-gallery {
+    flex-wrap: wrap;
+}
+
 .featured-gallery img,
 .suggested-gallery img,
 .product-gallery img {
@@ -459,6 +463,9 @@ footer h4 {
         justify-content: center;
         align-items: center;
         width: 50%;
+    }
+    .product-card {
+        width: 25%;
     }
 
     /* Se agrandan precios de featured */

@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "name": "Son Playstation 4 Slim 1TB",
+        "name": "Sony Playstation 4 Slim 1TB",
         "description": "Sony Playstation 4. No solo vas a poder descargar los mejores videojuegos y navegar en la web sin límite, sino que, gracias a su interconectividad global, también vas a tener la posibilidad de competir en línea con tus amigos y con personas de todas partes del mundo disfrutando de aventuras inolvidables.",
         "price": 62999,
         "discount": 5,
-        "image": "",
+        "image": "sony-ps4.jpg",
         "category": "consoles"
     },
     {
@@ -14,7 +14,7 @@
         "description": "Microsoft Xbox One S 1TB Standard. Disfruta de más de 1300 juegos fantásticos: desde los superéxitos y las sagas más populares hasta tres generaciones de títulos favoritos a los que puedes volver a jugar o que puedes experimentar por primera vez.",
         "price": 59999,
         "discount": 3,
-        "image": "",
+        "image": "microsoft-xbox-one-s.jpg",
         "category": "consoles"
     },
     {
@@ -23,7 +23,7 @@
         "description": "Nintendo Switch 32GB Standard. Nintendo Switch es una consola desmontable, que puede usarse en modo portátil, sobremesa o en TV; esto te brindará la posibilidad de utilizarla donde quieras y compartir sus controles.",
         "price": 65499,
         "discount": 0,
-        "image": "",
+        "image": "nintendo-switch.jpg",
         "category": "consoles"
     },
     {
@@ -32,7 +32,7 @@
         "description": "Sony Playstation 5. Experimenta cargas ultra rápidas gracias a una unidad de estado sólido (SSD) de alta velocidad, una inmersión más profunda con retroalimentación háptica, gatillos adaptivos y el nuevo audio 3D, además de una nueva generación de increíbles juegos de PlayStation",
         "price": 149999,
         "discount": 0,
-        "image": "",
+        "image": "sony-ps5-digital.jpg",
         "category": "consoles"
     },
     {
@@ -41,7 +41,7 @@
         "description": "Microsoft Xbox Series X. La Xbox más rápida y potente de la historia. Juega a miles de títulos de cuatro generaciones de consolas: todos los juegos tienen el mejor aspecto y se juegan mejor en Xbox Series X.",
         "price": 124999,
         "discount": 0,
-        "image": "",
+        "image": "microsoft-xbox-series-x.jpg",
         "category": "consoles"
     },
     {
@@ -50,7 +50,7 @@
         "description": "Joystick inalámbrico Sony Dualshock 4. Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort. Además, se destaca por su capacidad de detección de movimientos en un determinado espacio, que te permite una mayor interacción con la pantalla.",
         "price": 9420,
         "discount": 10,
-        "image": "",
+        "image": "controller-sony-dualshock-4.jpg",
         "category": "accesories"
     },
     {
@@ -59,7 +59,7 @@
         "description": "Joystick inalámbrico Nintendo Joy-Con. Con los nuevos mandos Joy-Con para Nintendo Switch tendrás flexibilidad total a la hora de jugar y descubrirás nuevas formas de interactuar que transformarán por completo tus experiencias de juego.",
         "price": 36700,
         "discount": 5,
-        "image": "",
+        "image": "controller-nintendo-joycon.jpg",
         "category": "accesories"
     },
     {
@@ -68,7 +68,7 @@
         "description": "Joystick inalámbrico Microsoft Xbox One. Tecnología inalámbrica de Xbox y Bluetooth: Incluye tecnología inalámbrica de Xbox y Bluetooth para poder jugar sin cables en consolas compatibles, PCs con Windows 10, teléfonos Android y táblets.",
         "price": 10800,
         "discount": 2,
-        "image": "",
+        "image": "controller-microsoft-xboxone.jpg",
         "category": "accesories"
     },
     {
@@ -77,7 +77,7 @@
         "description": "Cyberpunk 2077 es una historia de acción y aventuras en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Te pondrás en la piel de V, un mercenario que persigue un implante único: el secreto de la inmortalidad.",
         "price": 8499,
         "discount": 0,
-        "image": "",
+        "image": "cyberpunk2077-ps4.jpg",
         "category": "games"
     },
     {
@@ -86,7 +86,7 @@
         "description": "Vuelve la emblemática serie Black Ops con Call of Duty®: Black Ops Cold War, la secuela directa de uno de los títulos favoritos de los fans, Call of Duty®: Black Ops. Black Ops Cold War transportará a los jugadores al corazón de la volátil batalla geopolítica de la Guerra Fría, a principios de los 80.",
         "price": 9299,
         "discount": 0,
-        "image": "",
+        "image": "cod-blackops-coldwar.jpg",
         "category": "games"
     },
     {
@@ -95,7 +95,7 @@
         "description": "The Legend of Zelda: Breath of the Wild es un videojuego exclusivo de Nintendo, desarrollado, producido y distribuido por la misma compañía, para las videoconsolas Wii U y Nintendo Switch.",
         "price": 29990,
         "discount": 0,
-        "image": "",
+        "image": "zelda-botw.jpg",
         "category": "games"
     },
     {
@@ -104,7 +104,7 @@
         "description": "Esta aventura 3D de Mario de estilo sandbox (la primera desde Super Mario 64 en 1997 y Super Mario Sunshine para Game Cube en 2002) está llena a reventar de secretos y sorpresas. Y con los nuevos movimientos de Mario, como lanzamiento de sombrero, Salto Sombrero o captura, vivirás experiencias de juego como no has conocido nunca en un juego de Mario.",
         "price": 8999,
         "discount": 0,
-        "image": "",
+        "image": "mario-odyssey.jpg",
         "category": "games"
     },
     {
@@ -113,7 +113,7 @@
         "description": "Gana con EA SPORTS™ FIFA 21 con nuevas maneras de jugar en equipo y expresar cómo eres en la calle y en el estadio. Desarrollado con Frostbite™, FIFA 21 eleva el juego con nuevas características que te permiten disfrutar de victorias aún mayores en VOLTA FOOTBALL y FIFA Ultimate Team™. Siente un nuevo nivel de realismo del juego que te recompensa por tu creatividad y control. ",
         "price": 7980,
         "discount": 2,
-        "image": "",
+        "image": "fifa21.jpg",
         "category": "games"
     },
     {
@@ -122,7 +122,7 @@
         "description": "Nintendo Super NES Classic Edition. Con tu consola Super NES Classic Edition tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
         "price": 54999,
         "discount": 0,
-        "image": "",
+        "image": "nes-classic.jpg",
         "category": "retro"
     },
     {
@@ -131,7 +131,7 @@
         "description": "Consola Sega Genesis Mini 512MB. La icónica consola SEGA Mega Drive que definió a una generación de jugadores vuelve de forma delicada y miniaturizada. La consola SEGA Mega Drive Mini viene con 42 legendarios juegos entre los que se que incluyen: Ecco the Dolphin, Castlevania: Bloodlines, Space Harrier 2, Shining Force, Dr. Robotnik´s Mean Bean Machine, Toe Jam & Earl, Comix Zone, Sonic the Hedgehog, Altered Beast, Gunstar Heroes y muchos más…",
         "price": 15979,
         "discount": 8,
-        "image": "",
+        "image": "sega-mini.jpg",
         "category": "retro"
     },
     {
@@ -140,7 +140,7 @@
         "description": "Pokémon Yellow Version: Special Pikachu Edition ya está disponible para las consolas de la familia Nintendo 3DS. El juego sigue siendo fiel al original, completo con pixel art monocromático y música de fondo de 4 bits, por lo que puedes sentir como si estuvieras experimentando el juego tal y como era en ese entonces.",
         "price": 48549,
         "discount": 0,
-        "image": "",
+        "image": "nintendo-new3ds.jpg",
         "category": "consoles"
     }
 ]

@@ -5,7 +5,7 @@ productController = {
         const products = getProducts();
         res.render("products-all", { products: products });
     },
-    main: (req, res) => {
+    detail: (req, res) => {
         res.render("product");
     },
     showCreate: (req, res) => {

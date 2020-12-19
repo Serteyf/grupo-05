@@ -1,11 +1,13 @@
-<div class="product-card">
-    <p class="product-card-header"><%= product.name %></p>
-    <img
-        src="/images/products/<%= product.image %>"
-        alt="<%= product.name %>"
-    />
-    <div class="product-card-price">
-        <i class="fas fa-shopping-cart"></i>
-        <p><%= product.price %></p>
-    </div>
-</div>
+<article class="product-card">
+    <a href="/products/<%= product.id %>">
+        <p class="product-card-header"><%= product.name %></p>
+        <img
+            src="/images/products/<%= product.image %>"
+            alt="<%= product.name %>"
+        />
+        <div class="product-card-price">
+            <i class="fas fa-shopping-cart"></i>
+            <p><%= product.price %></p>
+        </div>
+    </a>
+</article>

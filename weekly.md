@@ -30,8 +30,6 @@ app.set("views", [
 
 Durante la semana próxima vamos a estar trabajando en la página de creación y edición de productos, una vez que hayamos visto la unidad relacionada con formularios y la aplicación de los distintos métodos HTTP.
 
-</br>
-
 # Reunión 04/12
 
 ## Qué se hizo la semana pasada
@@ -60,3 +58,18 @@ A la hora de probar que las rutas funcionaran nos encontrmaos con un inconvenien
 ## Qué se va a hacer la semana próxima
 
 Durante la semana próxima vamos a empezar a trabajar con el Sprint 4 (el cual se lanza a partir del lunes 14/12).
+
+# Reunión 11/12
+
+## Qué se hizo la semana pasada
+
+Recibimos las indicaciones para completar el nuevo Sprint (JSON y HTTP). Creamos nuestra base de datos de productos y agregamos las imagenes correspondientes a cada uno.
+Durante la reunión semanal hicimos pair programming para lograr entre todos leer y mostrar todos los productos de la base de datos en el sitio web.
+
+## Impedimentos con los cuales nos encontramos
+
+De momento no nos encontramos con ninguna situación que nos haya impedido continuar con las indicaciones dadas. Únicamente surgieron temas a resolver en cuanto al CSS cuando intentamos mostrar en pantalla todos los productos obtenidos de la base de datos en tarjetas de producto, pero es un inconveniente cuya resolución no debería representar mayores esfuerzos.
+
+## Qué se va a hacer la semana próxima
+
+Durante la semana entrante vamos a trabajar en implementar los métodos de escritura, edición y borrado de productos en los controladores correspondientes.

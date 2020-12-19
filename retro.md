@@ -1,6 +1,6 @@
 # Retrospectiva Grupo 05 - Level Up Games
 
-# Sprint 2
+# Sprint 1
 
 ## Comenzar a hacer
 
@@ -34,7 +34,7 @@ Durante la puesta en común no logramos encontrar acciones que consideremos nece
 
 En la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos innecesariamente en completar las tareas dadas. De ahora en más vamos a intentar aprovechar mejor el tiempo estipulado para cada sprint.
 
-# Sprint 3
+# Sprint 2
 
 ## Comenzar a hacer
 
@@ -54,8 +54,26 @@ Durante la puesta en común no logramos encontrar acciones que consieremos neces
 
 ## Dejar de hacer
 
-### Apurarnos en los plazos de entrega
-
 Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos apuramos nuevamente en completar las tareas dadas. Esto nos hizo correr un poco con los tiempos, pero a la vez nos dio más tiempo para avanzar en otras cuestiones.
 
-..
+# Sprint 3
+
+## Comenzar a hacer
+
+...
+
+## Hacer más
+
+...
+
+## Continuar haciendo
+
+...
+
+## Hacer menos
+
+...
+
+## Dejar de hacer
+
+...

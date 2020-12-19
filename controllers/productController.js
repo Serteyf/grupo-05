@@ -6,7 +6,11 @@ productController = {
         res.render("products-all", { products: products });
     },
     detail: (req, res) => {
-        res.render("product");
+        const products = getProducts();
+        const selectedProduct = products.find((product) => {
+            return req.params.id == product.id;
+        });
+        res.render("product", { product: selectedProduct });
     },
     showCreate: (req, res) => {
         res.render("product-create");

@@ -13,13 +13,12 @@
             <section class="product">             
                 
                 <div class="product-img">
-                    <img src="/images/product-crash_bandicoot.jpeg" alt="Foto de producto">
+                    <img src="/images/products/<%= product.image %>" alt="Foto de producto">
                 </div>
-
                 <div class="product-info">
-                    <h2>Nombre <b>Producto</b></h2>
+                    <h2><%= product.name %></h2>
                     <p class="product-code">Código: 983746</p>
-                    <p class="product-price">$8.999</p>
+                    <p class="product-price"><%= product.price %></p>
                     <span>Cantidad</span>
                     <select name="quantity" id="quantity">
                         <option value="1">1</option>
@@ -38,7 +37,7 @@
 
                 <div class="product-description">
                     <h4>DESCRIPCION</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus labore recusandae veniam at, quam numquam blanditiis ut quae ducimus deserunt, error eveniet facilis voluptate. Eaque nam facilis asperiores hic dolor.</p>
+                    <p><%= product.description %></p>
                 </div>
             </section>
 

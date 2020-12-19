@@ -1,16 +1,23 @@
 const getProducts = require("../utils/getProducts");
+const toThousand = require("../utils/toThousand");
 
 productController = {
     all: (req, res) => {
         const products = getProducts();
-        res.render("products-all", { products: products });
+        res.render("products-all", {
+            products: products,
+            thousand: toThousand,
+        });
     },
     detail: (req, res) => {
         const products = getProducts();
         const selectedProduct = products.find((product) => {
             return req.params.id == product.id;
         });
-        res.render("product", { product: selectedProduct });
+        res.render("product", {
+            product: selectedProduct,
+            thousand: toThousand,
+        });
     },
     showCreate: (req, res) => {
         res.render("product-create");

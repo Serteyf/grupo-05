@@ -6,7 +6,8 @@
         "price": 62999,
         "discount": 5,
         "image": "sony-ps4.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "price": 59999,
         "discount": 3,
         "image": "microsoft-xbox-one-s.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "price": 65499,
         "discount": 0,
         "image": "nintendo-switch.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "price": 149999,
         "discount": 0,
         "image": "sony-ps5-digital.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "price": 124999,
         "discount": 0,
         "image": "microsoft-xbox-series-x.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "price": 9420,
         "discount": 10,
         "image": "controller-sony-dualshock-4.jpg",
-        "category": "accesories"
+        "category": "accesories",
+        "outstanding": true
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "price": 36700,
         "discount": 5,
         "image": "controller-nintendo-joycon.jpg",
-        "category": "accesories"
+        "category": "accesories",
+        "outstanding": true
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "price": 10800,
         "discount": 2,
         "image": "controller-microsoft-xboxone.jpg",
-        "category": "accesories"
+        "category": "accesories",
+        "outstanding": true
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "price": 8499,
         "discount": 0,
         "image": "cyberpunk2077-ps4.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": true
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@
         "price": 9299,
         "discount": 0,
         "image": "cod-blackops-coldwar.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": true
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@
         "price": 29990,
         "discount": 0,
         "image": "zelda-botw.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": true
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@
         "price": 8999,
         "discount": 0,
         "image": "mario-odyssey.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": true
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@
         "price": 7980,
         "discount": 2,
         "image": "fifa21.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": true
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@
         "price": 54999,
         "discount": 0,
         "image": "nes-classic.jpg",
-        "category": "retro"
+        "category": "retro",
+        "outstanding": true
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@
         "price": 15979,
         "discount": 8,
         "image": "sega-mini.jpg",
-        "category": "retro"
+        "category": "retro",
+        "outstanding": true
     },
     {
         "id": 16,
@@ -141,6 +156,7 @@
         "price": 48549,
         "discount": 0,
         "image": "nintendo-new3ds.jpg",
-        "category": "consoles"
+        "category": "consoles",
+        "outstanding": true
     }
 ]

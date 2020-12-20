@@ -231,8 +231,6 @@ header a {
     width: 85%;
 }
 
-.featured-item,
-.suggested-item,
 .product-card {
     display: flex;
     flex-direction: column;
@@ -241,17 +239,17 @@ header a {
     width: 50%;
 }
 
-.featured-item:hover,
-.featured-item-desktop:hover,
-.suggested-item:hover,
-.suggested-item-desktop:hover {
+.product-card a {
+    text-decoration: none;
+}
+
+.product-card:hover,
+.product-card-desktop:hover {
     opacity: 85%;
     transition: all 1s;
     transform: scale(1.03);
 }
 
-.featured-header,
-.suggested-header,
 .product-card-header {
     margin-top: 24px;
     background-color: #000000;
@@ -260,10 +258,9 @@ header a {
     width: 85%;
     padding-left: 3%;
     font-size: 15px;
+    text-align: center;
 }
 
-.featured-price,
-.suggested-price,
 .product-card-price {
     width: 80%;
     margin-top: 10px;
@@ -272,8 +269,6 @@ header a {
     align-items: center;
 }
 
-.featured-price p,
-.suggested-price p,
 .product-card-price p {
     font-weight: 700;
     color: #91d2be;
@@ -281,8 +276,7 @@ header a {
 
 /* Featured items que se esconden en version mobile */
 
-.featured-item-desktop,
-.suggested-item-desktop {
+.product-card-desktop {
     display: none;
 }
 
@@ -453,32 +447,29 @@ footer h4 {
     }
 }
 
-/* Featured items que se muestran solo en pantallas > 768px */
+/* Items que se muestran solo en pantallas > 768px */
 
 @media (min-width: 768px) {
-    .featured-item-desktop,
-    .suggested-item-desktop {
+    .product-card-desktop {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 25%;
     }
     .product-card {
         width: 25%;
     }
 
-    /* Se agrandan precios de featured */
+    /* Se agrandan precios de cards */
 
-    .featured-price p,
-    .suggested-price p {
+    .product-card-price p {
         font-size: 18px;
     }
 }
 
 @media (min-width: 1024px) {
-    .featured-price p,
-    .suggested-price p {
+    .product-card-price p {
         font-size: 20px;
     }
 }
@@ -486,13 +477,11 @@ footer h4 {
 /* Se agrandan iconos y fonts a medida que crece el width de la pantalla */
 
 @media (min-width: 1024px) {
-    .featured-price,
-    .suggested-price {
+    .product-card-price {
         padding: 0px 15%;
     }
 
-    .featured-header,
-    .suggested-header {
+    .product-card-header {
         font-size: 18px;
     }
 

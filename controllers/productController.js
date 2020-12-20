@@ -14,8 +14,16 @@ productController = {
         const selectedProduct = products.find((product) => {
             return req.params.id == product.id;
         });
+
+        const suggestedProducts = products.filter(
+            (product) => product.category == selectedProduct.category
+        );
+
+        suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct), 1);
+
         res.render("product", {
             product: selectedProduct,
+            suggestedProducts: suggestedProducts,
             thousand: toThousand,
         });
     },

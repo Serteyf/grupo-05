@@ -49,17 +49,26 @@
             
                 <div class="suggested-gallery">
                     <div class="suggested-item">
-                        <p class="suggested-header">PS4 / XBOX One</p>
-                        <img src="/images/suggested-games-fallguys.jpg" alt="Fall Guys 2" />
+                        <p class="suggested-header"><%= suggestedProducts[0].name %></p>
+                        <img src="/images/products/<%= suggestedProducts[0].image %>" alt="Fall Guys 2" />
                         <div class="suggested-price">
                             <i class="fas fa-shopping-cart"></i>
-                            <p>$3.499</p>
+                            <p><%= suggestedProducts[0].price %></p>
                         </div>
                     </div>
             
                     <div class="suggested-item">
-                        <p class="suggested-header">Switch</p>
-                        <img src="/images/suggested-games-marioodyssey.jpg" alt="Mario Galaxy 2" />
+                        <p class="suggested-header"><%= suggestedProducts[1].name %></p>
+                        <img src="/images/products/<%= suggestedProducts[1].image %>" alt="Mario Galaxy 2" />
+                        <div class="suggested-price">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p><%= suggestedProducts[0].price %></p>
+                        </div>
+                    </div>
+
+                    <div class="suggested-item-desktop">
+                        <p class="suggested-header"><%= suggestedProducts[2].name %></p>
+                        <img src="/images/products/<%= suggestedProducts[2].image %>" alt="Mario Galaxy 2" />
                         <div class="suggested-price">
                             <i class="fas fa-shopping-cart"></i>
                             <p>$3.499</p>
@@ -67,20 +76,11 @@
                     </div>
 
                     <div class="suggested-item-desktop">
-                        <p class="suggested-header">Switch</p>
-                        <img src="/images/suggested-games-luigismansion.jpg" alt="Mario Galaxy 2" />
+                        <p class="suggested-header"><%= suggestedProducts[3].name %></p>
+                        <img src="/images/products/<%= suggestedProducts[3].image %>" alt="Mario Galaxy 2" />
                         <div class="suggested-price">
                             <i class="fas fa-shopping-cart"></i>
-                            <p>$3.499</p>
-                        </div>
-                    </div>
-
-                    <div class="suggested-item-desktop">
-                        <p class="suggested-header">PS4</p>
-                        <img src="/images/suggested-games-ratchetandclank.jpg" alt="Mario Galaxy 2" />
-                        <div class="suggested-price">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p>$3.499</p>
+                            <p><%= suggestedProducts[3].price %></p>
                         </div>
                     </div>
 

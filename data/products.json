@@ -158,5 +158,35 @@
         "image": "nintendo-new3ds.jpg",
         "category": "consoles",
         "outstanding": true
+    },
+    {
+        "id": 17,
+        "name": "BANDAI Tamagotchi Original",
+        "description": "Tamagotchi, la mascota original de realidad virtual. Aliméntala y juega con él. Comprueba su salud. Levanta tu Tamagotchi de huevo a adulto y mira qué personaje obtienes.Todo depende de cómo cuidas a tu mascota!",
+        "price": 2149,
+        "discount": 0,
+        "image": "bandai-tamagotchi.jpg",
+        "category": "retro",
+        "outstanding": false
+    },
+    {
+        "id": 18,
+        "name": "Goolsky RS-99 Tetris",
+        "description": "Goolsky RS-99 Consola de Juegos clásicos Juego de Bloques Tetris Juego de Rompecabezas Juegos de Mano Máquina de Juegos de Mano para niños Incorporados 26 Tipos de Juegos.",
+        "price": 1499,
+        "discount": 0,
+        "image": "goolsky-tetris.jpg",
+        "category": "retro",
+        "outstanding": false
+    },
+    {
+        "id": 18,
+        "name": "Atari Flashback 9",
+        "description": "¡La clásica se ha renovado! Ahora con 105 juegos retro que definen su generación y como novedad ahora es compatible con populares títulos de KONAMI como Frogger, Amidar, Time Pilot, Super Cobra o Tutankham. Además incluye los clásicos* éxtiso de la atari 2600 como: Asteroids, Pong, Centipede, Breakout o Missile Command., la Atari Flashback 8 es una consola Retro indispensable.",
+        "price": 32799,
+        "discount": 0,
+        "image": "atari-flashback.jpg",
+        "category": "retro",
+        "outstanding": false
     }
 ]

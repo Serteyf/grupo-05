@@ -18,7 +18,7 @@
                 <div class="product-info">
                     <h2><%= product.name %></h2>
                     <p class="product-code">Código: 000<%= product.id %></p>
-                    <p class="product-price"><%= thousand(product.price) %></p>
+                    <p class="product-price">$<%= thousand(product.price) %></p>
                     <span>Cantidad</span>
                     <select name="quantity" id="quantity">
                         <option value="1">1</option>

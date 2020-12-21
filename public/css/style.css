@@ -239,7 +239,8 @@ header a {
     width: 50%;
 }
 
-.product-card a {
+.product-card a,
+.product-card-desktop a {
     text-decoration: none;
 }
 

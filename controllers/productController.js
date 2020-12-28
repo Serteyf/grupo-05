@@ -1,5 +1,6 @@
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
+const fs = require("fs");
 
 productController = {
     all: (req, res) => {
@@ -33,8 +34,22 @@ productController = {
     showEdit: (req, res) => {
         res.render("product-edit");
     },
-    create: (req, res) => {
-        res.send("Producto creado!");
+    create: (req, res, next) => {
+       const products = getProducts();
+       const newProduct = {
+            id: Number(products.length + 1),
+            name: req.body.name,
+            description: req.body.description,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
+            image: req.files[0].filename,
+            category: req.body.category
+       }
+       products.push(newProduct);
+       const productsJSON = JSON.stringify(products, null, 4);
+       fs.writeFileSync( __dirname + "/../data/products.json",
+        productsJSON);
+        res.redirect("/products/" + newProduct.id);
     },
     edit: (req, res) => {
         res.send("Producto editado!");

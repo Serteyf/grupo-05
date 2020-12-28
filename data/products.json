@@ -188,5 +188,45 @@
         "image": "atari-flashback.jpg",
         "category": "retro",
         "outstanding": false
+    },
+    {
+        "id": 20,
+        "name": "Prueba",
+        "description": "Prueba",
+        "price": 2352,
+        "discount": 3253,
+        "category": "Juegos"
+    },
+    {
+        "id": 21,
+        "name": "Prueba",
+        "description": "Prueba",
+        "price": 2352,
+        "discount": 3253,
+        "category": "Juegos"
+    },
+    {
+        "id": 22,
+        "name": "Prueba",
+        "description": "Prueba",
+        "price": 6634,
+        "discount": 6343563,
+        "category": "Juegos"
+    },
+    {
+        "id": 23,
+        "name": "Prueba",
+        "description": "Prueba",
+        "price": 34332,
+        "discount": 432324,
+        "category": "Juegos"
+    },
+    {
+        "id": 24,
+        "name": "Prueba",
+        "description": "Prueba",
+        "price": 34332,
+        "discount": 432324,
+        "category": "Juegos"
     }
 ]

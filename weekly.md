@@ -59,7 +59,7 @@ A la hora de probar que las rutas funcionaran nos encontrmaos con un inconvenien
 
 Durante la semana próxima vamos a empezar a trabajar con el Sprint 4 (el cual se lanza a partir del lunes 14/12).
 
-# Reunión 11/12
+# Reunión 18/12
 
 ## Qué se hizo la semana pasada
 

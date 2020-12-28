@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("partials/head-base.ejs", {title: "Eliminar producto"}) %>
+        <link rel="stylesheet" href="/css/login-register-create.css" />
+
+    </head>
+    <body>
+        <header><%- include("partials/header.ejs") %></header>
+        <main class="error-404">
+        <section class="create-back">
+            <div class="create">
+                <h1>¿Querés eliminar el producto <%= product.name %> ?</h1>
+                <form
+            action="/products/delete/<%= product.id %>?_method=DELETE"
+            method="POST"
+        >
+          <button type="submit">Eliminar producto</button>
+        </main>
+        <footer><%- include("partials/footer.ejs") %></footer>
+    </body>
+</html>

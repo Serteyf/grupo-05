@@ -12,7 +12,7 @@
             <section class="create-back">
                 <div class="create">
                     <h2>CREAR PRODUCTO</h2>
-                    <form action="/product/create" method="POST">
+                    <form action="/products/create" method="POST">
                         <input
                             class="caja"
                             type="text"
@@ -31,6 +31,12 @@
                             placeholder="Precio"
                             name="price"
                         />
+                        <input 
+                            class="caja" 
+                            type="number" 
+                            placeholder="Descuento" 
+                            name="discount" 
+                        />
                         <select
                             class="caja"
                             type="text"
@@ -45,7 +51,7 @@
                             <input
                                 class="photo"
                                 type="file"
-                                name="photo"
+                                name="image"
                                 placeholder="Foto producto"
                             />
                         </label>

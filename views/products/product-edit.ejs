@@ -12,42 +12,51 @@
             <section class="create-back">
                 <div class="create">
                     <h2>EDITAR PRODUCTO</h2>
-                    <form action="/product/edit?_method=PUT"
+                    <form action="/products/edit/<%= product.id %>?_method=PUT"
                     method="POST">
                         <input
                             class="caja"
                             type="text"
-                            value="Nombre producto"
+                            value="<%= product.name %>"
                             name="name"
                         />
                         <input
                         type="text" 
                         class="caja"   
-                        value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus labore recusandae veniam at, quam numquam blanditiis ut quae ducimus deserunt, error eveniet facilis voluptate. Eaque nam facilis asperiores hic dolor."
+                        value="<%= product.description %>"
                         name="description"
                         ></input>
                         <input
                             class="caja"
                             type="text"
-                            value="$8.999"
+                            value="$<%= product.price %>"
                             name="price"
                         />
-                        <select
+                        <input 
+                        class="caja" 
+                        type="number" 
+                        value="<%= product.discount %>"
+                        name="discount" 
+                    />
+
+                     <select
                             class="caja"
                             type="text"
                             name="category"
                         />
-                        <option value="Consolas">Consolas</option>
-                        <option value="Juegos">Juegos</option>
-                        <option value="Accesorios">Accesorios</option>
+                        <option value="consoles" <%= product.category == "consoles" ? "selected" : "" %> >Consolas</option>
+                        <option value="accesories" <%= product.category == "accesories" ? "selected" : "" %>>Accesorios</option>
+                        <option value="games" <%= product.category == "games" ? "selected" : "" %>>Juegos</option>
+
                     </select>
                         <label class="cartel" for="photo"
                             >Imagen de producto
                             <input
                                 class="photo"
                                 type="file"
-                                name="photo"
+                                name="image"
                                 placeholder="Foto producto"
+                                value="<%= product.image %>"
                             />
                         </label>
                         <button type="submit">EDITAR</button>

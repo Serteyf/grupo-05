@@ -73,3 +73,20 @@ De momento no nos encontramos con ninguna situación que nos haya impedido conti
 ## Qué se va a hacer la semana próxima
 
 Durante la semana entrante vamos a trabajar en implementar los métodos de escritura, edición y borrado de productos en los controladores correspondientes.
+
+# Reunión 28/12
+
+## Qué se hizo la semana pasada
+- Creación de ruta y controlador "create" para poder cargar nuevos productos en la base de datos.
+- Creación de ruta y controlador "edit" para poder editar productos de la base de datos.
+- Instalación de multer
+- Corrección de formularios en las vistas.
+
+## Impedimentos con los cuales nos encontramos
+- De momento multer no permite subir ni editar las imagenes.
+- En la vista de edición, al traer los datos del producto al formulario, sólo se visualiza la primera palabra del campo en cuestión.
+
+## Qué se va a hacer la semana próxima
+Solucionar inconvenientes con multer y con la vista de edición de productos.
+
+

@@ -58,7 +58,9 @@ productController = {
         };
         products.push(newProduct);
         const productsJSON = JSON.stringify(products, null, 4);
+
         fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);
+
         res.redirect("/products/" + newProduct.id);
     },
     edit: (req, res) => {
@@ -102,9 +104,9 @@ productController = {
         const selectedProduct = products.find((product) => {
             return product.id == req.params.id;
         });
-        
+
         products.splice(products.indexOf(selectedProduct), 1);
-        
+
         const productsJSON = JSON.stringify(products, null, 4);
 
         fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);

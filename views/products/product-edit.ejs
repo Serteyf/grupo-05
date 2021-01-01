@@ -13,7 +13,7 @@
                 <div class="create">
                     <h2>EDITAR PRODUCTO</h2>
                     <form action="/products/edit/<%= product.id %>?_method=PUT"
-                    method="POST">
+                        enctype="multipart/form-data" method="POST">
                         <input
                             class="caja"
                             type="text"
@@ -50,7 +50,7 @@
                         <option value="retro" <%= product.category == "retro" ? "selected" : "" %>>Retro</option>
 
                     </select>
-                        <label class="cartel" for="photo"
+                        <label class="cartel" for="image"
                             >Imagen de producto
                             <input
                                 class="photo"

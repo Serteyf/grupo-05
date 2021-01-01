@@ -60,7 +60,7 @@ Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos
 
 ## Comenzar a hacer
 
-...
+Implementar las features más importantes (en este caso, creación, edición y borrado de productos) de forma conjunta mediante pair programming para que todos estemos al tanto del funcionamiento del código y cómo fue pensado el mismo.
 
 ## Hacer más
 
@@ -68,7 +68,8 @@ Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos
 
 ## Continuar haciendo
 
-...
+Mantener la comunicación frecuente por medio de los canales habituales y notificar de cualquier modificación o progreso que se haya realizado de forma individual. 
+Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
 
 ## Hacer menos
 
@@ -76,4 +77,4 @@ Al igual que en la primera etapa no tuvimos en claro las fechas de entrega y nos
 
 ## Dejar de hacer
 
-...
+Dejar de postergar las restrospectivas y realizarlas al principio de cada Sprint como debería ser, previo a planear y ejecutar el resto de las tareas solicitadas.

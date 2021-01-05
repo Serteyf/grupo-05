@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "Usuario Administrador",
+        "user": "admin",
+        "email": "admin@levelup.net",
+        "address": "Domicilio de admin",
+        "admin": true,
+        "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
+    },
+    {
+        "id": 2,
+        "name": "Usuario Prueba",
+        "user": "user",
+        "email": "user@levelup.net",
+        "address": "Domicilio de usuario",
+        "pass": "$2b$12$mSREup5KTn6Q43zGabR4Ruf2xD7IrgfH.2aebjPXxRVcYetDZ.EUy"
+    }
+]

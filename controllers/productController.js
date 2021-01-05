@@ -75,7 +75,7 @@ productController = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: selectedProduct.image,
+            image: req.files[0].filename,
             category: req.body.category,
         };
 

@@ -6,8 +6,7 @@
         "price": 62999,
         "discount": 5,
         "image": "sony-ps4.jpg",
-        "category": "consoles",
-        "outstanding": true
+        "category": "consoles"
     },
     {
         "id": 2,
@@ -156,8 +155,7 @@
         "price": 48549,
         "discount": 0,
         "image": "nintendo-new3ds.jpg",
-        "category": "consoles",
-        "outstanding": true
+        "category": "consoles"
     },
     {
         "id": 17,

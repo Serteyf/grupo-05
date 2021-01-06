@@ -65,6 +65,12 @@
     align-items: center;
 }
 
+.admin-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /* Se adapta a medidas superiores a 768px */
 @media (min-width: 768px) {
     .product {

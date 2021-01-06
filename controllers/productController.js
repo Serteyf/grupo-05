@@ -56,7 +56,9 @@ productController = {
             image: req.files[0].filename,
             category: req.body.category,
         };
+
         products.push(newProduct);
+
         const productsJSON = JSON.stringify(products, null, 4);
 
         fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);
@@ -75,7 +77,7 @@ productController = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: req.files[0].filename,
+            image: req.files[0] == undefined ? selectedProduct.image : req.files[0].filename,
             category: req.body.category,
         };
 

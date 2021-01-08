@@ -1,13 +1,15 @@
 <article class="product-card">
+    <div class="product-card-header">
+        <p><%= product.name %></p>
+    </div>
     <a href="/products/<%= product.id %>">
-        <p class="product-card-header"><%= product.name %></p>
         <img
             src="/images/products/<%= product.image %>"
             alt="<%= product.name %>"
         />
-        <div class="product-card-price">
-            <i class="fas fa-shopping-cart"></i>
-            <p>$<%= thousand(product.price) %></p>
-        </div>
     </a>
+    <div class="product-card-price">
+        <i class="fas fa-shopping-cart"></i>
+        <p>$<%= thousand(product.price) %></p>
+    </div>
 </article>

@@ -89,4 +89,17 @@ Durante la semana entrante vamos a trabajar en implementar los métodos de escri
 ## Qué se va a hacer la semana próxima
 Solucionar inconvenientes con multer y con la vista de edición de productos.
 
+# Reunión 08/01
 
+## Qué se hizo la semana pasada
+- JSON de usuarios.
+- Modificaciones en controlador edit (multer).
+- Botones de edit y delete en la vista de detalle de producto.
+- Cambios en el CSS de tarjetas de producto.
+- Se mejoró el código de los productos sugeridos dentro de la vista de detalle de producto.
+
+## Impedimentos con los cuales nos encontramos
+- Nos fuimos encontrando con pequeños impedimentos en CSS que logramos ir superando en conjunto haciendo pair programming.
+
+## Qué se va a hacer la semana próxima
+- Comenzar con el Sprint #5 de Middlewares.

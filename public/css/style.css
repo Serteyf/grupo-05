@@ -546,6 +546,11 @@ footer h4 {
     .menu-icon {
         display: none !important;
     }
+
+    .login-checkout {
+        position: absolute;
+        right: -30px;
+    }
   
     nav {
         position: relative;
@@ -562,7 +567,7 @@ footer h4 {
     nav ul li {
         display: inline-flex;
     }
-}
+    }
 
 @media (min-width: 1024px) {
     nav ul li a {

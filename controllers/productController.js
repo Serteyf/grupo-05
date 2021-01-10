@@ -10,6 +10,21 @@ productController = {
             thousand: toThousand,
         });
     },
+    byCategory: (req, res) => {
+        const products = getProducts();
+        const categoryResults = products.filter(
+            (product) => product.category == req.params.category
+        );
+
+        if (categoryResults == "") {
+            return res.render('not-found')
+        }
+
+        res.render("products-all", {
+            products: categoryResults,
+            thousand: toThousand,
+        });
+    },
     detail: (req, res) => {
         const products = getProducts();
         const selectedProduct = products.find((product) => {
@@ -77,7 +92,10 @@ productController = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: req.files[0] == undefined ? selectedProduct.image : req.files[0].filename,
+            image:
+                req.files[0] == undefined
+                    ? selectedProduct.image
+                    : req.files[0].filename,
             category: req.body.category,
         };
 

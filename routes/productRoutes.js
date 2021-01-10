@@ -23,6 +23,8 @@ router.get("/create", productController.showCreate);
 
 router.post("/create", upload.any(), productController.create);
 
+router.get("/category/:category", productController.byCategory);
+
 router.get("/edit/:id", productController.showEdit);
 
 router.put("/edit/:id", upload.any(), productController.edit);

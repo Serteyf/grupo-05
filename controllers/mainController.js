@@ -1,5 +1,6 @@
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
+const replaceAll = require("../utils/replaceAll");
 
 mainController = {
     home: (req, res) => {
@@ -11,12 +12,15 @@ mainController = {
     },
     search: (req, res) => {
         const products = getProducts();
-        let keyword = req.query.buscar;
+        let keyword = req.query.buscar.toLowerCase();
+        let keywordReplace = replaceAll(keyword);
         let results = [];
 
         for (let i = 0; i < products.length; i++) {
+            const product = products[i].name.toLowerCase();
+            const productReplace = replaceAll(product);
             if (
-                products[i].name.toLowerCase().includes(keyword.toLowerCase())
+                productReplace.includes(keywordReplace)
             ) {
                 results.push(products[i]);
             }

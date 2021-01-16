@@ -18,8 +18,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 
 const mainRoutes = require("./routes/mainRoutes");
-const loginRoutes = require("./routes/loginRoutes");
-const registerRoutes = require("./routes/registerRoutes");
+const usersRoutes = require("./routes/usersRoutes");
 const productRoutes = require("./routes/productRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 
@@ -28,8 +27,7 @@ app.listen(3000, () => {
 });
 
 app.use("/", mainRoutes);
-app.use("/login", loginRoutes);
-app.use("/register", registerRoutes);
+app.use("/users", usersRoutes);
 app.use("/products", productRoutes);
 app.use("/checkout", checkoutRoutes);
 

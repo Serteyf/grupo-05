@@ -4,45 +4,54 @@ const bcrypt = require("bcrypt");
 
 usersController = {
     showRegister: (req, res) => {
-        res.render("register")
+        res.render("register");
     },
-    register: (req, res) => {
+    register: (req, res, next) => {
         const users = getUsers();
 
         const lastUserIndex = users.length - 1;
         const lastUser = users[lastUserIndex];
         const newId = lastUser ? lastUser.id + 1 : 1;
 
-        if (req.body.password2) {
+        if (req.body.password2 != req.body.password) {
+            res.redirect("/users/register");
+        } else {
             delete req.body.password2;
+
+            const newUser = {
+                id: newId,
+                ...req.body,
+                avatar: req.files[0].filename,
+                password: bcrypt.hashSync(req.body.password, 12),
+            };
+
+            users.push(newUser);
+            saveUsers(users);
+
+            res.redirect("/");
         }
-
-        const newUser = {
-            id: newId,
-            ...req.body,
-            avatar: req.files[0].filename,
-            pass: bcrypt.hashSync(req.body.password, 12),
-        };
-
-        users.push(newUser);
-        saveUsers(users);
-
-        res.redirect("/");
     },
     showLogin: (req, res) => {
-        res.render("login")
+        res.render("login");
     },
     login: (req, res) => {
-        const usersDb = getUsers();
-        const user = usersDb.find((user) => {
+        const users = getUsers();
+        const user = users.find((user) => {
             return (
                 user.user == req.body.user &&
-                bcrypt.compareSync(req.body.password, user.pass)
+                bcrypt.compareSync(req.body.password, user.password)
             );
         });
-        res.redirect("/")
+        console.log(user);
+
+        if (!user) {
+            return res.redirect("/users/login");
+        } else {
+            req.session.loggedUserId = user.id;
+
+            return res.redirect("/");
+        }
     },
 };
 
 module.exports = usersController;
-

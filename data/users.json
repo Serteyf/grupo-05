@@ -51,5 +51,52 @@
     "password": "",
     "password2": "",
     "pass": "$2b$12$bFWbJQxIhR28hPn9DAXfL.II/ofRjLacTj9EPgmju.HX0Z34V33VO"
+  },
+  {
+    "id": 7,
+    "name": "Prueba 4",
+    "user": "Prueba 4",
+    "email": "prueba@gmail.com",
+    "address": "Casa3",
+    "password": "1234",
+    "avatar": "avatar-1610821913933.jpg",
+    "pass": "$2b$12$GITwcXJNkCEATrCnhcdZquzR56CYS.QXNPNohbe1IF08ECmWEYh6e"
+  },
+  {
+    "id": 8,
+    "name": "Prueba 4",
+    "user": "Prueba 4",
+    "email": "prueba@gmail.com",
+    "address": "Casa3",
+    "password": "1234",
+    "avatar": "avatar-1610822042188.jpg",
+    "pass": "$2b$12$zUX/3CAZXeTHYdgPc4.mUeqLzHR38fwbmo6Ayd87hkiKsoLBD1sgG"
+  },
+  {
+    "id": 9,
+    "name": "Prueba 4",
+    "user": "Prueba 4",
+    "email": "prueba@gmail.com",
+    "address": "Casa3",
+    "password": "$2b$12$Ra4waFVOAJXvUFL9sQiI3.fvPotcwO4ZVcoMUZ79ZMgjR8STW30a6",
+    "avatar": "avatar-1610822081415.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Prueba 4",
+    "user": "Prueba 4",
+    "email": "prueba@gmail.com",
+    "address": "Casa3",
+    "password": "$2b$12$pLbczfuQOk6NI9MTAFbAvOfwR6rZMcf8fzJnTSJka/pE3VBgbAmBi",
+    "avatar": "avatar-1610822134513.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Prueba 4",
+    "user": "Prueba 4",
+    "email": "prueba@gmail.com",
+    "address": "Casa3",
+    "password": "$2b$12$0kVVycAeIeWwYgAoVmY.LO0e.Wsg6sReZ3UZbb47pzLExC17.ofoC",
+    "avatar": "avatar-1610822456843.jpg"
   }
 ]

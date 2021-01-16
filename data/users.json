@@ -98,5 +98,14 @@
     "address": "Casa3",
     "password": "$2b$12$0kVVycAeIeWwYgAoVmY.LO0e.Wsg6sReZ3UZbb47pzLExC17.ofoC",
     "avatar": "avatar-1610822456843.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Usuario de prueba",
+    "user": "usuarioprueba",
+    "email": "usuario@prueba.com",
+    "address": "prueba",
+    "password": "$2b$12$qnyslz7WWjY9.QyKbYLSeeefB5LrLI/WePjV8TQPa8dnlP0/69Q2O",
+    "avatar": "avatar-1610823876293.jpg"
   }
 ]

@@ -22,6 +22,7 @@ router.get("/register", userController.showRegister);
 router.post("/register", upload.any(), userController.register);
 
 router.get("/login", userController.showLogin);
+router.post("/login", userController.login);
 
 
 module.exports = router;

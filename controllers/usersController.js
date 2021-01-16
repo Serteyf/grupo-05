@@ -43,12 +43,10 @@ usersController = {
             );
         });
         console.log(user);
-
         if (!user) {
             return res.redirect("/users/login");
         } else {
             req.session.loggedUserId = user.id;
-
             return res.redirect("/");
         }
     },

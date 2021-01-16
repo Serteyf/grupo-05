@@ -42,7 +42,7 @@ usersController = {
                 bcrypt.compareSync(req.body.password, user.password)
             );
         });
-        console.log(user);
+        
         if (!user) {
             return res.redirect("/users/login");
         } else {

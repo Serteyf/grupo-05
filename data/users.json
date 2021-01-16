@@ -1,19 +1,55 @@
 [
-    {
-        "id": 1,
-        "name": "Usuario Administrador",
-        "user": "admin",
-        "email": "admin@levelup.net",
-        "address": "Domicilio de admin",
-        "admin": true,
-        "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
-    },
-    {
-        "id": 2,
-        "name": "Usuario Prueba",
-        "user": "user",
-        "email": "user@levelup.net",
-        "address": "Domicilio de usuario",
-        "pass": "$2b$12$mSREup5KTn6Q43zGabR4Ruf2xD7IrgfH.2aebjPXxRVcYetDZ.EUy"
-    }
+  {
+    "id": 1,
+    "name": "Usuario Administrador",
+    "user": "admin",
+    "email": "admin@levelup.net",
+    "address": "Domicilio de admin",
+    "admin": true,
+    "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
+  },
+  {
+    "id": 2,
+    "name": "Usuario Prueba",
+    "user": "user",
+    "email": "user@levelup.net",
+    "address": "Domicilio de usuario",
+    "pass": "$2b$12$mSREup5KTn6Q43zGabR4Ruf2xD7IrgfH.2aebjPXxRVcYetDZ.EUy"
+  },
+  {
+    "id": 3,
+    "user": "Prueba",
+    "email": "prueba@gmail.com",
+    "password": "1234",
+    "pass": "$2b$12$P71nlUKnBypKBaY7/CYQluxZFB7cwRe8UqkX4pNHP4uK8snDRD3um"
+  },
+  {
+    "id": 4,
+    "name": "Prueba Gomez",
+    "user": "Prueba",
+    "email": "prueba@gmail.com",
+    "address": "Casa 1",
+    "password": "1234",
+    "pass": "$2b$12$rPQX8Optmel9HagsfF9vwOj4y6zNu5ZIG/VohoJgYMofUJtABe0iK"
+  },
+  {
+    "id": 5,
+    "name": "Prueba Gomez",
+    "user": "Prueba",
+    "email": "prueba@gmail.com",
+    "address": "Casa 1",
+    "password": "",
+    "password2": "",
+    "pass": "$2b$12$Qv2pVo/y.A.zPeC.y0VN2utrAlV4cfme4ACpPHe5MDtBuYuyI1I8y"
+  },
+  {
+    "id": 6,
+    "name": "Prueba Gomez",
+    "user": "Prueba",
+    "email": "prueba@gmail.com",
+    "address": "Casa 1",
+    "password": "",
+    "password2": "",
+    "pass": "$2b$12$bFWbJQxIhR28hPn9DAXfL.II/ofRjLacTj9EPgmju.HX0Z34V33VO"
+  }
 ]

@@ -12,9 +12,11 @@
             <section class="register-back">
                 <div class="register">
                     <h2>CREAR CUENTA</h2>
-                    <form action="/" method="POST">
+                    <form action="/users/register" method="POST" enctype="multipart/form-data">
+                        <input type="text" placeholder="Nombre y Apellido" name="name" />
                         <input type="text" placeholder="Usuario" name="user" />
                         <input type="email" placeholder="Email" name="email" />
+                        <input type="text" placeholder="Domicilio" name="address" />
                         <input
                             type="password"
                             placeholder="Contraseña"
@@ -25,13 +27,7 @@
                             placeholder="Repetir contraseña"
                             name="password2"
                         />
-                        <div class="terms">
-                            <input type="checkbox" />
-                            <p>
-                                Declaro que acepto los
-                                <u>términos y condiciones.</u>
-                            </p>
-                        </div>
+                        <input type="file" class="userAvatar" name="avatar">
                         <button type="submit">REGISTRARME</button>
                     </form>
                 </div>

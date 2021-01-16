@@ -100,7 +100,6 @@
 .register button,
 .login button {
     margin-top: 8px;
-    margin-bottom: 8px;
     border: none;
     background-color: #231f20;
     color: #91d2be;
@@ -126,7 +125,7 @@
     color: #fbaaff;
     font-size: 14px;
     display: flex;
-    margin: 15px 0px;
+    margin: 5px 0px;
 }
 
 .terms input[type="checkbox"] {

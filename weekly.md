@@ -103,3 +103,16 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 ## Qué se va a hacer la semana próxima
 - Comenzar con el Sprint #5 de Middlewares.
+
+# Reunión 16/01
+
+## Qué se hizo la semana pasada
+- Se reestructuraron los archivos y directorios de usuarios para cumplir con los requerimientos del sprint.
+- Se implementó register, creando el controlador y rutas correspondientes.
+- Se implementó login y session, creando el controlador y las rutas correspondientes.
+
+## Impedimentos con los cuales nos encontramos
+- Si bien nos encontramos con algunos errores al implementar Multer y Express Session, pudimos resolverlos durante la sesión de pair programming.
+
+## Qué se va a hacer la semana próxima
+- Implementar rutas de invitados y usuarios a través de middlewares.

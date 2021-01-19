@@ -1,111 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Usuario Administrador",
-    "user": "admin",
-    "email": "admin@levelup.net",
-    "address": "Domicilio de admin",
-    "admin": true,
-    "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
-  },
-  {
-    "id": 2,
-    "name": "Usuario Prueba",
-    "user": "user",
-    "email": "user@levelup.net",
-    "address": "Domicilio de usuario",
-    "pass": "$2b$12$mSREup5KTn6Q43zGabR4Ruf2xD7IrgfH.2aebjPXxRVcYetDZ.EUy"
-  },
-  {
-    "id": 3,
-    "user": "Prueba",
-    "email": "prueba@gmail.com",
-    "password": "1234",
-    "pass": "$2b$12$P71nlUKnBypKBaY7/CYQluxZFB7cwRe8UqkX4pNHP4uK8snDRD3um"
-  },
-  {
-    "id": 4,
-    "name": "Prueba Gomez",
-    "user": "Prueba",
-    "email": "prueba@gmail.com",
-    "address": "Casa 1",
-    "password": "1234",
-    "pass": "$2b$12$rPQX8Optmel9HagsfF9vwOj4y6zNu5ZIG/VohoJgYMofUJtABe0iK"
-  },
-  {
-    "id": 5,
-    "name": "Prueba Gomez",
-    "user": "Prueba",
-    "email": "prueba@gmail.com",
-    "address": "Casa 1",
-    "password": "",
-    "password2": "",
-    "pass": "$2b$12$Qv2pVo/y.A.zPeC.y0VN2utrAlV4cfme4ACpPHe5MDtBuYuyI1I8y"
-  },
-  {
-    "id": 6,
-    "name": "Prueba Gomez",
-    "user": "Prueba",
-    "email": "prueba@gmail.com",
-    "address": "Casa 1",
-    "password": "",
-    "password2": "",
-    "pass": "$2b$12$bFWbJQxIhR28hPn9DAXfL.II/ofRjLacTj9EPgmju.HX0Z34V33VO"
-  },
-  {
-    "id": 7,
-    "name": "Prueba 4",
-    "user": "Prueba 4",
-    "email": "prueba@gmail.com",
-    "address": "Casa3",
-    "password": "1234",
-    "avatar": "avatar-1610821913933.jpg",
-    "pass": "$2b$12$GITwcXJNkCEATrCnhcdZquzR56CYS.QXNPNohbe1IF08ECmWEYh6e"
-  },
-  {
-    "id": 8,
-    "name": "Prueba 4",
-    "user": "Prueba 4",
-    "email": "prueba@gmail.com",
-    "address": "Casa3",
-    "password": "1234",
-    "avatar": "avatar-1610822042188.jpg",
-    "pass": "$2b$12$zUX/3CAZXeTHYdgPc4.mUeqLzHR38fwbmo6Ayd87hkiKsoLBD1sgG"
-  },
-  {
-    "id": 9,
-    "name": "Prueba 4",
-    "user": "Prueba 4",
-    "email": "prueba@gmail.com",
-    "address": "Casa3",
-    "password": "$2b$12$Ra4waFVOAJXvUFL9sQiI3.fvPotcwO4ZVcoMUZ79ZMgjR8STW30a6",
-    "avatar": "avatar-1610822081415.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Prueba 4",
-    "user": "Prueba 4",
-    "email": "prueba@gmail.com",
-    "address": "Casa3",
-    "password": "$2b$12$pLbczfuQOk6NI9MTAFbAvOfwR6rZMcf8fzJnTSJka/pE3VBgbAmBi",
-    "avatar": "avatar-1610822134513.jpg"
-  },
-  {
-    "id": 11,
-    "name": "Prueba 4",
-    "user": "Prueba 4",
-    "email": "prueba@gmail.com",
-    "address": "Casa3",
-    "password": "$2b$12$0kVVycAeIeWwYgAoVmY.LO0e.Wsg6sReZ3UZbb47pzLExC17.ofoC",
-    "avatar": "avatar-1610822456843.jpg"
-  },
-  {
-    "id": 12,
     "name": "Usuario de prueba",
-    "user": "usuarioprueba",
-    "email": "usuario@prueba.com",
-    "address": "prueba",
-    "password": "$2b$12$qnyslz7WWjY9.QyKbYLSeeefB5LrLI/WePjV8TQPa8dnlP0/69Q2O",
-    "avatar": "avatar-1610823876293.jpg"
+    "user": "user",
+    "email": "user@level.up",
+    "address": "Domicilio de prueba",
+    "password": "$2b$12$dpV7HhRLX6lAUY5Kv55aeeJu9Afg6nCjpASzS..1kokxZl9KXlD8W",
+    "avatar": "avatar-1611023247989.png"
   }
 ]

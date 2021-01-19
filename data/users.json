@@ -7,5 +7,15 @@
     "address": "Domicilio de prueba",
     "password": "$2b$12$dpV7HhRLX6lAUY5Kv55aeeJu9Afg6nCjpASzS..1kokxZl9KXlD8W",
     "avatar": "avatar-1611023247989.png"
+  },
+  {
+    "id": 2,
+    "name": "Administrador",
+    "user": "admin",
+    "email": "admin@level.up",
+    "address": "Domicilio de admin",
+    "password": "$2b$12$7WqrT08NI3o5FB8nAVqaXOi8POKApqu7kbd2dH1JZwi935Lw9tgBO",
+    "avatar": "avatar-1611023533110.png",
+    "admin": true
   }
 ]

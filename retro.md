@@ -68,7 +68,7 @@ Implementar las features más importantes (en este caso, creación, edición y b
 
 ## Continuar haciendo
 
-Mantener la comunicación frecuente por medio de los canales habituales y notificar de cualquier modificación o progreso que se haya realizado de forma individual. 
+Mantener la comunicación frecuente por medio de los canales habituales y notificar de cualquier modificación o progreso que se haya realizado de forma individual.
 Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
 
 ## Hacer menos
@@ -78,3 +78,25 @@ Continuar realizando reuniones semanales y llevar un registro de todos los temas
 ## Dejar de hacer
 
 Dejar de postergar las restrospectivas y realizarlas al principio de cada Sprint como debería ser, previo a planear y ejecutar el resto de las tareas solicitadas.
+
+# Sprint 4
+
+## Comenzar a hacer
+
+Si bien es preferible que trabajemos en conjunto bajo la modalidad pair programming a la hora de implementar cambios importantes en el proyecto, a veces es necesario también avanzar de manera individual y luego compartir los cambios realizados con el grupo. Esto es así para optimizar los tiempos de trabajo y llegar más holgados a las fechas de entrega.
+
+## Hacer más
+
+Mantener la comunicación frecuente por medio de los canales habituales y notificar de cualquier modificación o progreso que se haya realizado de forma individual.
+
+## Continuar haciendo
+
+Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
+
+## Hacer menos
+
+...
+
+## Dejar de hacer
+
+...

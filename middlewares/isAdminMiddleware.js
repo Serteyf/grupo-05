@@ -1,9 +1,9 @@
-function assertAdminMiddleware(req, res, next) {
+function isAdminMiddleware(req, res, next) {
     if (!res.locals.user.admin) {
-        res.redirect("/auth/login");
+        res.redirect("/users/login");
     } else {
         next();
     }
 }
 
-module.exports = assertAdminMiddleware;
+module.exports = isAdminMiddleware;

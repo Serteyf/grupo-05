@@ -1,9 +1,9 @@
-function assertLoggedMiddleware(req, res, next) {
+function isLoggedMiddleware(req, res, next) {
     if (!res.locals.user) {
-        res.redirect("/auth/login");
+        res.redirect("/users/login");
     } else {
         next();
     }
 }
 
-module.exports = assertLoggedMiddleware;
+module.exports = isLoggedMiddleware;

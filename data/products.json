@@ -95,8 +95,7 @@
         "price": 9299,
         "discount": 0,
         "image": "cod-blackops-coldwar.jpg",
-        "category": "games",
-        "outstanding": true
+        "category": "games"
     },
     {
         "id": 11,

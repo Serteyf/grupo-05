@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
+const authenticateMiddleware = require('./middlewares/authenticateMiddleware')
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -20,6 +21,8 @@ app.use(methodOverride("_method"));
 
 app.use(session({ secret: "Mensaje secreto" }));
 
+app.use(authenticateMiddleware)
+
 const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes");
 const productRoutes = require("./routes/productRoutes");
@@ -33,6 +36,9 @@ app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productRoutes);
 app.use("/checkout", checkoutRoutes);
+
+// Setea 'user' dentro de locals para usarla despues
+app.locals.user = null;
 
 app.use((req, res, next) => {
     res.status(404).render("not-found");

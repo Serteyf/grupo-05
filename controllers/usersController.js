@@ -42,13 +42,18 @@ usersController = {
                 bcrypt.compareSync(req.body.password, user.password)
             );
         });
-        
+
         if (!user) {
             return res.redirect("/users/login");
         } else {
             req.session.loggedUserId = user.id;
+            // console.log(loggedUser)
             return res.redirect("/");
         }
+    },
+    logout: (req, res) => {
+        req.session.loggedUserId = null;
+        res.redirect("/");
     },
 };
 

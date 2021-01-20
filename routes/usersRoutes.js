@@ -24,6 +24,8 @@ router.post("/register", upload.any(), userController.register);
 router.get("/login", userController.showLogin);
 router.post("/login", userController.login);
 
+router.get("/logout", userController.logout)
+
 
 module.exports = router;
 

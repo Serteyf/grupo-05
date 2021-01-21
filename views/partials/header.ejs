@@ -16,25 +16,26 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
 
-            <% if (!user) { %>
-
             <ul class="login-checkout">
+                <% if (!user) { %>
                 <li>
                     <a href="/users/login/" style="color: #fbaaff"
                         ><i class="fas fa-sign-in-alt"></i
                     ></a>
                 </li>
+                <% } else { %>
+                <li>
+                    <a href="/users/logout/" style="color: #fbaaff"
+                        ><i class="fas fa-sign-out-alt"></i
+                    ></a>
+                </li>
+                <% } %>
                 <li>
                     <a href="/checkout/" style="color: #fbaaff"
                         ><i class="fas fa-shopping-cart"></i
                     ></a>
                 </li>
             </ul>
-
-            <% } else { %>
-            <p class="user-welcome">Bienvenido, <%= user.name %>!</p>
-            <a href="/users/logout/">Salir</a>
-            <% } %>
         </nav>
         <label for="checkbox">
             <i class="fa fa-bars menu-icon"></i>
@@ -53,3 +54,10 @@
         <i class="fas fa-search"></i>
     </form>
 </div>
+<% if (!user) { %>
+<div class="admin_container"></div>
+<% } else { %>
+<div class="admin_container">
+    <p class="user-welcome">-- Bienvenido, <%= user.name %>! --</p>
+</div>
+<% } %>

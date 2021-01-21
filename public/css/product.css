@@ -10,6 +10,18 @@
     text-align: center;
 }
 
+.btn-edit, .btn-delete {
+    margin: 8px 8px 8px 0px;
+    border: none;
+    background-color: #000000;
+    color: #91d2be !important;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    width: 40%;
+    text-align: center;
+}
+
 .product {
     display: flex;
     flex-direction: column;

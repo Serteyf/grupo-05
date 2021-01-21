@@ -41,7 +41,7 @@
                 </div>
             </section>
 
-            <% if (user.admin) { %>
+            <% if (user && user.admin) { %>
 
             <div class="admin-product">
                 <a href="/products/edit/<%= product.id %>" class="btn">Editar producto</a>

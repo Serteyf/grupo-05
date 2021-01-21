@@ -116,3 +116,16 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 ## Qué se va a hacer la semana próxima
 - Implementar rutas de invitados y usuarios a través de middlewares.
+
+# Reunión 20/01
+
+## Qué se hizo la semana pasada
+- Se implementó session para identificar a los usuarios una vez logueados, mostrar su nombre en el header y permitir acceso a determinadas secciones.
+
+## Impedimentos con los cuales nos encontramos
+- Nos quedó pendiente adecuar el CSS del header para que se muestre de manera correcta junto con el texto de bienvenida.
+- Tuvimos problemas para implementar correctamente express-session pero finalmente pudimos lograr acceder a los datos de la sesión desde cualquier parte de la aplicación.
+
+## Qué se va a hacer la semana próxima
+- Implementar los arreglos finales en el HTML y CSS para que el mensaje de bienvenida del usuario se vea correctamente.
+- Funcionalidad de recordar usuario con cookies.

@@ -67,3 +67,29 @@ Sitio web responsive bien adaptado a dispositivos móviles. Menú de tipo "hambu
 A la hora de organizar nuestras tareas y facilitar la dinámica del trabajo en equipo utilizamos un tablero en la plataforma Trello. Esto nos permite separar cada tarea a realizar en tarjetas y dar seguimiento a los objetivos propuestos en cada sprint.
 
 **[Link al tablero de Level-Up Games](https://trello.com/b/1Y0GDd5d/0920-grupo05-level-up-games)**
+
+## Rutas y permisos
+
+### Rutas accesibles por invitados
+
+-   `/users/login/`: Página de inicio de sesión.
+
+-   `/users/register/`: Página de registro.
+
+-   `/products/`: Listado de todos los productos disponibles.
+
+-   `/products/category/:categoria/`: Listado de todos los productos dentro de una categoría (por ejemplo: consoles, games, accesories, retro).
+
+-   `/products/detail/`: Página de detalle de producto.
+
+### Rutas accesibles únicamente por usuarios logueados
+
+-   `/checkout/`: Página de carrito de compras.
+
+### Rutas accesibles únicamente por usuarios con permisos de admistrador
+
+-   `/product/create/`: Página de creación de producto.
+
+-   `/product/edit/:id/`: Página de edición de producto.
+
+-   `/product/delete/:id/`: Página de eliminación de producto.

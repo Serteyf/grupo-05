@@ -86,7 +86,7 @@ A la hora de organizar nuestras tareas y facilitar la dinámica del trabajo en e
 
 -   `/checkout/`: Página de carrito de compras.
 
--   `/users/login/`: Ruta de cerre de sesión.
+-   `/users/logout/`: Ruta de cerre de sesión.
 
 ### Rutas accesibles únicamente por usuarios con permisos de admistrador
 

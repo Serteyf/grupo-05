@@ -19,9 +19,22 @@
             <% if (!user) { %>
 
             <ul class="login-checkout">
-                <li><a href="/users/login/" style="color: #fbaaff"><i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href="/checkout/" style="color: #fbaaff"><i class="fas fa-shopping-cart"></i></a></li>
+                <li>
+                    <a href="/users/login/" style="color: #fbaaff"
+                        ><i class="fas fa-sign-in-alt"></i
+                    ></a>
+                </li>
+                <li>
+                    <a href="/checkout/" style="color: #fbaaff"
+                        ><i class="fas fa-shopping-cart"></i
+                    ></a>
+                </li>
             </ul>
+
+            <% } else { %>
+            <p class="user-welcome">Bienvenido, <%= user.name %>!</p>
+            <a href="/users/logout/">Salir</a>
+            <% } %>
         </nav>
         <label for="checkbox">
             <i class="fa fa-bars menu-icon"></i>
@@ -39,8 +52,4 @@
         />
         <i class="fas fa-search"></i>
     </form>
-    <% } else { %>
-        <p>Bienvenido, <%= user.name %>! </p>
-        <a href="/users/logout/">Salir</a>
-        <% } %>
-        </div>
+</div>

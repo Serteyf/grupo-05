@@ -12,7 +12,6 @@ body {
 /* Menú responsive */
 
 header {
-    
     background-color: #231f20;
     padding: 10px 0;
 }
@@ -28,16 +27,15 @@ header {
 .menu-icon {
     font-size: 2.2em;
     color: #91d2be;
-    
 }
 nav {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #3D4852;
-    top:85px;
-    left:0;
+    background-color: #3d4852;
+    top: 85px;
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -54,7 +52,8 @@ nav ul li a {
     text-decoration: none;
     letter-spacing: 0.05em;
 }
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover,
+nav ul li a:focus {
     color: #fbaaff;
 }
 #checkbox {
@@ -96,7 +95,7 @@ nav ul li a:hover, nav ul li a:focus {
 
 .fa-shopping-cart,
 .fa-user {
-    color:#fbaaff
+    color: #fbaaff;
 }
 
 /* Banner */
@@ -317,6 +316,12 @@ footer h4 {
     color: #91d2be;
 }
 
+/* Mensaje de bienvenida a usuarios logueados */
+
+.user-welcome {
+    color: #91d2be;
+}
+
 /* MEDIA QUERIES */
 
 /* Barra de busqueda en pantallas desde 768px */
@@ -366,7 +371,6 @@ footer h4 {
 /* Tarjetas de productos en pantallas > 768px */
 
 @media (min-width: 768px) {
-    
     .product-card {
         width: 25%;
     }
@@ -378,7 +382,7 @@ footer h4 {
     }
 
     .product-card-header p {
-        font-size: 14px
+        font-size: 14px;
     }
 }
 
@@ -433,18 +437,17 @@ footer h4 {
 }
 
 @media (min-width: 1200px) {
-     main {
+    main {
         padding: 0 6%;
     }
 
     .product-card-header p {
         font-size: 16px;
     }
-
 }
 
 @media (min-width: 1440px) {
-     main {
+    main {
         padding: 0 9%;
     }
 
@@ -541,7 +544,7 @@ footer h4 {
 
 /* Media queries del menú */
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .menu-icon {
         display: none !important;
     }
@@ -550,7 +553,7 @@ footer h4 {
         position: absolute;
         right: -30px;
     }
-  
+
     nav {
         position: relative;
         background-color: transparent;
@@ -566,7 +569,7 @@ footer h4 {
     nav ul li {
         display: inline-flex;
     }
-    }
+}
 
 @media (min-width: 1024px) {
     nav ul li a {

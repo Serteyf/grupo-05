@@ -97,6 +97,7 @@ productController = {
                     ? selectedProduct.image
                     : req.files[0].filename,
             category: req.body.category,
+            outstanding: req.body.outstanding
         };
 
         products.splice(products.indexOf(selectedProduct), 1, editedProduct);

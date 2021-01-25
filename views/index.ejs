@@ -40,7 +40,7 @@
                     <div class="product-gallery">
                         <% let cantidadGames = 0 %> 
                         <% for (let i = 0; i < products.length; i++) { %> 
-                            <% if (products[i].outstanding && products[i].category == "games") { %>
+                            <% if (products[i].outstanding == "true" && products[i].category == "games") { %>
                                 <% cantidadGames++ %> 
                                 <%-
                                 include("partials/product-card", { product: products[i] }) %> 
@@ -60,7 +60,7 @@
                     <div class="product-gallery">
                         <% let cantidadConsolas = 0 %> 
                         <% for (let i = 0; i < products.length; i++) { %> 
-                            <% if (products[i].outstanding && products[i].category == "consoles") { %>
+                            <% if (products[i].outstanding == "true" && products[i].category == "consoles") { %>
                                 <% cantidadConsolas++ %> 
                                 <%-
                                 include("partials/product-card", { product: products[i] }) %> 

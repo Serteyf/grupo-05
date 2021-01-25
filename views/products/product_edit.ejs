@@ -67,6 +67,18 @@
                     </select>
                     </div>
                     <div class="product-description-edit">
+                        <h4>DESTACADO</h4>
+                     <select
+                            class="caja"
+                            type="text"
+                            name="outstanding"
+                        >
+                        <option value="true" <%= product.outstanding == "true" ? "selected" : "" %> >SI</option>
+                        <option value="false" <%= product.outstanding == "false" ? "selected" : "" %>>NO</option>
+                    </select>
+                    </div>
+
+                    <div class="product-description-edit">
                         <h4>IMAGEN DE PRODUCTO</h4>
 
                     <input

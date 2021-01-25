@@ -16,7 +16,7 @@
         "discount": 3,
         "image": "microsoft-xbox-one-s.jpg",
         "category": "consoles",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 3,
@@ -26,7 +26,7 @@
         "discount": 0,
         "image": "nintendo-switch.jpg",
         "category": "consoles",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 4,
@@ -36,7 +36,7 @@
         "discount": 0,
         "image": "sony-ps5-digital.jpg",
         "category": "consoles",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 5,
@@ -46,7 +46,7 @@
         "discount": 0,
         "image": "microsoft-xbox-series-x.jpg",
         "category": "consoles",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 6,
@@ -56,7 +56,7 @@
         "discount": 10,
         "image": "controller-sony-dualshock-4.jpg",
         "category": "accesories",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 7,
@@ -66,7 +66,7 @@
         "discount": 5,
         "image": "controller-nintendo-joycon.jpg",
         "category": "accesories",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 8,
@@ -76,7 +76,7 @@
         "discount": 2,
         "image": "controller-microsoft-xboxone.jpg",
         "category": "accesories",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 9,
@@ -86,7 +86,7 @@
         "discount": 0,
         "image": "cyberpunk2077-ps4.jpg",
         "category": "games",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 10,
@@ -101,10 +101,11 @@
         "id": 11,
         "name": "The Legend of Zelda: Breath Of The Wild - Juego Switch",
         "description": "The Legend of Zelda: Breath of the Wild es un videojuego exclusivo de Nintendo, desarrollado, producido y distribuido por la misma compañía, para las videoconsolas Wii U y Nintendo Switch.",
-        "price": 9,
+        "price": 9700,
         "discount": 0,
         "image": "zelda-botw.jpg",
-        "category": "games"
+        "category": "games",
+        "outstanding": "true"
     },
     {
         "id": 12,
@@ -114,7 +115,7 @@
         "discount": 0,
         "image": "mario-odyssey.jpg",
         "category": "games",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 13,
@@ -124,7 +125,7 @@
         "discount": 2,
         "image": "fifa21.jpg",
         "category": "games",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 14,
@@ -134,7 +135,7 @@
         "discount": 0,
         "image": "nes-classic.jpg",
         "category": "retro",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 15,
@@ -144,7 +145,7 @@
         "discount": 8,
         "image": "sega-mini.jpg",
         "category": "retro",
-        "outstanding": true
+        "outstanding": "true"
     },
     {
         "id": 16,
@@ -163,7 +164,7 @@
         "discount": 0,
         "image": "bandai-tamagotchi.jpg",
         "category": "retro",
-        "outstanding": false
+        "outstanding": "false"
     },
     {
         "id": 18,
@@ -173,7 +174,7 @@
         "discount": 0,
         "image": "goolsky-tetris.jpg",
         "category": "retro",
-        "outstanding": false
+        "outstanding": "false"
     },
     {
         "id": 18,
@@ -183,6 +184,6 @@
         "discount": 0,
         "image": "atari-flashback.jpg",
         "category": "retro",
-        "outstanding": false
+        "outstanding": "false"
     }
 ]

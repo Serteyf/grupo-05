@@ -36,13 +36,22 @@
     margin: 20px 0px;
 }
 
+.product-description-edit {
+    color: #91d2be;
+}
+
 .product-description h4 {
     border: 1px solid #f9ef64;
     background-color: #000000;
     padding: 10px;
 }
 
-.product-description p {
+.product-description-edit h4 {
+    padding: 5px 0px 5px 0px;
+}
+
+.product-description p,
+.product-description-edit p {
     padding: 10px;
 }
 
@@ -55,7 +64,7 @@
     border: 1px solid white;
 }
 
-.product-info {
+.product-info, .product-info-edit {
     width: 90%;
     color: #f9ef64;
 }
@@ -77,10 +86,33 @@
     align-items: center;
 }
 
+.btn-product-edit {
+    margin-top: 15px;
+    width: 25%;
+    margin: 8px 8px 8px 0px;
+    border: none;
+    background-color: #000000;
+    color: #91d2be !important;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
 .admin-product {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.caja {
+    width: 100%;
+    background-color: #231f20;
+    color: #f9ef64;
+    height: 30px;
+    padding-left: 5px;
+    background-color: #000000;
+    border: 0;
 }
 
 /* Se adapta a medidas superiores a 768px */
@@ -96,12 +128,17 @@
         width: 45%;
     }
 
+    .product-info-edit {
+        width: 45%;
+        padding-left: 5%;
+    }
+
     .product-info {
         width: 45%;
         padding: 5% 0% 5% 5%;
     }
 
-    .product-info h2 {
+    .product-info h2, .product-info-edit h2 {
         font-size: 32px;
     }
 
@@ -113,7 +150,8 @@
         font-size: 38px;
     }
 
-    .product-info span {
+    .product-info span,
+    .product-info-edit span {
         font-size: 18px;
     }
 
@@ -124,6 +162,11 @@
     .btn-buy {
         width: 60%;
     }
+
+    .btn-product-edit {
+        width: 40%;
+        margin-top: 15px;
+    }
 }
 
 /* Se adapta a medidas superiores a 1024px */
@@ -133,7 +176,8 @@
         padding: 3% 5%;
     }
 
-    .product-info h2 {
+    .product-info h2,
+    .product-info-edit h2 {
         font-size: 34px;
     }
 
@@ -145,7 +189,8 @@
         font-size: 40px;
     }
 
-    .product-info span {
+    .product-info span,
+    .product-info-edit span {
         font-size: 20px;
     }
 

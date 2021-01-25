@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("partials/head-base.ejs", {title: "Página de producto"}) %>
+        <link rel="stylesheet" href="/css/product.css">
+    </head>
+    <body>
+
+        <header><%- include("partials/header.ejs") %></header>
+        
+        <main>
+            
+            <section class="product">             
+                
+                <div class="product-img">
+                    <img src="/images/products/<%= product.image %>" alt="Foto de <%= product.name %>">
+                </div>
+                <div class="product-info-edit">
+                    <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+                    <div class="product-description-edit">
+                        <h4>NOMBRE</h4>
+                        <input
+                            class="caja"
+                            type="text"
+                            value="<%= product.name %>"
+                            name="name"
+                        />
+                    </div>
+                    <div class="product-description-edit">
+                        <h4>DESCRIPCION</h4>
+                        <input
+                        class="caja"
+                        type="text"
+                        value="<%= product.description %>"
+                        name="description"
+                    />
+        </div>
+                    <div class="product-description-edit">
+                        <h4>PRECIO</h4>
+                        <input
+                            class="caja"
+                            type="text"
+                            value="<%= product.price %>"
+                            name="price"
+                        />
+                    </div>
+                    <div class="product-description-edit">
+                        <h4>DESCUENTO</h4>
+                        <input 
+                        class="caja" 
+                        type="text" 
+                        value="<%= product.discount %>" 
+                        name="discount" 
+                    />
+                    </div>
+                    <div class="product-description-edit">
+                        <h4>CATEGORIA</h4>
+                     <select
+                            class="caja"
+                            type="text"
+                            name="category"
+                        >
+                        <option value="consoles" <%= product.category == "consoles" ? "selected" : "" %> >Consolas</option>
+                        <option value="accesories" <%= product.category == "accesories" ? "selected" : "" %>>Accesorios</option>
+                        <option value="games" <%= product.category == "games" ? "selected" : "" %>>Juegos</option>
+                        <option value="retro" <%= product.category == "retro" ? "selected" : "" %>>Retro</option>
+                    </select>
+                    </div>
+                    <div class="product-description-edit">
+                        <h4>IMAGEN DE PRODUCTO</h4>
+
+                    <input
+                        class="photo"
+                        type="file"
+                        name="image"
+                        placeholder="Foto producto"
+                        value="<%= product.image %>"
+                    />
+                </div>
+                <div class="product-buy">
+                        <button class="btn-product-edit" type="submit">EDITAR</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+
+        <footer><%- include("partials/footer.ejs") %></footer>
+        
+    </body>
+</html>

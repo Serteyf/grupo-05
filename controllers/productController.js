@@ -55,7 +55,7 @@ productController = {
             return res.send("Error 404 - Producto no encontrado");
         }
 
-        res.render("product-edit", {
+        res.render("product_edit", {
             product: selectedProduct,
             toThousand: toThousand,
         });

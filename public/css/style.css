@@ -9,6 +9,10 @@ body {
     font-family: "Titillium Web", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Menú responsive */
 
 header {

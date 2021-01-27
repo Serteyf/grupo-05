@@ -45,9 +45,12 @@ usersController = {
 
         if (!user) {
             return res.redirect("/users/login");
+        } else if (req.body.remember) {
+            req.session.loggedUserId = user.id;
+            res.cookie("remember", req.session.loggedUserId);
+            return res.redirect("/");
         } else {
             req.session.loggedUserId = user.id;
-            // console.log(loggedUser)
             return res.redirect("/");
         }
     },

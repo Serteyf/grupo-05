@@ -147,12 +147,21 @@
     margin: 6px 0;
 }
 
-.login-social {
+.login-social, .remember {
     color: #f9ef64;
 }
 
 .login-social i {
     margin: 10px 10px 15px 0px;
+}
+
+.remember {
+    display: flex; 
+}
+
+.remember label {
+    width: 100%;
+    font-size: 14px;
 }
 
 .btn-register {

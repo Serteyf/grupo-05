@@ -4,6 +4,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
 const authenticateMiddleware = require('./middlewares/authenticateMiddleware')
+const rememberMiddleware = require('./middlewares/rememberMiddleware')
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -24,6 +25,7 @@ app.use(session({ secret: "Mensaje secreto" }));
 
 app.use(cookieParser())
 app.use(authenticateMiddleware)
+app.use(rememberMiddleware)
 
 const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes");

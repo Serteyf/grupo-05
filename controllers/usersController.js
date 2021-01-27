@@ -47,7 +47,7 @@ usersController = {
             return res.redirect("/users/login");
         } else if (req.body.remember) {
             req.session.loggedUserId = user.id;
-            res.cookie("remember", req.session.loggedUserId);
+            res.cookie("remember", req.session.loggedUserId, { maxAge: 900000 });
             return res.redirect("/");
         } else {
             req.session.loggedUserId = user.id;
@@ -56,6 +56,7 @@ usersController = {
     },
     logout: (req, res) => {
         req.session.loggedUserId = null;
+        res.clearCookie("remember");
         res.redirect("/");
     },
 };

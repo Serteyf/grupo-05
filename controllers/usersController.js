@@ -55,7 +55,7 @@ usersController = {
         }
     },
     logout: (req, res) => {
-        req.session.loggedUserId = null;
+        req.session.destroy();
         res.clearCookie("remember");
         res.redirect("/");
     },

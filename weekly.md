@@ -77,55 +77,81 @@ Durante la semana entrante vamos a trabajar en implementar los métodos de escri
 # Reunión 28/12
 
 ## Qué se hizo la semana pasada
-- Creación de ruta y controlador "create" para poder cargar nuevos productos en la base de datos.
-- Creación de ruta y controlador "edit" para poder editar productos de la base de datos.
-- Instalación de multer
-- Corrección de formularios en las vistas.
+
+-   Creación de ruta y controlador "create" para poder cargar nuevos productos en la base de datos.
+-   Creación de ruta y controlador "edit" para poder editar productos de la base de datos.
+-   Instalación de multer
+-   Corrección de formularios en las vistas.
 
 ## Impedimentos con los cuales nos encontramos
-- De momento multer no permite subir ni editar las imagenes.
-- En la vista de edición, al traer los datos del producto al formulario, sólo se visualiza la primera palabra del campo en cuestión.
+
+-   De momento multer no permite subir ni editar las imagenes.
+-   En la vista de edición, al traer los datos del producto al formulario, sólo se visualiza la primera palabra del campo en cuestión.
 
 ## Qué se va a hacer la semana próxima
+
 Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 # Reunión 08/01
 
 ## Qué se hizo la semana pasada
-- JSON de usuarios.
-- Modificaciones en controlador edit (multer).
-- Botones de edit y delete en la vista de detalle de producto.
-- Cambios en el CSS de tarjetas de producto.
-- Se mejoró el código de los productos sugeridos dentro de la vista de detalle de producto.
+
+-   JSON de usuarios.
+-   Modificaciones en controlador edit (multer).
+-   Botones de edit y delete en la vista de detalle de producto.
+-   Cambios en el CSS de tarjetas de producto.
+-   Se mejoró el código de los productos sugeridos dentro de la vista de detalle de producto.
 
 ## Impedimentos con los cuales nos encontramos
-- Nos fuimos encontrando con pequeños impedimentos en CSS que logramos ir superando en conjunto haciendo pair programming.
+
+-   Nos fuimos encontrando con pequeños impedimentos en CSS que logramos ir superando en conjunto haciendo pair programming.
 
 ## Qué se va a hacer la semana próxima
-- Comenzar con el Sprint #5 de Middlewares.
+
+-   Comenzar con el Sprint #5 de Middlewares.
 
 # Reunión 16/01
 
 ## Qué se hizo la semana pasada
-- Se reestructuraron los archivos y directorios de usuarios para cumplir con los requerimientos del sprint.
-- Se implementó register, creando el controlador y rutas correspondientes.
-- Se implementó login y session, creando el controlador y las rutas correspondientes.
+
+-   Se reestructuraron los archivos y directorios de usuarios para cumplir con los requerimientos del sprint.
+-   Se implementó register, creando el controlador y rutas correspondientes.
+-   Se implementó login y session, creando el controlador y las rutas correspondientes.
 
 ## Impedimentos con los cuales nos encontramos
-- Si bien nos encontramos con algunos errores al implementar Multer y Express Session, pudimos resolverlos durante la sesión de pair programming.
+
+-   Si bien nos encontramos con algunos errores al implementar Multer y Express Session, pudimos resolverlos durante la sesión de pair programming.
 
 ## Qué se va a hacer la semana próxima
-- Implementar rutas de invitados y usuarios a través de middlewares.
+
+-   Implementar rutas de invitados y usuarios a través de middlewares.
 
 # Reunión 20/01
 
 ## Qué se hizo la semana pasada
-- Se implementó session para identificar a los usuarios una vez logueados, mostrar su nombre en el header y permitir acceso a determinadas secciones.
+
+-   Se implementó session para identificar a los usuarios una vez logueados, mostrar su nombre en el header y permitir acceso a determinadas secciones.
 
 ## Impedimentos con los cuales nos encontramos
-- Nos quedó pendiente adecuar el CSS del header para que se muestre de manera correcta junto con el texto de bienvenida.
-- Tuvimos problemas para implementar correctamente express-session pero finalmente pudimos lograr acceder a los datos de la sesión desde cualquier parte de la aplicación.
+
+-   Nos quedó pendiente adecuar el CSS del header para que se muestre de manera correcta junto con el texto de bienvenida.
+-   Tuvimos problemas para implementar correctamente express-session pero finalmente pudimos lograr acceder a los datos de la sesión desde cualquier parte de la aplicación.
 
 ## Qué se va a hacer la semana próxima
-- Implementar los arreglos finales en el HTML y CSS para que el mensaje de bienvenida del usuario se vea correctamente.
-- Funcionalidad de recordar usuario con cookies.
+
+-   Implementar los arreglos finales en el HTML y CSS para que el mensaje de bienvenida del usuario se vea correctamente.
+-   Funcionalidad de recordar usuario con cookies.
+
+# Reunión 27/01
+
+## Qué se hizo la semana pasada
+
+-   Se implementó funcionalidad que permite recordar al usuario tildando un input del tipo checkbox, a través del uso de cookie-parser.
+
+## Impedimentos con los cuales nos encontramos
+
+-   Encontramos un bug que produce que se cierre la sesión del usuario luego de crear, editar o borrar un producto. Esto no es así si está activada la funcionalidad de recordar usuario. Sin embargo, si se trabaja sin cookies (solo con session) el problema ocurre. Estamos trabajando para solucionarlo.
+
+## Qué se va a hacer la semana próxima
+
+-   Comenzar a definir la base de datos con la cual vamos a trabajar en el nuevo Sprint.

@@ -1,5 +1,11 @@
 CREATE DATABASE level_up;
 
+CREATE TABLE users_category (
+id INTEGER AUTO_INCREMENT,
+name VARCHAR(50),
+PRIMARY KEY (id)
+); 
+
 CREATE TABLE users (
 id INTEGER AUTO_INCREMENT,
 user VARCHAR(50),
@@ -11,12 +17,6 @@ category_id INTEGER,
 avatar VARCHAR(50),
 PRIMARY KEY (id),
 FOREIGN KEY (category_id) REFERENCES users_category(id)
-); 
-
-CREATE TABLE users_category (
-id INTEGER AUTO_INCREMENT,
-name VARCHAR(50),
-PRIMARY KEY (id)
 ); 
 
 CREATE TABLE products_category (

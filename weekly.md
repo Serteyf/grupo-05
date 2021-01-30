@@ -155,3 +155,17 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 ## Qué se va a hacer la semana próxima
 
 -   Comenzar a definir la base de datos con la cual vamos a trabajar en el nuevo Sprint.
+
+# Reunión 29/01 - XX/02
+
+## Qué se hizo la semana pasada
+
+-   Se creó diagrama de base de datos.
+-   Se creo script para la estructura de la base de datos.
+
+## Impedimentos con los cuales nos encontramos
+-   No encontramos impedimentos a lo largo de esta semana.
+
+## Qué se va a hacer la semana próxima
+
+-   Poblar la base de datos con la información necesaria y comenzar a implementar Sequelize en nuestro proyecto

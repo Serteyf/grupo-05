@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const isLoggedMiddleware = require('../middlewares/isLoggedMiddleware')
+const isNotLoggedMiddleware = require('../middlewares/isNotLoggedMiddleware')
 
 const checkoutController = require("../controllers/checkoutController");
 
-router.get("/", isLoggedMiddleware, checkoutController.main);
+router.get("/", isNotLoggedMiddleware, checkoutController.main);
 
 module.exports = router;

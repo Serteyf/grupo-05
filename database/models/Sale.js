@@ -1,31 +1,31 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Ventas";
     let cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        date:{},
-        payment_method:{},
-        user_id:{
-             type: dataTypes.INTEGER,
-            foreignKey: true,           //REVISAR//
-            autoIncrement: true         //REVISAR//
+        date: dataTypes.DATE,
+        paymentMethod: dataTypes.STRING,
+        userId: {
+            type: dataTypes.INTEGER,
+            foreignKey: true,
         },
-        quantity:{
-            type: dataTypes.INTEGER
-        },
-        total_amount:{
-            type: dataTypes.INTEGER
-        }
     };
     let config = {
         tableName: "sales",
-        timestamps: false
-    }
+        timestamps: false,
+    };
 
     const Sale = sequelize.define(alias, cols, config);
 
+    Sale.associate = (models) => {
+        Sale.belongsToMany(models.Productos, {
+            as: "products",
+            through: "products_sales",
+        });
+    };
+
     return Sale;
-}
+};

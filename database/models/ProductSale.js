@@ -1,20 +1,24 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Ventas de productos";
+    let alias = "VentasProductos";
     let cols = {
         id:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        product_id: {
+        productId: {
             type: dataTypes.INTEGER,
-            foreignKey: true,           //REVISAR//
-            autoIncrement: true         //REVISAR//
+            foreignKey: true       
         },
-         sale_id: {
+         saleId: {
             type: dataTypes.INTEGER,
-            foreignKey: true,           //REVISAR//
-            autoIncrement: true         //REVISAR//
+            foreignKey: true    
+        },
+        quantity: {
+            type: dataTypes.INTEGER,
+        },
+        amount: {
+            type: dataTypes.INTEGER,
         }
     };
     let config = {

@@ -1,21 +1,27 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Categorías de productos";
+    let alias = "CategoriaProductos";
     let cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        name:{
-            type: dataTypes.STRING
-        }
+        name: {
+            type: dataTypes.STRING,
+        },
     };
     let config = {
         tableName: "products_category",
-        timestamps: false
-    }
+        timestamps: false,
+    };
 
     const ProductCategory = sequelize.define(alias, cols, config);
 
+    ProductCategory.associate = (models) => {
+        ProductCategory.hasMany(models.Productos, {
+            as: "products",
+        });
+    };
+
     return ProductCategory;
-}
+};

@@ -18,13 +18,13 @@ module.exports = (sequelize, dataTypes) => {
         discount:{
             type: dataTypes.INTEGER
         },
-        featured:{},
-        category_id:{
-             type: dataTypes.INTEGER,
-            foreignKey: true,           //REVISAR//
-            autoIncrement: true         //REVISAR//
+        featured: dataTypes.INTEGER,
+        categoryId:{
+            type: dataTypes.INTEGER,
+            foreignKey: true,           
+            autoIncrement: true
         },
-        image:{}
+        image: dataTypes.STRING
     };
     let config = {
         tableName: "products",
@@ -32,6 +32,17 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Product = sequelize.define(alias, cols, config);
+
+    Product.associate = (models) => {
+        Product.belongsTo(models.CategoriaProductos, {
+            as: "products_category",
+            foreignKey: "categoryId"
+        });
+        Product.belongsToMany(models.Ventas, {
+            as: "sales",
+            through: "products_sales"
+        })
+    }
 
     return Product;
 }

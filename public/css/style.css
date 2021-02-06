@@ -81,6 +81,7 @@ nav ul li a:focus {
     width: 80%;
     border-radius: 8px;
     line-height: 2.5;
+    margin-bottom: 5px;
 }
 
 .search-box::placeholder {
@@ -112,7 +113,6 @@ nav ul li a:focus {
 
 .user-welcome {
     display: inline;
-    margin-right: 10px;
     font-size: 14px;
     color: #fbaaff;
 }

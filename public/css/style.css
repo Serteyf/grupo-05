@@ -114,6 +114,7 @@ nav ul li a:focus {
     display: inline;
     margin-right: 10px;
     font-size: 14px;
+    color: #fbaaff;
 }
 
 /* Banner */
@@ -331,12 +332,6 @@ footer h4 {
 
 .social i,
 .contact i {
-    color: #91d2be;
-}
-
-/* Mensaje de bienvenida a usuarios logueados */
-
-.user-welcome {
     color: #91d2be;
 }
 

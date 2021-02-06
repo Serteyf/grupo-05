@@ -221,21 +221,11 @@
         margin-bottom: 10px;
     }
 
-    .checkout-shipp-sum {
-        display: flex;
-    }
-
-    .checkout-shipp {
-        width: 24%;
-        padding-left: 9%;
-    }
-
-    .checkout-sum {
-        width: 76%;
-    }
-
     .checkout-shipp-radio {
-        flex-direction: column;
-        justify-content: center;
+        margin: 0px 20%;
+    }
+
+    .checkout-shipp-radio input {
+        margin-right: -5%;
     }
 }

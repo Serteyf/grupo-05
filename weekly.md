@@ -156,7 +156,7 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 -   Comenzar a definir la base de datos con la cual vamos a trabajar en el nuevo Sprint.
 
-# Reunión 29/01 - XX/02
+# Reunión 29/01
 
 ## Qué se hizo la semana pasada
 
@@ -169,3 +169,19 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 ## Qué se va a hacer la semana próxima
 
 -   Poblar la base de datos con la información necesaria y comenzar a implementar Sequelize en nuestro proyecto
+
+# Reunión 05/02
+
+## Qué se hizo la semana pasada
+
+- Correcciones en el diagrama de la base de datos
+- Correcciones en el script de creación
+- Configuración, modelos y asociaciones en Sequelize
+
+## Impedimentos con los cuales nos encontramos
+- Tuvimos convenientes a la hora de correr el script de creación de la base de datos. Lo solucionamos buscando scripts similares y agregando los comandos que estaban faltando (por ejemplo, el USE de la base de datos luego de haberla creado).
+
+## Qué se va a hacer la semana próxima
+
+-   Poblar la base de datos con la información necesaria
+-   Comenzar a reemplazar los comandos del CRUD que modificaban el JSON para que funcionen con la DB.

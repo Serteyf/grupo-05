@@ -1,0 +1,94 @@
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    height: 20vh;
+}
+
+.contact-back {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/layout/benner_reg_log.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 400px;
+    padding: 0px 20px 20px 20px;
+    background-color: #000000;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 8px 0px;
+    width: 100%;
+    background-color: #231f20;
+    border: none;
+    padding: 10px;
+    color: #f9ef64;
+}
+
+.caja {
+    margin: 8px 0px;
+    width: 100%;
+    background-color: #231f20;
+    border: none;
+    padding: 10px;
+    color: #f9ef64;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #f9ef64;
+}
+
+.contact-form button {
+    margin-top: 8px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be;
+    padding: 5px;
+}
+
+.contact-form h2 {
+    color: #fbaaff;
+}
+
+
+.contact-form a {
+    color: #fbaaff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-form p {
+    margin-top: 1px;
+}
+
+.contact-form hr {
+    margin: 6px 0;
+}
+
+.btn-contact {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    width: 110px;
+    border: none;
+    background-color: #231f20;
+    color: #91d2be !important;
+    padding: 5px;
+}

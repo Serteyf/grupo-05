@@ -31,6 +31,9 @@ mainController = {
             keyword: keyword,
             thousand: toThousand
         });
+    },
+    contact: (req, res) => {
+        res.render("contact")
     }
 };
 

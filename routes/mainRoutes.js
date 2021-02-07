@@ -7,4 +7,6 @@ router.all("/", mainController.home);
 
 router.get("/search", mainController.search);
 
+router.get("/contact", mainController.contact);
+
 module.exports = router;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include("partials/head-base.ejs", {title: "Iniciar sesión"}) %>
+        <link rel="stylesheet" href="/css/contact.css" />
+    </head>
+
+    <body>
+        <header><%- include("partials/header.ejs") %></header>
+
+        <main>
+            <section class="contact-back">
+                <div class="contact-form">
+                    <h2>CONTACTO</h2>
+                    <form action="/" method="POST">
+                        <input type="text" placeholder="Nombre" name="name" />
+                        <input type="email" placeholder="Email" name="email" />
+                        <textarea name="comment">
+Dejanos tu comentario...</textarea
+                        >
+
+                        <button type="submit">Enviar comentario</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer><%- include("partials/footer.ejs") %></footer>
+    </body>
+</html>

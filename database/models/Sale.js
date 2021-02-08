@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Ventas";
+    let alias = "Sale";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     const Sale = sequelize.define(alias, cols, config);
 
     Sale.associate = (models) => {
-        Sale.belongsToMany(models.Productos, {
+        Sale.belongsToMany(models.Product, {
             as: "products",
             through: "products_sales",
         });

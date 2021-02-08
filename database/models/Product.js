@@ -22,7 +22,6 @@ module.exports = (sequelize, dataTypes) => {
         categoryId:{
             type: dataTypes.INTEGER,
             foreignKey: true,           
-            autoIncrement: true
         },
         image: dataTypes.STRING
     };
@@ -35,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = (models) => {
         Product.belongsTo(models.ProductCategory, {
-            as: "products_category",
+            as: "product_category",
             foreignKey: "categoryId"
         });
         Product.belongsToMany(models.Sale, {

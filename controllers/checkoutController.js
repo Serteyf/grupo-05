@@ -1,6 +1,6 @@
 checkoutController = {
     main: (req, res) => {
-        res.render("checkout")
+         res.render("checkout")
     }
 };
 

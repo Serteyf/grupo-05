@@ -1,10 +1,20 @@
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
 const fs = require("fs");
+const db = require("../database/models");
 
 productController = {
     all: (req, res) => {
         const products = getProducts();
+
+        db.sequelize.query("SELECT * FROM products")
+            .then((productos) => {
+                console.log(productos);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
         res.render("products-all", {
             products: products,
             thousand: toThousand,
@@ -17,7 +27,7 @@ productController = {
         );
 
         if (categoryResults == "") {
-            return res.render('not-found')
+            return res.render("not-found");
         }
 
         res.render("products-all", {
@@ -97,7 +107,7 @@ productController = {
                     ? selectedProduct.image
                     : req.files[0].filename,
             category: req.body.category,
-            outstanding: req.body.outstanding
+            outstanding: req.body.outstanding,
         };
 
         products.splice(products.indexOf(selectedProduct), 1, editedProduct);

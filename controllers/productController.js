@@ -5,72 +5,87 @@ const db = require("../database/models");
 
 productController = {
     all: (req, res) => {
-        const products = getProducts();
-
         db.Product.findAll({
             raw: true,
         })
-            .then((productos) => {
-                console.log(productos);
+            .then((products) => {
+                res.render("products-all", {
+                    products: products,
+                    thousand: toThousand,
+                });
             })
             .catch((error) => {
                 console.log(error);
             });
-
-        res.render("products-all", {
-            products: products,
-            thousand: toThousand,
-        });
     },
     byCategory: (req, res) => {
-        const products = getProducts();
-        const categoryResults = products.filter(
-            (product) => product.category == req.params.category
-        );
-
-        if (categoryResults == "") {
-            return res.render("not-found");
-        }
-
-        res.render("products-all", {
-            products: categoryResults,
-            thousand: toThousand,
-        });
+        db.Product.findAll({
+            raw: true,
+            where: {
+                categoryId: req.params.category,
+            },
+        })
+            .then((products) => {
+                if (products == "") {
+                    return res.render("not-found");
+                }
+                res.render("products-all", {
+                    products: products,
+                    thousand: toThousand,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
     detail: (req, res) => {
-        const products = getProducts();
-        const selectedProduct = products.find((product) => {
-            return req.params.id == product.id;
-        });
-
-        const suggestedProducts = products.filter(
-            (product) => product.category == selectedProduct.category
-        );
-
-        suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct), 1);
-
-        res.render("product", {
-            product: selectedProduct,
-            suggestedProducts: suggestedProducts,
-            thousand: toThousand,
-        });
+        db.Product.findAll({
+            raw: true,
+        })
+            .then((products) => {
+                const selectedProduct = products.find((product) => {
+                    return req.params.id == product.id;
+                });
+                const suggestedProducts = products.filter(
+                    (product) => product.category == selectedProduct.category
+                );
+                suggestedProducts.splice(
+                    suggestedProducts.indexOf(selectedProduct),
+                    1
+                );
+                res.render("product", {
+                    product: selectedProduct,
+                    suggestedProducts: suggestedProducts,
+                    thousand: toThousand,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
     showCreate: (req, res) => {
         res.render("product-create");
     },
     showEdit: (req, res) => {
-        const products = getProducts();
-        const selectedProduct = products.find((product) => {
-            return product.id == req.params.id;
-        });
-        if (selectedProduct == null) {
-            return res.send("Error 404 - Producto no encontrado");
-        }
+        db.Product.findAll({
+            raw: true,
+        })
+            .then((products) => {
+                const selectedProduct = products.find((product) => {
+                    return product.id == req.params.id;
+                });
+                if (selectedProduct == null) {
+                    return res.send("Error 404 - Producto no encontrado");
+                }
 
-        res.render("product_edit", {
-            product: selectedProduct,
-            toThousand: toThousand,
-        });
+                res.render("product_edit", {
+                    product: selectedProduct,
+                    toThousand: toThousand,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
     create: (req, res, next) => {
         const products = getProducts();

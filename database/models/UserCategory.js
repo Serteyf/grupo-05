@@ -18,8 +18,9 @@ module.exports = (sequelize, dataTypes) => {
     const UserCategory = sequelize.define(alias, cols, config);
 
     UserCategory.associate = (models) => {
-        UserCategory.hasMany(models.User, {
+        UserCategory.belongsToMany(models.User, {
             as: "users",
+            through: "users_category",
         });
     };
 

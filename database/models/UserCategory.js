@@ -11,16 +11,16 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
-        tableName: "user_category",
+        tableName: "users_category",
         timestamps: false,
     };
 
     const UserCategory = sequelize.define(alias, cols, config);
 
     UserCategory.associate = (models) => {
-        UserCategory.belongsToMany(models.User, {
+        UserCategory.hasMany(models.User, {
             as: "users",
-            through: "users_category",
+            foreignKey: "categoryId",
         });
     };
 

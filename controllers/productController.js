@@ -2,7 +2,6 @@ const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
 const fs = require("fs");
 const db = require("../database/models");
-const { QueryTypes } = require("sequelize");
 
 productController = {
     all: (req, res) => {

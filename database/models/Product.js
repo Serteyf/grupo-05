@@ -1,47 +1,51 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "Product";
     let cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        name:{
-            type: dataTypes.STRING
+        name: {
+            type: dataTypes.STRING,
         },
         description: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
         },
-        price:{
-            type: dataTypes.INTEGER
-        },
-        discount:{
-            type: dataTypes.INTEGER
-        },
-        featured: dataTypes.INTEGER,
-        categoryId:{
+        price: {
             type: dataTypes.INTEGER,
-            foreignKey: true,           
         },
-        image: dataTypes.STRING
+        discount: {
+            type: dataTypes.INTEGER,
+        },
+        featured: {
+            type: dataTypes.INTEGER,
+        },
+        categoryId: {
+            type: dataTypes.INTEGER,
+            foreignKey: true,
+        },
+        image: {
+            type: dataTypes.STRING,
+        },
     };
     let config = {
         tableName: "products",
-        timestamps: false
-    }
+        timestamps: false,
+    };
 
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models) => {
         Product.hasOne(models.ProductCategory, {
             as: "product_category",
-            foreignKey: "categoryId"
+            foreignKey: "categoryId",
         });
         Product.belongsToMany(models.Sale, {
             as: "sales",
-            through: "products_sales"
-        })
-    }
+            through: "products_sales",
+        });
+    };
 
     return Product;
-}
+};

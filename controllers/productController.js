@@ -8,8 +8,9 @@ productController = {
     all: (req, res) => {
         const products = getProducts();
 
-        db.sequelize
-            .query("SELECT * FROM products", { type: QueryTypes.SELECT })
+        db.Product.findAll({
+            raw: true,
+        })
             .then((productos) => {
                 console.log(productos);
             })

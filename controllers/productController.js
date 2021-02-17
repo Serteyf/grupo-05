@@ -2,6 +2,7 @@ const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
 const fs = require("fs");
 const db = require("../database/models");
+const Product = require("../database/models/Product");
 
 productController = {
     all: (req, res) => {
@@ -88,24 +89,18 @@ productController = {
             });
     },
     create: (req, res, next) => {
-        const products = getProducts();
-        const newProduct = {
-            id: Number(products.length + 1),
+        db.Product.create({
+            id: null,
             name: req.body.name,
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
+            featured: 0,
             image: req.files[0].filename,
-            category: req.body.category,
-        };
+            categoryId: req.body.category,
+        });
 
-        products.push(newProduct);
-
-        const productsJSON = JSON.stringify(products, null, 4);
-
-        fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);
-
-        res.redirect("/products/" + newProduct.id);
+        res.redirect("/products/");
     },
     edit: (req, res) => {
         const products = getProducts();

@@ -12,7 +12,11 @@
             <section class="create-back">
                 <div class="create">
                     <h2>CREAR PRODUCTO</h2>
-                    <form action="/products/create" enctype="multipart/form-data" method="POST">
+                    <form
+                        action="/products/create"
+                        enctype="multipart/form-data"
+                        method="POST"
+                    >
                         <input
                             class="caja"
                             type="text"
@@ -31,22 +35,18 @@
                             placeholder="Precio"
                             name="price"
                         />
-                        <input 
-                            class="caja" 
-                            type="number" 
-                            placeholder="Descuento" 
-                            name="discount" 
-                        />
-                        <select
+                        <input
                             class="caja"
-                            type="text"
-                            name="category"
+                            type="number"
+                            placeholder="Descuento"
+                            name="discount"
                         />
-                        <option value="consoles">Consolas</option>
-                        <option value="games">Juegos</option>
-                        <option value="accesories">Accesorios</option>
-                        <option value="retro">Retro</option>
-                    </select>
+                        <select class="caja" type="text" name="category">
+                            <option value="1">Consolas</option>
+                            <option value="2">Juegos</option>
+                            <option value="3">Accesorios</option>
+                            <option value="4">Retro</option>
+                        </select>
                         <label class="cartel" for="photo"
                             >Imagen de producto
                             <input

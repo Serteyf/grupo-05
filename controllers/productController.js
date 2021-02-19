@@ -2,7 +2,6 @@ const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
 const fs = require("fs");
 const db = require("../database/models");
-const Product = require("../database/models/Product");
 
 productController = {
     all: (req, res) => {
@@ -10,6 +9,7 @@ productController = {
             raw: true,
         })
             .then((products) => {
+                console.log(products);
                 res.render("products-all", {
                     products: products,
                     thousand: toThousand,
@@ -95,7 +95,7 @@ productController = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            featured: 0,
+            featured: Number(req.body.featured),
             image: req.files[0].filename,
             categoryId: req.body.category,
         });
@@ -103,56 +103,60 @@ productController = {
         res.redirect("/products/");
     },
     edit: (req, res) => {
-        const products = getProducts();
-        const selectedProduct = products.find((product) => {
-            return product.id == req.params.id;
-        });
+        db.Product.update(
+            {
+                name: req.body.name,
+                description: req.body.description,
+                price: Number(req.body.price),
+                discount: Number(req.body.discount),
+                image:
+                    req.files[0] == undefined
+                        ? db.Product.image
+                        : req.files[0].filename,
+                category: req.body.category,
+                featured: req.body.featured,
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
 
-        const editedProduct = {
-            id: selectedProduct.id,
-            name: req.body.name,
-            description: req.body.description,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
-            image:
-                req.files[0] == undefined
-                    ? selectedProduct.image
-                    : req.files[0].filename,
-            category: req.body.category,
-            outstanding: req.body.outstanding,
-        };
-
-        products.splice(products.indexOf(selectedProduct), 1, editedProduct);
-
-        const productsJSON = JSON.stringify(products, null, 4);
-
-        fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);
-
-        res.redirect("/products/" + editedProduct.id);
+        res.redirect("/products/" + req.params.id);
     },
     showDelete: (req, res) => {
-        const products = getProducts();
-        const selectedProduct = products.find((product) => {
-            return product.id == req.params.id;
-        });
-        if (selectedProduct == null) {
-            return res.send("Error 404 - Producto no encontrado");
-        }
-        res.render("product-delete", {
-            product: selectedProduct,
-        });
+        db.Product.findAll({
+            raw: true,
+        })
+            .then((products) => {
+                const selectedProduct = products.find((product) => {
+                    return product.id == req.params.id;
+                });
+                if (selectedProduct == null) {
+                    return res.send("Error 404 - Producto no encontrado");
+                }
+                res.render("product-delete", {
+                    product: selectedProduct,
+                });
+
+                res.render("product", {
+                    product: selectedProduct,
+                    suggestedProducts: suggestedProducts,
+                    thousand: toThousand,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
+
     delete: (req, res) => {
-        const products = getProducts();
-        const selectedProduct = products.find((product) => {
-            return product.id == req.params.id;
+        db.Product.destroy({
+            where: {
+                id: req.params.id,
+            },
         });
-
-        products.splice(products.indexOf(selectedProduct), 1);
-
-        const productsJSON = JSON.stringify(products, null, 4);
-
-        fs.writeFileSync(__dirname + "/../data/products.json", productsJSON);
 
         res.redirect("/products");
     },

@@ -70,11 +70,11 @@
                         <h4>DESTACADO</h4>
                      <select
                             class="caja"
-                            type="text"
-                            name="outstanding"
+                            type="number"
+                            name="featured"
                         >
-                        <option value="true" <%= product.outstanding == "true" ? "selected" : "" %> >SI</option>
-                        <option value="false" <%= product.outstanding == "false" ? "selected" : "" %>>NO</option>
+                        <option value=1 <%= product.featured == 1 ? "selected" : "" %> >SI</option>
+                        <option value=0 <%= product.featured == 0 ? "selected" : "" %>>NO</option>
                     </select>
                     </div>
 

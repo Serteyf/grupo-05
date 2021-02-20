@@ -105,7 +105,7 @@ Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar 
 
 ## Comenzar a hacer
 
-En este sprint lo que tuvimos que comenzar a hacer es repasar bastante los materiales teóricos y consultar bastante la documentación, ya que este sprint nos resultó uno de los mas dificiles a la hora de realizarlo, con conceptos que no teniamos tan interiorizados a la hora de implementarlos.
+Comenzar a hacer es repasar  los materiales teóricos y consultar la documentación, ya que este sprint nos resultó uno de los mas dificiles a la hora de realizarlo, con conceptos que no teniamos tan interiorizados a la hora de implementarlos.
 
 ## Hacer más
 
@@ -113,7 +113,8 @@ Mantener la comunicación frecuentemente, notificar y mantenernos al tanto de cu
 
 ## Continuar haciendo
 
-Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
+Continuar planificando las tareas de la forma en la que lo estamos haciendo para llegar a tiempo con las entregas.
+Continuar realizando consultas en las cuestiones que no podamos resolver por nuestra cuenta con el fin de no atrasarnos.
 
 ## Hacer menos
 

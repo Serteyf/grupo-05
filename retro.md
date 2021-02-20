@@ -100,3 +100,25 @@ En este sprint no vimos algo que tuvieramos que hacer menos. Manejamos los tiemp
 ## Dejar de hacer
 
 Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar de hacer. El sprint lo pudimos llevar a cabo de forma correcta gracias al trabajo en conjunto y a la comunicación constante en el grupo.
+
+# Sprint 5
+
+## Comenzar a hacer
+
+En este sprint lo que tuvimos que comenzar a hacer es repasar bastante los materiales teóricos y consultar bastante la documentación, ya que este sprint nos resultó uno de los mas dificiles a la hora de realizarlo, con conceptos que no teniamos tan interiorizados a la hora de implementarlos.
+
+## Hacer más
+
+Mantener la comunicación frecuentemente, notificar y mantenernos al tanto de cualquier cambio realizado de forma individual y repasar mas los materiales que se nos presentan en el sprint. 
+
+## Continuar haciendo
+
+Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
+
+## Hacer menos
+
+En este sprint no vimos algo que tuvieramos que hacer menos. Manejamos los tiempos y las tareas de forma adecuada.
+
+## Dejar de hacer
+
+Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar de hacer. El sprint lo pudimos llevar a cabo de forma correcta gracias al trabajo en conjunto y a la comunicación constante en el grupo.

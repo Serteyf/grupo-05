@@ -185,3 +185,18 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 -   Poblar la base de datos con la información necesaria
 -   Comenzar a reemplazar los comandos del CRUD que modificaban el JSON para que funcionen con la DB.
+
+# Reunión 19/02
+
+## Qué se hizo la semana pasada
+
+- CRUD utilizando la base de datos en lugar del JSON.
+
+## Impedimentos con los cuales nos encontramos
+- Nos quedó pendiente implementar la base de datos en el controlador "main", que se encarga de la lógica detrás del index y de las búsquedas.
+
+## Qué se va a hacer la semana próxima
+
+- Resolver la implementación de la DB para el mainController
+- Comenzar el sprint de Validaciones
+

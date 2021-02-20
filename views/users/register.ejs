@@ -12,11 +12,23 @@
             <section class="register-back">
                 <div class="register">
                     <h2>CREAR CUENTA</h2>
-                    <form action="/users/register" method="POST" enctype="multipart/form-data">
-                        <input type="text" placeholder="Nombre y Apellido" name="name" />
+                    <form
+                        action="/users/register"
+                        method="POST"
+                        enctype="multipart/form-data"
+                    >
+                        <input
+                            type="text"
+                            placeholder="Nombre y Apellido"
+                            name="name"
+                        />
                         <input type="text" placeholder="Usuario" name="user" />
                         <input type="email" placeholder="Email" name="email" />
-                        <input type="text" placeholder="Domicilio" name="address" />
+                        <input
+                            type="text"
+                            placeholder="Domicilio"
+                            name="address"
+                        />
                         <input
                             type="password"
                             placeholder="Contraseña"
@@ -27,7 +39,7 @@
                             placeholder="Repetir contraseña"
                             name="password2"
                         />
-                        <input type="file" class="userAvatar" name="avatar">
+                        <input type="file" class="userAvatar" name="avatar" />
                         <button type="submit">REGISTRARME</button>
                     </form>
                 </div>

@@ -41,7 +41,7 @@
                 </div>
             </section>
 
-            <% if (user && user.admin) { %>
+            <% if (user && user.categoryId == 2) { %>
 
             <div class="admin-product">
                 <a href="/products/edit/<%= product.id %>" class="btn-edit">Editar producto</a>

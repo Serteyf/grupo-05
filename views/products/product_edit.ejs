@@ -60,10 +60,10 @@
                             type="text"
                             name="category"
                         >
-                        <option value="consoles" <%= product.category == "consoles" ? "selected" : "" %> >Consolas</option>
-                        <option value="accesories" <%= product.category == "accesories" ? "selected" : "" %>>Accesorios</option>
-                        <option value="games" <%= product.category == "games" ? "selected" : "" %>>Juegos</option>
-                        <option value="retro" <%= product.category == "retro" ? "selected" : "" %>>Retro</option>
+                        <option value="consoles" <%= product.categoryId == "1" ? "selected" : "" %> >Consolas</option>
+                        <option value="accesories" <%= product.categoryId == "3" ? "selected" : "" %>>Accesorios</option>
+                        <option value="games" <%= product.categoryId == "2" ? "selected" : "" %>>Juegos</option>
+                        <option value="retro" <%= product.categoryId == "4" ? "selected" : "" %>>Retro</option>
                     </select>
                     </div>
                     <div class="product-description-edit">

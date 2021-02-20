@@ -1,14 +1,22 @@
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/toThousand");
 const replaceAll = require("../utils/replaceAll");
+const db = require("../database/models");
 
 mainController = {
     home: (req, res) => {
-        const products = getProducts();
-        res.render("index", {
-            products: products,
-            thousand: toThousand,
-        });
+        db.Product.findAll({
+            raw: true,
+        })
+            .then((products) => {
+                res.render("index", {
+                    products: products,
+                    thousand: toThousand,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
     search: (req, res) => {
         const products = getProducts();
@@ -19,9 +27,7 @@ mainController = {
         for (let i = 0; i < products.length; i++) {
             const product = products[i].name.toLowerCase();
             const productReplace = replaceAll(product);
-            if (
-                productReplace.includes(keywordReplace)
-            ) {
+            if (productReplace.includes(keywordReplace)) {
                 results.push(products[i]);
             }
         }
@@ -29,12 +35,12 @@ mainController = {
         res.render("product-search", {
             results: results,
             keyword: keyword,
-            thousand: toThousand
+            thousand: toThousand,
         });
     },
     contact: (req, res) => {
-        res.render("contact")
-    }
+        res.render("contact");
+    },
 };
 
 module.exports = mainController;

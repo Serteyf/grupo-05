@@ -1,5 +1,3 @@
-const getUsers = require("../utils/getUsers");
-const saveUsers = require("../utils/saveUsers");
 const bcrypt = require("bcrypt");
 const db = require("../database/models");
 
@@ -12,10 +10,7 @@ usersController = {
             id: null,
             ...req.body,
             categoryId: 1,
-            avatar:
-                req.files[0] == undefined
-                    ? null
-                    : req.files[0].filename,
+            avatar: req.files[0].filename,
             password: bcrypt.hashSync(req.body.password, 12),
         });
 

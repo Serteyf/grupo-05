@@ -1,6 +1,6 @@
 const toThousand = require("../utils/toThousand");
 const db = require("../database/models");
-
+// cambio para probar nueva branch
 productController = {
     all: (req, res) => {
         db.Product.findAll({

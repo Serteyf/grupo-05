@@ -1,90 +1,60 @@
 const toThousand = require("../utils/toThousand");
+const productServices = require("../services/productServices");
 const db = require("../database/models");
 
 productController = {
-    all: (req, res) => {
-        db.Product.findAll({
-            raw: true,
-        })
-            .then((products) => {
-                console.log(products);
-                res.render("products-all", {
-                    products: products,
-                    thousand: toThousand,
-                });
+    all: async(req, res) => {
+        try {
+            const products = await productServices.findAll();
+            res.render("products-all", {
+                products: products,
+                thousand: toThousand
             })
-            .catch((error) => {
-                console.log(error);
-            });
+        } catch (err) {
+            console.log(err)
+        }
     },
-    byCategory: (req, res) => {
-        db.Product.findAll({
-            raw: true,
-            where: {
-                categoryId: req.params.category,
-            },
-        })
-            .then((products) => {
-                if (products == "") {
+    byCategory: async(req, res) => {
+        try {
+            const productsByCategory = await productServices.findByCategory();
+            if (productsByCategory == "") {
                     return res.render("not-found");
                 }
-                res.render("products-all", {
-                    products: products,
-                    thousand: toThousand,
-                });
+            res.render("products-all", {
+                products: productsByCategory,
+                thousand: toThousand,
             })
-            .catch((error) => {
-                console.log(error);
-            });
+        } catch(err) {
+            console.log(error);
+        }
     },
-    detail: (req, res) => {
-        db.Product.findAll({
-            raw: true,
-        })
-            .then((products) => {
-                const selectedProduct = products.find((product) => {
-                    return req.params.id == product.id;
-                });
-                const suggestedProducts = products.filter(
-                    (product) => product.category == selectedProduct.category
-                );
-                suggestedProducts.splice(
-                    suggestedProducts.indexOf(selectedProduct),
-                    1
-                );
-                res.render("product", {
-                    product: selectedProduct,
-                    suggestedProducts: suggestedProducts,
-                    thousand: toThousand,
-                });
-            })
-            .catch((error) => {
-                console.log(error);
+    detail: async(req, res) => {
+        try {
+            const selectedProduct = await productServices.findOne(req.params.id);
+            const suggestedProducts = await productServices.findSuggested(selectedProduct.categoryId)
+            suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct));
+
+            res.render("product", {
+                product: selectedProduct,
+                suggestedProducts: suggestedProducts,
+                thousand: toThousand,
             });
+        } catch(err) {
+            console.log(err);
+        }
     },
     showCreate: (req, res) => {
         res.render("product-create");
     },
-    showEdit: (req, res) => {
-        db.Product.findAll({
-            raw: true,
-        })
-            .then((products) => {
-                const selectedProduct = products.find((product) => {
-                    return product.id == req.params.id;
-                });
-                if (selectedProduct == null) {
-                    return res.send("Error 404 - Producto no encontrado");
-                }
-
-                res.render("product_edit", {
-                    product: selectedProduct,
-                    toThousand: toThousand,
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+    showEdit: async(req, res) => {
+        const product = await productServices.findOne(req.params.id);
+        if(product == null){
+            return res.render('not-found.ejs')
+        };
+        res.render("product_edit", {
+            product: product,
+            toThousand: toThousand,
+        });
     },
     create: (req, res, next) => {
         db.Product.create({
@@ -123,30 +93,47 @@ productController = {
 
         res.redirect("/products/" + req.params.id);
     },
-    showDelete: (req, res) => {
-        db.Product.findAll({
-            raw: true,
-        })
-            .then((products) => {
-                const selectedProduct = products.find((product) => {
-                    return product.id == req.params.id;
-                });
-                if (selectedProduct == null) {
-                    return res.send("Error 404 - Producto no encontrado");
-                }
-                res.render("product-delete", {
-                    product: selectedProduct,
-                });
+    showDelete: async(req, res) => {
+        try {
+            const product = await productServices.findOne(req.params.id);
 
-                res.render("product", {
-                    product: selectedProduct,
+            if (product == null) {
+                return res.send("Error 404 - Producto no encontrado");
+            }
+            res.render("product-delete", {
+                product: product,
+            });
+            res.render("product", {
+                    product: product,
                     suggestedProducts: suggestedProducts,
                     thousand: toThousand,
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+                })
+        } catch(err) {
+            console.log(err);
+        }
+        // db.Product.findAll({
+        //     raw: true,
+        // })
+        //     .then((products) => {
+        //         const selectedProduct = products.find((product) => {
+        //             return product.id == req.params.id;
+        //         });
+        //         if (selectedProduct == null) {
+        //             return res.send("Error 404 - Producto no encontrado");
+        //         }
+        //         res.render("product-delete", {
+        //             product: selectedProduct,
+        //         });
+
+        //         res.render("product", {
+        //             product: selectedProduct,
+        //             suggestedProducts: suggestedProducts,
+        //             thousand: toThousand,
+        //         });
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     });
     },
 
     delete: (req, res) => {

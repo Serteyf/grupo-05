@@ -1,25 +1,39 @@
 const bcrypt = require("bcrypt");
 const db = require("../database/models");
+const path = require("path"); 
+const {
+    validationResult
+} = require("express-validator");
 
 usersController = {
     showRegister: (req, res) => {
         res.render("register");
     },
     register: (req, res, next) => {
-        db.User.create({
-            id: null,
-            ...req.body,
-            categoryId: 1,
-            avatar: req.files[0] == undefined ? null : req.files[0].filename,
-            password: bcrypt.hashSync(req.body.password, 12),
-        });
+        const errors = validationResult(req);
 
-        if (req.body.password2 != req.body.password) {
-            res.redirect("/users/register");
+        if (!errors.isEmpty()) {
+            console.log(errors)
+            res.render(path.resolve(__dirname, '../views/users/register.ejs'), {
+                errors: errors.errors
+            })
+
         } else {
-            delete req.body.password2;
+            db.User.create({
+                id: null,
+                ...req.body,
+                categoryId: 1,
+                avatar: req.files[0] == undefined ? null : req.files[0].filename,
+                password: bcrypt.hashSync(req.body.password, 12),
+            });
 
-            res.redirect("/");
+            if (req.body.password2 != req.body.password) {
+                res.redirect("/users/register");
+            } else {
+                delete req.body.password2;
+
+                res.redirect("/");
+            }
         }
     },
     showLogin: (req, res) => {
@@ -38,7 +52,7 @@ usersController = {
                 });
 
                 if (!user) {
-                    return res.redirect("/users/login");
+                    return res.redirect("/users/register");
                 } else if (req.body.remember) {
                     req.session.loggedUserId = user.id;
                     res.cookie("remember", req.session.loggedUserId, {

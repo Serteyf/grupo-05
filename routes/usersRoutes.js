@@ -47,17 +47,35 @@ router.post(
                 min: 8,
             })
             .withMessage("La contraseña debe tener un mínimo de 8 caracteres"),
-        check("avatar")
-        .custom((value, {req}) => {
-            if(req.files.mimetype === 'application/pdf'){
-                return '.pdf'; // return "non-falsy" value to indicate valid data"
-            }else{
-                return false; // return "falsy" value to indicate invalid data
-            }
-        })
-    .withMessage('Please only submit pdf documents.'), // custom error message that will be send back if the file in not a pdf.
-            
-        
+        //  COMPLETAR CON VALIDACION PARA IMAGEN DE PERFIL
+        body("avatar")
+            .custom((value, { req }) => {
+                const fileExtension = path.extname(req.files[0].filename);
+                console.log(fileExtension);
+                switch (fileExtension) {
+                    case ".png":
+                        return true;
+                    case ".jpg":
+                        return true;
+                    case ".jpeg":
+                        return true;
+                    case ".gif":
+                        return true;
+                    default:
+                        return false;
+                }
+            })
+            .withMessage("La imagen puede ser en formato .png, .jpg, .jpeg o .gif"), // custom error message that will be send back if the file in not a pdf.
+
+        // .custom((value, { req }) => {
+        //     const archivo = path.extname(req.files[0].filename);
+        //     if (archivo === ".png") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // })
+
         body("email")
             //  COMPLETAR CON VALIDACION PARA EMAIL
             .custom(async (value) => {

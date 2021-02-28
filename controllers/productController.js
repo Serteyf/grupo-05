@@ -16,7 +16,7 @@ productController = {
     },
     byCategory: async(req, res) => {
         try {
-            const productsByCategory = await productServices.findByCategory(req, res);
+            const productsByCategory = await productServices.findByCategory(req);
             if (productsByCategory == "") {
                     return res.render("not-found");
                 }

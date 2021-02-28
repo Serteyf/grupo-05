@@ -16,7 +16,7 @@ productController = {
     },
     byCategory: async(req, res) => {
         try {
-            const productsByCategory = await productServices.findByCategory();
+            const productsByCategory = await productServices.findByCategory(req, res);
             if (productsByCategory == "") {
                     return res.render("not-found");
                 }
@@ -25,7 +25,7 @@ productController = {
                 thousand: toThousand,
             })
         } catch(err) {
-            console.log(error);
+            console.log(err);
         }
     },
     detail: async(req, res) => {

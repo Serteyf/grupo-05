@@ -13,7 +13,7 @@ module.exports = {
     findAll: async () => {
         return await Product.findAll({raw:true})
     },
-    findByCategory: async () => {
+    findByCategory: async (req) => {
         return await Product.findAll({
             raw: true,
             where: { categoryId: req.params.category }

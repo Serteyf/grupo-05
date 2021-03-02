@@ -217,6 +217,7 @@ nav ul li a:focus {
     justify-content: center;
     align-items: center;
     width: 50%;
+    opacity: 90%;
 }
 
 .product-card a {

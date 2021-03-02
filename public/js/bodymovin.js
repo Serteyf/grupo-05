@@ -15,3 +15,20 @@ window.addEventListener("load", function(){
         animation.playSegments([0,200], true);
     })
 })
+
+window.addEventListener("load", function(){
+    const container2 = document.getElementById("logo-footer");
+        
+    const animation = lottie.loadAnimation({
+        container: container2,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        animationData: bodyData
+      });
+    
+    container2.addEventListener("mousemove", function(){
+        animation.playSegments([0,200], true);
+    })
+})
+

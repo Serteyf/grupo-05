@@ -9,6 +9,14 @@
         <header><%- include("partials/header.ejs") %></header>
 
         <main>
+            <% if (typeof errors != 'undefined'){ %>
+                <ul>
+                    <% for (i=0; i < errors.length; i++) {%>
+                    <li style="color: aliceblue;"><%= errors[i].msg %></li>
+                    <% } %>
+                </ul>
+                <% } %>
+    
             <section class="create-back">
                 <div class="create">
                     <h2>CREAR PRODUCTO</h2>

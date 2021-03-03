@@ -47,18 +47,15 @@ router.post(
                 min: 8,
             })
             .withMessage("La contraseña debe tener un mínimo de 8 caracteres"),
-        //  COMPLETAR CON VALIDACION PARA IMAGEN DE PERFIL
+        
         body("avatar")
-            .custom((value, { req }) => {
+            .custom((value, {req}) => {
                 const fileExtension = path.extname(req.files[0].filename);
                 console.log(fileExtension);
                 switch (fileExtension) {
                     case ".png":
-                        return true;
                     case ".jpg":
-                        return true;
                     case ".jpeg":
-                        return true;
                     case ".gif":
                         return true;
                     default:
@@ -66,34 +63,54 @@ router.post(
                 }
             })
             .withMessage("La imagen puede ser en formato .png, .jpg, .jpeg o .gif"), // custom error message that will be send back if the file in not a pdf.
-
-        // .custom((value, { req }) => {
-        //     const archivo = path.extname(req.files[0].filename);
-        //     if (archivo === ".png") {
-        //         return true;
-        //     } else {
-        //         return false;
-        //     }
-        // })
-
-        body("email")
-            //  COMPLETAR CON VALIDACION PARA EMAIL
-            .custom(async (value) => {
-                const emailUser = await User.findOne({
-                    where: { email: value },
-                });
-                if (!emailUser) {
-                    return true;
-                }
-                return false;
+        
+        body('email', 'Invalid email').exists().trim().escape().custom(userEmail=> {
+            return new Promise((resolve, reject) => {
+                User.findOne({ where: { email: userEmail } })
+                .then(emailExist => {
+                    if(emailExist !== null){
+                        reject(new Error('El mail ya existe'))
+                    }else{
+                        resolve(true)
+                    }
+                })
+                
             })
-            .withMessage("Este email ya se encuentra registrado"),
+        }),
+        body('user').exists().trim().escape().custom(userName=> {
+            return new Promise((resolve, reject) => {
+                User.findOne({ where: { user: userName } })
+                .then(userExist => {
+                    if(userExist !== null){
+                        reject(new Error('El usuario ya existe'))
+                    }else{
+                        resolve(true)
+                    }
+                })
+                
+            })
+        })
     ],
     userController.register
 );
 
 router.get("/login", isLoggedMiddleware, userController.showLogin);
-router.post("/login", userController.login);
+router.post("/login", [
+    body('user').exists().trim().escape().custom(userName=> {
+        return new Promise((resolve, reject) => {
+            User.findOne({ where: { user: userName } })
+            .then(userExist => {
+                if(!userExist){
+                    reject(new Error('El usuario no existe'))
+                }else{
+                    resolve(true)
+                }
+            })
+            
+        })
+    })
+],
+userController.login);
 
 router.get("/logout", isNotLoggedMiddleware, userController.logout);
 

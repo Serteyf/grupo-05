@@ -9,6 +9,13 @@
         <header><%- include("partials/header.ejs") %></header>
 
         <main>
+            <% if (typeof errors != 'undefined'){ %>
+                <ul>
+                    <% for (i=0; i < errors.length; i++) {%>
+                    <li style="color: aliceblue;"><%= errors[i].msg %></li>
+                    <% } %>
+                </ul>
+                <% } %>    
             <section class="login-back">
                 <div class="login">
                     <h2>INGRESAR</h2>

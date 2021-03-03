@@ -1,6 +1,13 @@
 const toThousand = require("../utils/toThousand");
 const productServices = require("../services/productServices");
 const db = require("../database/models");
+const path = require("path"); 
+
+
+const {
+    validationResult
+} = require("express-validator");
+
 
 productController = {
     all: async(req, res) => {
@@ -57,6 +64,16 @@ productController = {
         });
     },
     create: (req, res, next) => {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            console.log(errors)
+            res.render(path.resolve(__dirname, '../views/products/product-create.ejs'), {
+                errors: errors.errors
+            })
+
+        } else {
+
         db.Product.create({
             id: null,
             name: req.body.name,
@@ -69,6 +86,7 @@ productController = {
         });
 
         res.redirect("/products/");
+    }
     },
     edit: (req, res) => {
         db.Product.update(

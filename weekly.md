@@ -164,6 +164,7 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 -   Se creo script para la estructura de la base de datos.
 
 ## Impedimentos con los cuales nos encontramos
+
 -   No encontramos impedimentos a lo largo de esta semana.
 
 ## Qué se va a hacer la semana próxima
@@ -174,12 +175,13 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 ## Qué se hizo la semana pasada
 
-- Correcciones en el diagrama de la base de datos
-- Correcciones en el script de creación
-- Configuración, modelos y asociaciones en Sequelize
+-   Correcciones en el diagrama de la base de datos
+-   Correcciones en el script de creación
+-   Configuración, modelos y asociaciones en Sequelize
 
 ## Impedimentos con los cuales nos encontramos
-- Tuvimos convenientes a la hora de correr el script de creación de la base de datos. Lo solucionamos buscando scripts similares y agregando los comandos que estaban faltando (por ejemplo, el USE de la base de datos luego de haberla creado).
+
+-   Tuvimos convenientes a la hora de correr el script de creación de la base de datos. Lo solucionamos buscando scripts similares y agregando los comandos que estaban faltando (por ejemplo, el USE de la base de datos luego de haberla creado).
 
 ## Qué se va a hacer la semana próxima
 
@@ -190,13 +192,43 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 
 ## Qué se hizo la semana pasada
 
-- CRUD utilizando la base de datos en lugar del JSON.
+-   CRUD utilizando la base de datos en lugar del JSON.
 
 ## Impedimentos con los cuales nos encontramos
-- Nos quedó pendiente implementar la base de datos en el controlador "main", que se encarga de la lógica detrás del index y de las búsquedas.
+
+-   Nos quedó pendiente implementar la base de datos en el controlador "main", que se encarga de la lógica detrás del index y de las búsquedas.
 
 ## Qué se va a hacer la semana próxima
 
-- Resolver la implementación de la DB para el mainController
-- Comenzar el sprint de Validaciones
+-   Resolver la implementación de la DB para el mainController
+-   Comenzar el sprint de Validaciones
 
+# Reunión 27/02
+
+## Qué se hizo la semana pasada
+
+-   Se comenzó a hacer la validación del backend correspondiente a las páginas create y register user.
+
+## Impedimentos con los cuales nos encontramos
+
+-   Tuvimos inconvenientes a la hora de validar que el email de registro no coincida con uno existente en la base de datos. Posteriormente pudimos solucionarlo.
+
+## Qué se va a hacer la semana próxima
+
+-   Terminar validación backend
+-   Comenzar con validación frontend
+
+# Reunión 03/03
+
+## Qué se hizo la semana pasada
+
+-   Se finalizó la validación del backend con express-validator.
+-   Se comenzó la validación del front seteando los archivos validator.min.js y validator.js.
+
+## Impedimentos con los cuales nos encontramos
+
+-   Esta reunión fue fluida y no nos encontramos con trabas que nos impidan continuar el trabajo.
+
+## Qué se va a hacer la semana próxima
+
+-   Terminar la validación del frontend

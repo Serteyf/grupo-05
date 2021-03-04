@@ -10,13 +10,13 @@ window.addEventListener("load", () => {
         clearValidations();
 
         validateInput("name", [
-            [validator.isLength, { min: 1 }, "Nombre es un campo requerido!"],
+            [validator.isLength, { min: 2 }, "Nombre es un campo requerido y con mas de 1 caracteres!"],
         ]);
         validateInput("email", [
             [validator.isEmail, "Email debe ser un email valido!"],
         ]);
         validateInput("password", [
-            [validator.isLength, { min: 1 }, "Password es un campo requerido!"],
+            [validator.isLength, { min: 8 }, "Password es un campo requerido y con mas de 7 caracteres!"],
         ]);
         validateInput("termsCheck", [
             [isTrue, "Debés aceptar los terminos y condiciones!"],

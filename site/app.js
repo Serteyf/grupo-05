@@ -3,7 +3,7 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
-const authenticateMiddleware = require('./middlewares/authenticateMiddleware')
+const authenticateMiddleware = require('./middlewares/auth/authenticateMiddleware')
 const rememberMiddleware = require('./middlewares/rememberMiddleware')
 
 app.set("view engine", "ejs");

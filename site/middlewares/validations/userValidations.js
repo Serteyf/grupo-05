@@ -1,6 +1,7 @@
 const { check, body } = require("express-validator");
 const { User } = require("../../database/models");
 const path = require("path");
+// const validateFileExt = require("../../utils/validateFileExt");
 
 const validations = {
     register: [
@@ -17,10 +18,10 @@ const validations = {
             .isLength({ min: 8, })
             .withMessage("La contraseña debe tener un mínimo de 8 caracteres"),
         body("avatar")
-            .custom((value, {req}) => {
-                let fileExtension = path.extname(req.files[0].filename);
+            .custom(({req}) => {
+                // validateFileExt(req, ".png", ".jpg", ".jpeg", ".gif");
+                let fileExtension = path.extname(req.files[0].filename); // filename undefined: Middleware ocurre antes que el controlador
                 fileExtension.toLowerCase; // Not working
-                console.log(fileExtension);
                 switch (fileExtension) {
                     case ".png":
                     case ".jpg":
@@ -32,46 +33,39 @@ const validations = {
                 }
             })
             .withMessage("La imagen puede ser en formato .png, .jpg, .jpeg o .gif"),
-        body('email').exists().trim().escape().custom(userEmail=> {
-            return new Promise((resolve, reject) => {
-                User.findOne({ where: { email: userEmail } })
-                .then(emailExist => {
+        body('email').exists().trim().escape()
+            .custom(async userEmail => {
+                return new Promise(async (resolve, reject) => {
+                    const emailExist = await User.findOne({ where: { email: userEmail } })
+
                     if(emailExist !== null){
                         reject(new Error('El mail ya existe'))
-                    }else{
-                        resolve(true)
-                    }
+                    } else resolve(true);
                 })
-                
-            })
         }),
-        body('user').exists().trim().escape().custom(userName=> {
-            return new Promise((resolve, reject) => {
-                User.findOne({ where: { user: userName } })
-                .then(userExist => {
+        body('user').exists().trim().escape()
+            .custom(async userName => {
+                return new Promise(async (resolve, reject) => {
+                    const userExist = await User.findOne({ where: { user: userName } })
+
                     if(userExist !== null){
-                        reject(new Error('El usuario ya existe'))
-                    }else{
-                        resolve(true)
-                    }
+                        reject(new Error('El nombre de usuario ya está en uso'))
+                    } else resolve(true);
                 })
-            })
-        })
+        }),
     ]
     ,
     login: [
-        body('user').exists().trim().escape().custom(userName=> {
-            return new Promise((resolve, reject) => {
-                User.findOne({ where: { user: userName } })
-                .then(userExist => {
+        body('user').exists().trim().escape()
+            .custom(async userName => {
+                return new Promise(async (resolve, reject) => {
+                    const userExist = await User.findOne({ where: { user: userName } })
+
                     if(!userExist){
-                        reject(new Error('El usuario no existe'))
-                    }else{
-                        resolve(true)
-                    }
+                        reject(new Error('El nombre de usuario no existe'))
+                    } else resolve(true);
                 })
-            })
-        })
+        }),
     ]
 };
 

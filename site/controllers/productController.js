@@ -1,57 +1,41 @@
+const path = require("path"); 
 const toThousand = require("../utils/toThousand");
 const productServices = require("../services/productServices");
-const db = require("../database/models");
-const path = require("path"); 
+const { Product } = require("../database/models");
 
-
-const {
-    validationResult
-} = require("express-validator");
-
+const { validationResult } = require("express-validator");
 
 productController = {
     all: async(req, res) => {
-        try {
-            const products = await productServices.findAll();
-            res.render("products-all", {
-                products: products,
-                thousand: toThousand
-            })
-        } catch (err) {
-            console.log(err)
-        }
+        const products = await productServices.findAll();
+        res.render("products-all", {
+            products: products,
+            thousand: toThousand
+        })
     },
     byCategory: async(req, res) => {
-        try {
-            const productsByCategory = await productServices.findByCategory(req);
-            if (productsByCategory == "") {
-                    return res.render("not-found");
-                }
-            res.render("products-all", {
-                products: productsByCategory,
-                thousand: toThousand,
-            })
-        } catch(err) {
-            console.log(err);
-        }
+        const productsByCategory = await productServices.findByCategory(req);
+        if (productsByCategory == "") {
+                return res.render("not-found");
+            }
+        res.render("products-all", {
+            products: productsByCategory,
+            thousand: toThousand,
+        })
     },
     detail: async(req, res) => {
-        try {
-            const selectedProduct = await productServices.findOne(req.params.id);
-            const suggestedProducts = await productServices.findSuggested(selectedProduct.categoryId)
-            suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct));
+        const selectedProduct = await productServices.findOne(req.params.id);
+        const suggestedProducts = await productServices.findSuggested(selectedProduct.categoryId)
+        suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct));
 
-            res.render("product", {
-                product: selectedProduct,
-                suggestedProducts: suggestedProducts,
-                thousand: toThousand,
-            });
-        } catch(err) {
-            console.log(err);
-        }
+        res.render("product", {
+            product: selectedProduct,
+            suggestedProducts: suggestedProducts,
+            thousand: toThousand,
+        });
     },
-    showCreate: (req, res) => {
-        res.render("product-create");
+    showCreate: async(req, res) => {
+        await res.render("product-create");
     },
     showEdit: async(req, res) => {
         const product = await productServices.findOne(req.params.id);
@@ -68,13 +52,11 @@ productController = {
 
         if (!errors.isEmpty()) {
             console.log(errors)
-            res.render(path.resolve(__dirname, '../views/products/product-create.ejs'), {
+            return res.render(path.resolve(__dirname, '../views/products/product-create.ejs'), {
                 errors: errors.errors
             })
-
-        } else {
-
-        db.Product.create({
+        } 
+        Product.create({
             id: null,
             name: req.body.name,
             description: req.body.description,
@@ -84,81 +66,47 @@ productController = {
             image: req.files[0].filename,
             categoryId: req.body.category,
         });
-
         res.redirect("/products/");
-    }
     },
     edit: (req, res) => {
-        db.Product.update(
-            {
-                name: req.body.name,
-                description: req.body.description,
-                price: Number(req.body.price),
-                discount: Number(req.body.discount),
-                image:
-                    req.files[0] == undefined
-                        ? db.Product.image
-                        : req.files[0].filename,
-                category: req.body.category,
-                featured: req.body.featured,
+        Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
+            image:
+                req.files[0] == undefined
+                    ? db.Product.image
+                    : req.files[0].filename,
+            category: req.body.category,
+            featured: req.body.featured,
+        },{
+            where: {
+                id: req.params.id,
             },
-            {
-                where: {
-                    id: req.params.id,
-                },
-            }
-        );
+        });
 
         res.redirect("/products/" + req.params.id);
     },
     showDelete: async(req, res) => {
-        try {
-            const product = await productServices.findOne(req.params.id);
+        const product = await productServices.findOne(req.params.id);
 
-            if (product == null) {
-                return res.send("Error 404 - Producto no encontrado");
-            }
-            res.render("product-delete", {
-                product: product,
-            });
-            res.render("product", {
-                    product: product,
-                    suggestedProducts: suggestedProducts,
-                    thousand: toThousand,
-                })
-        } catch(err) {
-            console.log(err);
+        if (product == null) {
+            return res.send("Error 404 - Producto no encontrado");
         }
-        // db.Product.findAll({
-        //     raw: true,
-        // })
-        //     .then((products) => {
-        //         const selectedProduct = products.find((product) => {
-        //             return product.id == req.params.id;
-        //         });
-        //         if (selectedProduct == null) {
-        //             return res.send("Error 404 - Producto no encontrado");
-        //         }
-        //         res.render("product-delete", {
-        //             product: selectedProduct,
-        //         });
-
-        //         res.render("product", {
-        //             product: selectedProduct,
-        //             suggestedProducts: suggestedProducts,
-        //             thousand: toThousand,
-        //         });
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     });
+        res.render("product-delete", {
+            product: product,
+        });
+        res.render("product", {
+                product: product,
+                suggestedProducts: suggestedProducts,
+                thousand: toThousand,
+            })
     },
 
     delete: (req, res) => {
-        db.Product.destroy({
-            where: {
-                id: req.params.id,
-            },
+        Product.destroy({
+            where: { id: req.params.id, },
         });
 
         res.redirect("/products");

@@ -2,14 +2,15 @@ const multer = require("multer");
 const path = require("path");
 const { User } = require("../database/models");
 
+
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, __dirname + "/../public/images/users");
     },
-    filename: (req, file, cb) => {
+    filename: async (req, file, cb) => {
         cb(
             null,
-            file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+            file.fieldname + "-" +  Date.now() + path.extname(file.originalname)
         );
     },
 });

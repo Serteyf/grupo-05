@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const isNotLoggedMiddleware = require("../middlewares/isNotLoggedMiddleware");
-const isLoggedMiddleware = require("../middlewares/isLoggedMiddleware");
+const isNotLoggedMiddleware = require("../middlewares/auth/isNotLoggedMiddleware");
+const isLoggedMiddleware = require("../middlewares/auth/isLoggedMiddleware");
 const validations = require("../middlewares/validations/userValidations");
 const upload = require("../middlewares/multer")
 

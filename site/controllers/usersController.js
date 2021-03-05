@@ -39,25 +39,25 @@ usersController = {
 
         if (!errors.isEmpty()) {
             console.log(errors)
-            res.render(path.resolve(__dirname, '../views/users/login.ejs'), {
+            return res.render(path.resolve(__dirname, '../views/users/login.ejs'), {
                 errors: errors.errors
             })
-        } else {
-            const user = await User.findOne({
-                where: { user: req.body.user }
-            });
-            const pwCompare = bcrypt.compareSync(req.body.password, user.password);
+        } 
+        const user = await User.findOne({
+            where: { user: req.body.user }
+        });
+        const pwCompare = bcrypt.compareSync(req.body.password, user.password);
 
-            if(!user || !pwCompare) return res.redirect("/users/register");
+        if(!user || !pwCompare) return res.redirect("/users/register");
 
-            if(req.body.remember) {
-                req.session.loggedUserId = user.id;
-                res.cookie("remember", req.session.loggedUserId, { maxAge: 1800000 })
-            } 
-
+        if(req.body.remember) {
             req.session.loggedUserId = user.id;
-            return res.redirect("/");
-        }
+            res.cookie("remember", req.session.loggedUserId, { maxAge: 1800000 })
+        } 
+
+        req.session.loggedUserId = user.id;
+        return res.redirect("/");
+    
     },
     logout: (req, res) => {
         req.session.destroy();

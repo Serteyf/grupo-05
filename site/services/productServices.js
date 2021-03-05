@@ -19,16 +19,4 @@ module.exports = {
             where: { categoryId: req.params.category }
         }) 
     },
-    // findSuggested: async (id) => {
-    //     return await this.findAll().filter(product => {
-    //         product.category = this.findByPk(id).category;
-    //     });
-
-    // },
-    // create: async (payload) => {
-        //     return await Product.create({
-            //         ...payload
-            //     })
-            // }
-            
-        }
+}

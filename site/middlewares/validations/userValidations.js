@@ -18,11 +18,14 @@ const validations = {
             .isLength({ min: 8, })
             .withMessage("La contraseña debe tener un mínimo de 8 caracteres"),
         body("avatar")
-            .custom(({req}) => {
+            .custom((value, {req}) => {
                 // validateFileExt(req, ".png", ".jpg", ".jpeg", ".gif");
-                let fileExtension = path.extname(req.files[0].filename); // filename undefined: Middleware ocurre antes que el controlador
-                fileExtension.toLowerCase; // Not working
+                // req.files[0] == undefined ? "" : req.files[0].filename
+                let fileExtension;
+                let extension = (path.extname(req.files[0].filename)).toLowerCase()
+                fileExtension == undefined ? "" : extension; // filename undefined: Middleware ocurre antes que el controlador
                 switch (fileExtension) {
+                    case "":
                     case ".png":
                     case ".jpg":
                     case ".jpeg":

@@ -3,6 +3,12 @@
     <head>
         <%- include("partials/head-base.ejs", {title: "Iniciar sesión"}) %>
         <link rel="stylesheet" href="/css/login-register-create.css" />
+        <!-- <script
+            type="text/javascript"
+            src="/js/validations/validator.min.js"
+            defer
+        ></script>
+        <script src="/js/validations/userValidations.js" defer></script> -->
     </head>
 
     <body>
@@ -10,22 +16,30 @@
 
         <main>
             <% if (typeof errors != 'undefined'){ %>
-                <ul>
-                    <% for (i=0; i < errors.length; i++) {%>
-                    <li style="color: aliceblue;"><%= errors[i].msg %></li>
-                    <% } %>
-                </ul>
-                <% } %>    
+            <ul>
+                <% for (i=0; i < errors.length; i++) {%>
+                <li style="color: aliceblue"><%= errors[i].msg %></li>
+                <% } %>
+            </ul>
+            <% } %>
             <section class="login-back">
                 <div class="login">
                     <h2>INGRESAR</h2>
-                    <form action="/users/login" method="POST">
-                        <input type="text" placeholder="Usuario" name="user" />
+                    <form action="/users/login" method="POST" id="registerForm">
+                        <input
+                            type="text"
+                            placeholder="Usuario"
+                            name="user"
+                            id="name"
+                        />
+                        <div id="nameFeedback" class="feedback"></div>
                         <input
                             type="password"
                             placeholder="Contraseña"
                             name="password"
+                            id="password"
                         />
+                        <div id="nameFeedback" class="feedback"></div>
                         <div class="remember">
                             <label for="remember">Recordar usuario</label>
                             <input type="checkbox" name="remember" checked />

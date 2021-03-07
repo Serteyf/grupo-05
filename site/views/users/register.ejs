@@ -3,6 +3,8 @@
     <head>
         <%- include("partials/head-base.ejs", {title: "Crear cuenta"}) %>
         <link rel="stylesheet" href="/css/login-register-create.css" />
+        <!-- <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
+    <script src="/js/validations/userValidations.js" defer></script> -->
     </head>
 
     <body>
@@ -12,7 +14,7 @@
             <% if (typeof errors != 'undefined'){ %>
             <ul>
                 <% for (i=0; i < errors.length; i++) {%>
-                <li style="color: aliceblue;"><%= errors[i].msg %></li>
+                <li style="color: aliceblue"><%= errors[i].msg %></li>
                 <% } %>
             </ul>
             <% } %>
@@ -25,34 +27,78 @@
                         enctype="multipart/form-data"
                         id="registerForm"
                     >
-                        <input
-                            id="name"
-                            type="text"
-                            placeholder="Nombre y Apellido"
-                            name="name"
-                            class=""
-                        />
-                        <input type="text" placeholder="Usuario" name="user" class=""/>
-                        <input type="email" placeholder="Email" name="email" class=""/>
-                        <input
-                            type="text"
-                            placeholder="Domicilio"
-                            name="address"
-                            class=""
-                        />
-                        <input
-                            type="password"
-                            placeholder="Contraseña"
-                            name="password"
-                            class=""
-                        />
-                        <input
-                            type="password"
-                            placeholder="Repetir contraseña"
-                            name="password2"
-                            class=""
-                        />
-                        <input type="file" class="userAvatar" name="avatar" />
+                        <div>
+                            <input
+                                id="name"
+                                type="text"
+                                placeholder="Nombre y Apellido"
+                                name="name"
+                                class="validate"
+                            />
+                            <div id="nameFeedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Usuario"
+                                name="user"
+                                class="validate"
+                            />
+                            <div id="userFeedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                name="email"
+                                class="validate"
+                            />
+                            <div id="emailFeedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Domicilio"
+                                name="address"
+                                class="validate"
+                            />
+                            <div id="addressFeedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="password"
+                                placeholder="Contraseña"
+                                name="password"
+                                id="password"
+                                class="validate"
+                            />
+                            <div id="passwordFeedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="password"
+                                placeholder="Repetir contraseña"
+                                name="password2"
+                                class="validate"
+                            />
+                            <div id="password2Feedback" class="feedback"></div>
+                        </div>
+
+                        <div>
+                            <input
+                                type="file"
+                                class="userAvatar"
+                                name="avatar"
+                                class="validate"
+                            />
+                            <div id="nameFeedback" class="feedback"></div>
+                        </div>
+
                         <button type="submit">REGISTRARME</button>
                     </form>
                 </div>

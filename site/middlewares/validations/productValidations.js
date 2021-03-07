@@ -14,9 +14,10 @@ const validations = {
             .isFloat({min: 10})
             .withMessage("El precio dedebe ser mayor a $10."),
         body("photo")
-            .custom(async (value, {req}) => {
+            .custom((value, {req}) => {
                 // validateFileExt(req, ".png", ".jpg", ".jpeg", ".gif");
-                const fileExtension = path.extname(req.files[0].filename);
+                const validatedFile = req.files[0] == undefined ? "" : req.files[0].filename;
+                let fileExtension = (path.extname(validatedFile)).toLowerCase();
                 switch (fileExtension) {
                     case ".png":
                     case ".jpg":

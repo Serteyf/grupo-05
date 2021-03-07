@@ -3,8 +3,9 @@
     <head>
         <%- include("partials/head-base.ejs", {title: "Crear cuenta"}) %>
         <link rel="stylesheet" href="/css/login-register-create.css" />
-        <!-- <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
-    <script src="/js/validations/userValidations.js" defer></script> -->
+
+        <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
+        <script src="/js/validations/userValidations.js" defer></script>
     </head>
 
     <body>
@@ -40,6 +41,7 @@
 
                         <div>
                             <input
+                                id="user"
                                 type="text"
                                 placeholder="Usuario"
                                 name="user"
@@ -50,6 +52,7 @@
 
                         <div>
                             <input
+                                id="email"
                                 type="email"
                                 placeholder="Email"
                                 name="email"
@@ -60,6 +63,7 @@
 
                         <div>
                             <input
+                                id="address"
                                 type="text"
                                 placeholder="Domicilio"
                                 name="address"
@@ -70,10 +74,10 @@
 
                         <div>
                             <input
+                                id="password"
                                 type="password"
                                 placeholder="Contraseña"
                                 name="password"
-                                id="password"
                                 class="validate"
                             />
                             <div id="passwordFeedback" class="feedback"></div>
@@ -81,6 +85,7 @@
 
                         <div>
                             <input
+                                id = "password2"
                                 type="password"
                                 placeholder="Repetir contraseña"
                                 name="password2"
@@ -91,6 +96,7 @@
 
                         <div>
                             <input
+                                id="avatar"
                                 type="file"
                                 class="userAvatar"
                                 name="avatar"

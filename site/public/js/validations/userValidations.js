@@ -64,7 +64,7 @@ function clearValidations() {
 
 function validateInput(inputId, validations) {
     const input = document.getElementById(inputId);
-    let inputValue;
+    let inputValue = input.value;
     // switch (input.type) {
     //     case "checkbox": {
     //         inputValue = input.checked;

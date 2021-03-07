@@ -20,12 +20,10 @@ const validations = {
         body("avatar")
             .custom((value, {req}) => {
                 // validateFileExt(req, ".png", ".jpg", ".jpeg", ".gif");
-                // req.files[0] == undefined ? "" : req.files[0].filename
-                let fileExtension;
-                let extension = (path.extname(req.files[0].filename)).toLowerCase()
-                fileExtension == undefined ? "" : extension; // filename undefined: Middleware ocurre antes que el controlador
+                const validatedFile = req.files[0] == undefined ? "" : req.files[0].filename;
+                let fileExtension = (path.extname(validatedFile)).toLowerCase();
+                
                 switch (fileExtension) {
-                    case "":
                     case ".png":
                     case ".jpg":
                     case ".jpeg":

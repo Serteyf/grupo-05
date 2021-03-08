@@ -33,7 +33,7 @@ PRIMARY KEY (`id`)
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
 `id` INTEGER AUTO_INCREMENT,
-`name` VARCHAR(50),
+`name` VARCHAR(100),
 `description` VARCHAR(300),
 `price` INTEGER,
 `discount` INTEGER,

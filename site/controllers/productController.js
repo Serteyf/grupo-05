@@ -105,11 +105,6 @@ productController = {
         res.render("product-delete", {
             product: product,
         });
-        res.render("product", {
-            product: product,
-            suggestedProducts: suggestedProducts,
-            thousand: toThousand,
-        });
     },
 
     delete: (req, res) => {

@@ -1,4 +1,4 @@
-const path = require("path"); 
+const path = require("path");
 const toThousand = require("../utils/toThousand");
 const productServices = require("../services/productServices");
 const { Product } = require("../database/models");
@@ -6,26 +6,28 @@ const { Product } = require("../database/models");
 const { validationResult } = require("express-validator");
 
 productController = {
-    all: async(req, res) => {
+    all: async (req, res) => {
         const products = await productServices.findAll();
         res.render("products-all", {
             products: products,
-            thousand: toThousand
-        })
+            thousand: toThousand,
+        });
     },
-    byCategory: async(req, res) => {
+    byCategory: async (req, res) => {
         const productsByCategory = await productServices.findByCategory(req);
         if (productsByCategory == "") {
-                return res.render("not-found");
-            }
+            return res.render("not-found");
+        }
         res.render("products-all", {
             products: productsByCategory,
             thousand: toThousand,
-        })
+        });
     },
-    detail: async(req, res) => {
+    detail: async (req, res) => {
         const selectedProduct = await productServices.findOne(req.params.id);
-        const suggestedProducts = await productServices.findSuggested(selectedProduct.categoryId)
+        const suggestedProducts = await productServices.findSuggested(
+            selectedProduct.categoryId
+        );
         suggestedProducts.splice(suggestedProducts.indexOf(selectedProduct));
 
         res.render("product", {
@@ -34,14 +36,14 @@ productController = {
             thousand: toThousand,
         });
     },
-    showCreate: async(req, res) => {
+    showCreate: async (req, res) => {
         await res.render("product-create");
     },
-    showEdit: async(req, res) => {
+    showEdit: async (req, res) => {
         const product = await productServices.findOne(req.params.id);
-        if(product == null){
-            return res.render('not-found.ejs')
-        };
+        if (product == null) {
+            return res.render("not-found.ejs");
+        }
         res.render("product_edit", {
             product: product,
             toThousand: toThousand,
@@ -51,11 +53,14 @@ productController = {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
-            console.log(errors)
-            return res.render(path.resolve(__dirname, '../views/products/product-create.ejs'), {
-                errors: errors.errors
-            })
-        } 
+            console.log(errors);
+            return res.render(
+                path.resolve(__dirname, "../views/products/product-create.ejs"),
+                {
+                    errors: errors.errors,
+                }
+            );
+        }
         Product.create({
             id: null,
             name: req.body.name,
@@ -69,26 +74,29 @@ productController = {
         res.redirect("/products/");
     },
     edit: (req, res) => {
-        Product.update({
-            name: req.body.name,
-            description: req.body.description,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
-            image:
-                req.files[0] == undefined
-                    ? db.Product.image
-                    : req.files[0].filename,
-            category: req.body.category,
-            featured: req.body.featured,
-        },{
-            where: {
-                id: req.params.id,
+        Product.update(
+            {
+                name: req.body.name,
+                description: req.body.description,
+                price: Number(req.body.price),
+                discount: Number(req.body.discount),
+                image:
+                    req.files[0] == undefined
+                        ? Product.image
+                        : req.files[0].filename,
+                category: req.body.category,
+                featured: req.body.featured,
             },
-        });
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
 
         res.redirect("/products/" + req.params.id);
     },
-    showDelete: async(req, res) => {
+    showDelete: async (req, res) => {
         const product = await productServices.findOne(req.params.id);
 
         if (product == null) {
@@ -98,15 +106,15 @@ productController = {
             product: product,
         });
         res.render("product", {
-                product: product,
-                suggestedProducts: suggestedProducts,
-                thousand: toThousand,
-            })
+            product: product,
+            suggestedProducts: suggestedProducts,
+            thousand: toThousand,
+        });
     },
 
     delete: (req, res) => {
         Product.destroy({
-            where: { id: req.params.id, },
+            where: { id: req.params.id },
         });
 
         res.redirect("/products");

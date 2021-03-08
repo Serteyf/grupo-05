@@ -16,8 +16,22 @@ window.addEventListener("load", () => {
                 "Nombre es un campo requerido y con mas de 1 caracteres!",
             ],
         ]);
+        validateInput("user", [
+            [
+                validator.isLength,
+                { min: 2 },
+                "Usuario es un campo requerido y con mas de 1 caracteres!",
+            ],
+        ]);
         validateInput("email", [
             [validator.isEmail, "Email debe ser un email valido!"],
+        ]);
+        validateInput("address", [
+            [
+                validator.isLength,
+                { min: 2 },
+                "Dirección es un campo requerido y con mas de 1 caracteres!",
+            ],
         ]);
         validateInput("password", [
             [

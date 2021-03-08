@@ -1,11 +1,12 @@
-import React from "react";
-
-const SideMenuLink = () => {
+function SideMenuLink() {
   return (
-    <div>
-      <p>Side Menu Link</p>
-    </div>
+    <li className="nav-item active">
+      <a className="nav-link" href="/">
+        <i className="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
   );
-};
+}
 
 export default SideMenuLink;

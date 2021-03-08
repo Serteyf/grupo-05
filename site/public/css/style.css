@@ -34,8 +34,8 @@ header {
 }
 nav {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: flex!important;
+    flex-direction: column!important;
     justify-content: center;
     background-color: #3d4852;
     top: 85px;

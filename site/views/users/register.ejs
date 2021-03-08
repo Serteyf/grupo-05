@@ -2,10 +2,30 @@
 <html lang="es">
     <head>
         <%- include("partials/head-base.ejs", {title: "Crear cuenta"}) %>
-        <link rel="stylesheet" href="/css/login-register-create.css" />
+        
 
         <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
         <script src="/js/validations/userValidations.js" defer></script>
+
+        <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+/>
+<script
+    defer
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+></script>
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="/css/login-register-create.css" />
     </head>
 
     <body>
@@ -15,97 +35,77 @@
             <% if (typeof errors != 'undefined'){ %>
             <ul>
                 <% for (i=0; i < errors.length; i++) {%>
-                <li style="color: aliceblue"><%= errors[i].msg %></li>
+                <li style="color:black"><%= errors[i].msg %></li>
                 <% } %>
             </ul>
             <% } %>
             <section class="register-back">
                 <div class="register">
                     <h2>CREAR CUENTA</h2>
-                    <form
-                        action="/users/register"
-                        method="POST"
-                        enctype="multipart/form-data"
-                        id="registerForm"
-                    >
-                        <div>
-                            <input
-                                id="name"
-                                type="text"
-                                placeholder="Nombre y Apellido"
-                                name="name"
-                                class="validate"
-                            />
-                            <div id="nameFeedback" class="feedback"></div>
-                        </div>
+                <form action="/users/register" method="POST" enctype="multipart/form-data" id="registerForm" class="registerForm" >
+                        <label>
+                            <div class="field">
+                                <input id="name" type="text" placeholder="Nombre y Apellido"name="name" class="validate floating-input" />
+                                <label for="name" class="floating-label">Nombre y Apellido</label>
+                            </div>
+                            <div id="nameBorder" class="feedback-border"></div>
+                            <span id="nameFeedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id="user"
-                                type="text"
-                                placeholder="Usuario"
-                                name="user"
-                                class="validate"
-                            />
-                            <div id="userFeedback" class="feedback"></div>
-                        </div>
+                        <label>
+                            <div class="field">
+                                <input id="user" type="text" placeholder="Usuario" name="user" class="validate floating-input" />
+                                <label for="user" class="floating-label">Nombre de usuario</label>
+                            </div>
+                            <div id="userBorder" class="feedback-border"></div>
+                            <span id="userFeedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="Email"
-                                name="email"
-                                class="validate"
-                            />
-                            <div id="emailFeedback" class="feedback"></div>
-                        </div>
+                        <label>
+                            <div class="field">
+                                <input id="email" type="email" placeholder="Email" name="email" class="validate floating-input" />
+                                <label for="email" class="floating-label">Email</label>
+                            </div>
+                            <div id="emailBorder" class="feedback-border"></div>
+                            <span id="emailFeedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id="address"
-                                type="text"
-                                placeholder="Domicilio"
-                                name="address"
-                                class="validate"
-                            />
-                            <div id="addressFeedback" class="feedback"></div>
-                        </div>
+                        <label>
+                            <div class="field">
+                                <input id="address" type="text" placeholder="Domicilio" name="address" class="validate floating-input" />
+                                <label for="address" class="floating-label">Dirección</label>
+                            </div>
+                            <div id="addressBorder" class="feedback-border"></div>
+                            <span id="addressFeedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id="password"
-                                type="password"
-                                placeholder="Contraseña"
-                                name="password"
-                                class="validate"
-                            />
-                            <div id="passwordFeedback" class="feedback"></div>
-                        </div>
+                        <label >
+                            <div class="field">
+                                <input id="password" type="password" placeholder="Contraseña" name="password" class="validate floating-input" />
+                                <label for="password" class="floating-label">Contraseña</label>
+                            </div>
+                            <div id="passwordBorder" class="feedback-border"></div>
+                            <span id="passwordFeedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id = "password2"
-                                type="password"
-                                placeholder="Repetir contraseña"
-                                name="password2"
-                                class="validate"
-                            />
-                            <div id="password2Feedback" class="feedback"></div>
-                        </div>
+                        <label>
+                            <div class="field">
+                                <input id="password2" type="password" placeholder="Repetir contraseña" name="password2" class="validate floating-input" />
+                                <label for="password2" class="floating-label">Repita su contraseña</label>
+                            </div>
+                            <div id="password2Border" class="feedback-border"></div>
+                            <span id="password2Feedback" class="feedback"></span>
+                        </label>
 
-                        <div>
-                            <input
-                                id="avatar"
-                                type="file"
-                                class="userAvatar"
-                                name="avatar"
-                                class="validate"
-                            />
-                            <div id="nameFeedback" class="feedback"></div>
-                        </div>
+                        <label class="avatar-container">
+                            <div>
+                                <input id="avatar" type="file" class="userAvatar" name="avatar" class="avatar-input validate form-control-file" />
+                            </div>
+                            <div id="avatarBorder" class="feedback-border"></div>
+                            <span id="nameFeedback" class="feedback"></span>
+                        </label>
 
-                        <button type="submit">REGISTRARME</button>
+                        <button type="submit" class="btn btn-primary">REGISTRARME</button>
                     </form>
                 </div>
             </section>

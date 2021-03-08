@@ -52,6 +52,7 @@ window.addEventListener("load", () => {
 function clearValidations() {
     const arrayInputs = document.getElementsByClassName("validate");
     const arrayFeedbacks = document.getElementsByClassName("feedback");
+    const arrayBorder = document.getElementsByClassName("feedback-border")
 
     for (const input of arrayInputs) {
         input.classList.remove("is-invalid", "is-valid");
@@ -59,6 +60,9 @@ function clearValidations() {
     for (const feedback of arrayFeedbacks) {
         feedback.classList.remove("alert", "alert-danger");
         feedback.innerHTML = "";
+    }
+    for (const border of arrayBorder){
+        border.classList.remove("error-feedback-border")
     }
 }
 
@@ -99,11 +103,16 @@ function checkErrors() {
     if (errors.length > 0) {
         errors.forEach((e) => {
             const feedbackId = e.inputId + "Feedback";
+            const borderId = e.inputId + "Border";
             const feedbackDiv = document.getElementById(feedbackId);
+            const borderDiv = document.getElementById(borderId);
             const input = document.getElementById(e.inputId);
+            // const floatingInput = document.getElementsByClassName("floating-input");
+            // floatingInput.classlist.add("invalid-input")
             input.classList.add("is-invalid");
-            feedbackDiv.innerHTML += `<li>${e.msg}</li>`;
-            feedbackDiv.classList.add("alert", "alert-danger");
+            borderDiv.classList.add("error-feedback-border")
+            feedbackDiv.innerHTML = e.msg;
+            feedbackDiv.classList.add("alert alert-danger");
         });
         return true;
     }

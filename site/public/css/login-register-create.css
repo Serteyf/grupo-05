@@ -50,9 +50,10 @@
     /* max-width: 50vw; */
     /* height: 400px; */
     /* height: 100vh; */
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
     background-color: #000000;
     margin: auto;
+    height: 508px;
 }
 
 .login {
@@ -112,7 +113,8 @@
     border-radius: 0;
     padding: 0;
     cursor: text;  
-        
+    height: 28px;
+    margin-bottom: 12px;
 
 }
 .feedback-border {
@@ -120,7 +122,11 @@
     border-bottom: 1px solid #ccc;
     height: 1px;
     width: 100%;
+    bottom: 13px;
 }
+
+
+
 .error-feedback-border {
     border-bottom: 1px solid red !important;
     content: "";
@@ -130,6 +136,31 @@
     -webkit-transform .25s ease;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    bottom: 13px;
+
+}
+
+.feedback-border-avatar {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    height: 1px;
+    width: 100%;
+    bottom: 3px;
+}
+
+
+
+.error-feedback-border-avatar {
+    border-bottom: 1px solid red !important;
+    content: "";
+    height: 2px;
+    width: 100%;
+    transition: transform .25s ease,
+    -webkit-transform .25s ease;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    bottom: 3px;
+
 }
 
 .userAvatar {
@@ -144,7 +175,14 @@
 .floating-label {
     letter-spacing: 0.05em;
     color: #f9ef64;
-    font-size: 2vh;
+    font-size: 11px;
+    position: relative;
+    bottom: 4px;
+
+}
+
+.register-tittle {
+    margin-bottom: 15px;
 }
 
 .floating-input:placeholder-shown+.floating-label {
@@ -153,7 +191,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     transform-origin: left bottom;
-    transform: translate(0, 2.125rem) scale(1.5);
+    transform: translate(0, 1.429rem) scale(1.2);
     margin-left: 10px;
 }
 
@@ -189,10 +227,12 @@
     margin:10px;
 } */
 .feedback {
-    font-size: 12px;
+    position: relative;
+    bottom: 10px;
+    font-size: 11px;
     line-height: 1em;
     color: red;
-    margin-top: .33333em;
+    margin-bottom: .33333em;
     margin-left: 10px;
     opacity: 1;
     -webkit-transition: opacity .15s ease-out;

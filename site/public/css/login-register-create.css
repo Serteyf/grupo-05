@@ -5,7 +5,17 @@
     display: block;
 }
 
-.register-back,
+.register-back {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/layout/benner_reg_log.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 0.5rem !important;
+}
 .login-back {
     display: flex;
     width: 100%;
@@ -15,7 +25,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    line-height: 0.5rem!important;
 }
 
 .create-back {
@@ -26,24 +35,54 @@
     background-image: url("../images/layout/banner-create.jpg");
     background-position: center;
     background-repeat: no-repeat;
+        background-size: cover;
+
 }
 
-.register,
-.login,
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    /* max-width: 50vw; */
+    /* height: 400px; */
+    /* height: 100vh; */
+    padding: 0px 20px 20px 20px;
+    background-color: #000000;
+    margin: auto;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    /* max-width: 50vw; */
+    height: 400px;
+    padding: 0px 20px 20px 20px;
+    background-color: #000000;
+    margin: auto;
+}
+
 .create {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
     min-width: 250px;
-    /* max-width: 400px; */
-    max-width: 50vw;
-    /* height: 400px; */
-    height: 100vh;
+    max-width: 400px;
+    /* max-width: 50vw; */
+    height: 70vh;
     padding: 0px 20px 20px 20px;
     background-color: #000000;
     margin: auto;
 }
+
 
 .register input,
 .login input {
@@ -118,7 +157,7 @@
     margin-left: 10px;
 }
 
-::-webkit-input-placeholder {
+.floating-input::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
 }
@@ -143,7 +182,7 @@
     flex-direction: column;
 }
 
-input {
+#avatar {
     line-height: initial!important;
 }
 /* .avatar-container {

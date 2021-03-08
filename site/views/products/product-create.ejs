@@ -20,35 +20,11 @@
             <section class="create-back">
                 <div class="create">
                     <h2>CREAR PRODUCTO</h2>
-                    <form
-                        action="/products/create"
-                        enctype="multipart/form-data"
-                        method="POST"
-                    >
-                        <input
-                            class="caja"
-                            type="text"
-                            placeholder="Nombre del producto"
-                            name="name"
-                        />
-                        <input
-                            class="caja"
-                            type="text"
-                            placeholder="Descripción"
-                            name="description"
-                        />
-                        <input
-                            class="caja"
-                            type="number"
-                            placeholder="Precio"
-                            name="price"
-                        />
-                        <input
-                            class="caja"
-                            type="number"
-                            placeholder="Descuento"
-                            name="discount"
-                        />
+                    <form action="/products/create" enctype="multipart/form-data" method="POST" >
+                        <input class="caja" type="text" placeholder="Nombre del producto" name="name" />
+                        <input class="caja" type="text" placeholder="Descripción" name="description" />
+                        <input class="caja" type="number" placeholder="Precio" name="price" />
+                        <input class="caja" type="number" placeholder="Descuento" name="discount" />
                         <select class="caja" type="text" name="category">
                             <option value="1">Consolas</option>
                             <option value="2">Juegos</option>

@@ -3,9 +3,11 @@ let errors = [];
 window.addEventListener("load", () => {
     const form = document.getElementById("registerForm");
 
+    
+    
     form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
+        // event.preventDefault();
+        
         errors = [];
         clearValidations();
 
@@ -40,27 +42,42 @@ window.addEventListener("load", () => {
                 "Password es un campo requerido y con mas de 7 caracteres!",
             ],
         ]);
+        const avatarInput = document.getElementById("avatar")
+        
+        validateFile(avatarInput);
+        
+        const passwordInput = document.getElementById("password");
+        const password2Input = document.getElementById("password2");
+    
+    
+        
+            validateInput("password", [
+                [
+                    validator.isLength,
+                    { min: 8 },
+                    "Tu contraseña tiene que tener al menos 8 caracteres!",
+                ],
+                // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra minuscula!"],
+                // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra mayuscula!"],
+                // [validator.isLength, { min: 1 }, "Tiene que tener al menos un simbolo!"],
+                // [validator.isLength, { min: 1 }, "Tiene que tener al menos un numero!"],
+            ]);
+            comparePassword (passwordInput, password2Input);
+            checkErrors();
+            
+            if (checkErrors()) {
+                event.preventDefault();
+            }
+  
+        
+        });
+    
 
-        if (checkErrors()) {
-            event.preventDefault();
-        }
-    });
+    
 
-    const passwordInput = document.getElementById("password");
-    passwordInput.addEventListener("change", () => {
-        validateInput("password", [
-            [
-                validator.isLength,
-                { min: 8 },
-                "Tu contraseña tiene que tener al menos 8 caracteres!",
-            ],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra minuscula!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra mayuscula!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos un simbolo!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos un numero!"],
-        ]);
-        checkErrors();
-    });
+
+
+    
 });
 
 function clearValidations() {
@@ -126,7 +143,7 @@ function checkErrors() {
             input.classList.add("is-invalid");
             borderDiv.classList.add("error-feedback-border")
             feedbackDiv.innerHTML = e.msg;
-            feedbackDiv.classList.add("alert alert-danger");
+            feedbackDiv.classList.add("alert-danger");
         });
         return true;
     }
@@ -137,3 +154,62 @@ function checkErrors() {
 function isTrue(value) {
     return value;
 }
+
+function comparePassword (p1, p2) {
+    let foundErrors = false;
+
+    if (p1.value !== p2.value) {
+        const error = {
+            inputId: "password2",
+            msg: "Las contraseñas deben ser iguales"
+        };
+        errors.push(error);
+        foundErrors = true;
+    } 
+    if (!foundErrors) {
+        p2.classList.add("is-valid");
+    }
+}
+
+
+function validateFile(avatar){
+  const allowedExtensions =  ['jpg','png', 'jpeg', 'gif'],
+        sizeLimit = 3000000; // 1 megabyte
+
+        const error = {
+            inputId: "avatar",
+            msg: ""
+        };
+        
+        if (!avatar.value){
+            error.msg = "Debe subir una imagen";
+            errors.push(error);
+            checkErrors();
+            return
+          } 
+  // destructuring file name and size from file object
+  const { name:fileName, size:fileSize } = avatar.files[0];
+
+  /*
+  * if filename is apple.png, we split the string to get ["apple","png"]
+  * then apply the pop() method to return the file extension
+  *
+  */
+  const fileExtension = fileName.split(".").pop();
+
+  /* 
+    check if the extension of the uploaded file is included 
+    in our array of allowed file extensions
+  */
+  if(!allowedExtensions.includes(fileExtension)){
+    error.msg = "La imagen debe ser en formato jpg, jpeg, png ó gif";
+    avatar.value = null;
+  }else if(fileSize > sizeLimit){
+    error.msg = "La imagen debe ser de 3 mb como máximo";
+    avatar.value = null;
+  } 
+  errors.push(error);
+  checkErrors();
+
+}
+

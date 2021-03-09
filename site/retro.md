@@ -123,3 +123,25 @@ En este sprint no vimos algo que tuvieramos que hacer menos. Manejamos los tiemp
 ## Dejar de hacer
 
 Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar de hacer. El sprint lo pudimos llevar a cabo de forma correcta gracias al trabajo en conjunto y a la comunicación constante en el grupo.
+
+# Sprint 6
+
+## Comenzar a hacer
+
+
+
+## Hacer más
+
+
+
+## Continuar haciendo
+
+
+
+## Hacer menos
+
+
+## Dejar de hacer
+
+
+

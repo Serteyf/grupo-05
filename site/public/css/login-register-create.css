@@ -78,19 +78,22 @@
     min-width: 250px;
     max-width: 400px;
     /* max-width: 50vw; */
-    height: 70vh;
     padding: 0px 20px 20px 20px;
     background-color: #000000;
     margin: auto;
+    height: 558px;
+
 }
 
 
 .register input,
-.login input {
+.login input,
+.create input,
+.create select {
     width: 100%;
     background-color: #231f20;
-    padding: 10px;
     color: #f9ef64;
+    padding-left: 10px;
 }
 
 /* Floating label */
@@ -101,7 +104,9 @@
 }
 
 .floating-label,
-.floating-input {
+.floating-label-create,
+.floating-input,
+.floating-input-create {
     transition: all 0.2s;
     touch-action: manipulation;
 }
@@ -115,7 +120,30 @@
     cursor: text;  
     height: 28px;
     margin-bottom: 12px;
+}
 
+.floating-input-create {
+    border: 0;
+    /* border-bottom: 1px solid #ccc; */
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;  
+    height: 28px;
+}
+
+.floating-select-create {
+    border: 0;
+    /* border-bottom: 1px solid #ccc; */
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;  
+    height: 28px;
+    margin: 18px 0px;
+    border-bottom: 1px solid #ccc;
 }
 .feedback-border {
     position: relative;
@@ -124,8 +152,6 @@
     width: 100%;
     bottom: 13px;
 }
-
-
 
 .error-feedback-border {
     border-bottom: 1px solid red !important;
@@ -139,6 +165,26 @@
     bottom: 13px;
 
 }
+.feedback-border-create {
+    border-bottom: 1px solid #ccc;
+    height: 1px;
+    width: 100%;
+}
+
+.error-feedback-border-create {
+    border-bottom: 1px solid red !important;
+    content: "";
+    height: 2px;
+    width: 100%;
+    transition: transform .25s ease,
+    -webkit-transform .25s ease;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+}
+
+
+
 
 .feedback-border-avatar {
     position: relative;
@@ -167,12 +213,14 @@
     margin-top:10px
 }
 
-.floating-input:focus {
+.floating-input:focus,
+.floating-input-create:focus,{
     outline: 0;
     border-bottom: 1px solid #666;
 }
 
-.floating-label {
+.floating-label,
+.floating-label-create {
     letter-spacing: 0.05em;
     color: #f9ef64;
     font-size: 11px;
@@ -185,7 +233,8 @@
     margin-bottom: 15px;
 }
 
-.floating-input:placeholder-shown+.floating-label {
+.floating-input:placeholder-shown+.floating-label,
+.floating-input-create:placeholder-shown+.floating-label {
     cursor: text;
     max-width: 66.66%;
     white-space: nowrap;
@@ -195,13 +244,29 @@
     margin-left: 10px;
 }
 
-.floating-input::-webkit-input-placeholder {
+.floating-input:placeholder-shown+.floating-label-create,
+.floating-input-create:placeholder-shown+.floating-label-create {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.729rem) scale(1.2);
+    margin-left: 10px;
+}
+
+
+
+.floating-input::-webkit-input-placeholder,
+.floating-input-create::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
 }
 
 .floating-input:not(:placeholder-shown)+.floating-label,
-.floating-input:focus+.floating-label {
+.floating-input:focus+.floating-label,
+.floating-input-create:not(:placeholder-shown)+.floating-label-create,
+.floating-input-create:focus+.floating-label-create {
     transform: translate(0, 0) scale(1);
     cursor: pointer;
 }
@@ -215,7 +280,7 @@
 /* Idea: https: //css-tricks.com/float-labels-css/ */
 
 
-.registerForm {
+.registerForm, .createForm {
     display:flex;
     flex-direction: column;
 }

@@ -51,7 +51,7 @@
                                 <input id="description" class="validate floating-input-create" type="text" placeholder="Descripción" name="description" />
                                 <label for="description" class="floating-label-create">Descripción</label>
                             </div>
-                            <div id="nameBorder" class="feedback-border-create"></div>
+                            <div id="descriptionBorder" class="feedback-border-create"></div>
                             <span id="descriptionFeedback" class="feedback"></span>
                         </label>
                         <label>
@@ -59,7 +59,7 @@
                                 <input id="price" class="validate floating-input-create" type="number" placeholder="Precio" name="price" />
                                 <label for="price" class="floating-label-create">Precio</label>
                             </div>
-                            <div id="nameBorder" class="feedback-border-create"></div>
+                            <div id="priceBorder" class="feedback-border-create"></div>
                             <span id="priceFeedback" class="feedback"></span>
                         </label>
                         <label>
@@ -67,7 +67,7 @@
                                 <input id="discount" class="validate floating-input-create" type="number" placeholder="Descuento" name="discount" />
                                 <label for="discount" class="floating-label-create">Descuento</label>
                             </div>
-                            <div id="nameBorder" class="feedback-border-create"></div>
+                            <div id="discountBorder" class="feedback-border-create"></div>
                             <span id="discountFeedback" class="feedback"></span>
                         </label>
                         <select id="category" class="validate floating-select-create" type="text" name="category">
@@ -86,11 +86,15 @@
                         <label class="cartel" for="photo"
                             >Imagen de producto
                             <input
+                                id="photo"
                                 class="photo"
                                 type="file"
                                 name="image"
                                 placeholder="Foto producto"
                             />
+                            <div id="avatarBorder" class="feedback-border-avatar"></div>
+                            <span id="avatarFeedback" class="feedback"></span>
+
                         </label>
                         <button type="submit">CREAR</button>
                     </form>

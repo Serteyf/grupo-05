@@ -3,46 +3,64 @@ let errors = [];
 window.addEventListener("load", () => {
     const form = document.getElementById("createForm");
 
+    
+    
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-
+        
         errors = [];
         clearValidations();
 
         validateInput("name", [
             [
                 validator.isLength,
-                { min: 2 },
-                "Nombre es un campo requerido y con mas de 4 caracteres!",
+                { min: 5 },
+                "Nombre es un campo requerido y con mas de 5 caracteres!",
             ],
         ]);
         validateInput("description", [
             [
                 validator.isLength,
-                { min: 2 },
-                "La descripción es un campo requerido y con mas de 19 caracteres!",
+                { min: 20 },
+                "Descripción es un campo requerido y con mas de 20 caracteres!",
             ],
         ]);
-        validateInput("price", [
-            [
-                validator.isLength,
-                { min: 2 },
-                "El precio es un campo requerido y debe ser mayor a $10!",
-            ],
-        ]);
+        // validateInput("price", [
+        //     [validator.isNumber, {min: 10}, "El precio debe ser mayor a $10!"],
+        // ]);
+        // validateInput("discount", [
+        //     [
+        //         validator.isNumber, {min: 0}, "Descuento?"],
+        // ]);
+        const photoInput = document.getElementById("photo")
         
+        validateFile(photoInput);
+        
+    
+    
+        
+            checkErrors();
 
-        if (checkErrors()) {
-            event.preventDefault();
-        }
-    });
+            
+            if (checkErrors()) {
+                event.preventDefault();
+            }
+  
+        
+        });
+    
 
+    
+
+
+
+    
 });
 
 function clearValidations() {
     const arrayInputs = document.getElementsByClassName("validate");
     const arrayFeedbacks = document.getElementsByClassName("feedback");
-    const arrayBorder = document.getElementsByClassName("feedback-border")
+    const arrayBorder = document.getElementsByClassName("feedback-border-create")
 
     for (const input of arrayInputs) {
         input.classList.remove("is-invalid", "is-valid");
@@ -52,7 +70,7 @@ function clearValidations() {
         feedback.innerHTML = "";
     }
     for (const border of arrayBorder){
-        border.classList.remove("error-feedback-border")
+        border.classList.remove("error-feedback-border-create")
     }
 }
 
@@ -91,6 +109,8 @@ function validateInput(inputId, validations) {
 
 function checkErrors() {
     if (errors.length > 0) {
+        console.log(errors)
+
         errors.forEach((e) => {
             const feedbackId = e.inputId + "Feedback";
             const borderId = e.inputId + "Border";
@@ -100,9 +120,9 @@ function checkErrors() {
             // const floatingInput = document.getElementsByClassName("floating-input");
             // floatingInput.classlist.add("invalid-input")
             input.classList.add("is-invalid");
-            borderDiv.classList.add("error-feedback-border")
+            borderDiv.classList.add("error-feedback-border-create")
             feedbackDiv.innerHTML = e.msg;
-            feedbackDiv.classList.add("alert alert-danger");
+            feedbackDiv.classList.add("alert-danger");
         });
         return true;
     }
@@ -110,6 +130,47 @@ function checkErrors() {
     return false;
 }
 
-function isTrue(value) {
-    return value;
+
+
+function validateFile(photo){
+  const allowedExtensions =  ['jpg','png', 'jpeg', 'gif'],
+        sizeLimit = 3000000; // 1 megabyte
+
+        const error = {
+            inputId: "photo",
+            msg: ""
+        };
+        
+        if (!photo.value){
+            error.msg = "Debe subir una imagen";
+            errors.push(error);
+            checkErrors();
+            return
+          } 
+  // destructuring file name and size from file object
+  const { name:fileName, size:fileSize } = photo.files[0];
+
+  /*
+  * if filename is apple.png, we split the string to get ["apple","png"]
+  * then apply the pop() method to return the file extension
+  *
+  */
+  const fileExtension = fileName.split(".").pop();
+
+  /* 
+    check if the extension of the uploaded file is included 
+    in our array of allowed file extensions
+  */
+  if(!allowedExtensions.includes(fileExtension)){
+    error.msg = "La imagen debe ser en formato jpg, jpeg, png ó gif";
+    photo.value = null;
+  }else if(fileSize > sizeLimit){
+    error.msg = "La imagen debe ser de 3 mb como máximo";
+    photo.value = null;
+  } 
+  errors.push(error);
+  checkErrors();
+
 }
+
+

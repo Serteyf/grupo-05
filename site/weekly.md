@@ -232,3 +232,18 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 ## Qué se va a hacer la semana próxima
 
 -   Terminar la validación del frontend
+
+# Reunión 09/03
+
+## Qué se hizo la semana pasada
+
+-   Se finalizó validación del frontend correspondiente a register
+-   Se estuvo trabajando sobre validación del frontend correspondiente a product create
+
+## Impedimentos con los cuales nos encontramos
+
+-   Nos demoramos en encontrar la manera de validar correctamente la extensión de las imagenes subidas a partir del frontend
+
+## Qué se va a hacer la semana próxima
+
+-   Comenzar a trabajar en el último sprint de React y APIs.

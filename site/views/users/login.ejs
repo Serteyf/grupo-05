@@ -3,12 +3,9 @@
     <head>
         <%- include("partials/head-base.ejs", {title: "Iniciar sesión"}) %>
         <link rel="stylesheet" href="/css/login-register-create.css" />
-        <!-- <script
-            type="text/javascript"
-            src="/js/validations/validator.min.js"
-            defer
-        ></script>
-        <script src="/js/validations/userValidations.js" defer></script> -->
+
+        <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
+        <script src="/js/validations/userLoginValidations.js" defer></script>
     </head>
 
     <body>
@@ -25,20 +22,20 @@
             <section class="login-back">
                 <div class="form-box">
                     <h2 class="form-tittle">INGRESAR</h2>
-                    <form action="/users/login" method="POST" id="registerForm">
+                    <form action="/users/login" method="POST" id="registerForm" class="registerForm">
                         <label class="box-label-form">
                             <div class="field">
                                 <input
                                     type="text"
                                     placeholder="Usuario"
-                                    name="user"
-                                    id="user"
+                                    name="userLogin"
+                                    id="userLogin"
                                     class="validate floating-input"
                                 />
-                                <label for="user" class="floating-label">Nombre de usuario</label>
+                                <label for="userLogin" class="floating-label">Nombre de usuario</label>
                             </div>
-                            <div id="userBorder" class="feedback-border"></div>
-                            <span id="userFeedback" class="feedback"></span>
+                            <div id="userLoginBorder" class="feedback-border"></div>
+                            <span id="userLoginFeedback" class="feedback"></span>
                         </label>
                         <label class="box-label-form">
                             <div class="field">

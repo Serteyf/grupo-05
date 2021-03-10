@@ -2,107 +2,186 @@
 <html lang="es">
     <head>
         <%- include("partials/head-base.ejs", {title: "Página de producto"}) %>
-        <link rel="stylesheet" href="/css/product.css">
+        <link rel="stylesheet" href="/css/product.css" />
+        <link rel="stylesheet" href="/css/login-register-create.css" />
+        <script
+            type="text/javascript"
+            src="/js/validations/validator.min.js"
+            defer
+        ></script>
+        <script src="/js/validations/productEditValidations.js" defer></script>
     </head>
     <body>
-
         <header><%- include("partials/header.ejs") %></header>
-        
+
         <main>
-            
-            <section class="product">             
-                
+            <section class="product">
                 <div class="product-img">
-                    <img src="/images/products/<%= product.image %>" alt="Foto de <%= product.name %>">
-                </div>
-                <div class="product-info-edit">
-                    <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-                    <div class="product-description-edit">
-                        <h4>NOMBRE</h4>
-                        <input
-                            class="caja"
-                            type="text"
-                            value="<%= product.name %>"
-                            name="name"
-                        />
-                    </div>
-                    <div class="product-description-edit">
-                        <h4>DESCRIPCION</h4>
-                        <input
-                        class="caja"
-                        type="text"
-                        value="<%= product.description %>"
-                        name="description"
-                    />
-        </div>
-                    <div class="product-description-edit">
-                        <h4>PRECIO</h4>
-                        <input
-                            class="caja"
-                            type="text"
-                            value="<%= product.price %>"
-                            name="price"
-                        />
-                    </div>
-                    <div class="product-description-edit">
-                        <h4>DESCUENTO</h4>
-                        <input 
-                        class="caja" 
-                        type="text" 
-                        value="<%= product.discount %>" 
-                        name="discount" 
-                    />
-                    </div>
-                    <div class="product-description-edit">
-                        <h4>CATEGORIA</h4>
-                     <select
-                            class="caja"
-                            type="text"
-                            name="category"
-                        >
-                        <option value="consoles" <%= product.categoryId == "1" ? "selected" : "" %> >Consolas</option>
-                        <option value="accesories" <%= product.categoryId == "3" ? "selected" : "" %>>Accesorios</option>
-                        <option value="games" <%= product.categoryId == "2" ? "selected" : "" %>>Juegos</option>
-                        <option value="retro" <%= product.categoryId == "4" ? "selected" : "" %>>Retro</option>
-                    </select>
-                    </div>
-                    <div class="product-description-edit">
-                        <h4>DESTACADO</h4>
-                     <select
-                            class="caja"
-                            type="number"
-                            name="featured"
-                        >
-                        <option value=1 <%= product.featured == 1 ? "selected" : "" %> >SI</option>
-                        <option value=0 <%= product.featured == 0 ? "selected" : "" %>>NO</option>
-                    </select>
-                    </div>
-
-                    <div class="product-description-edit">
-                        <h4>IMAGEN DE PRODUCTO</h4>
-
-                    <input
-                        class="photo"
-                        type="file"
-                        name="image"
-                        placeholder="Foto producto"
-                        value="<%= product.image %>"
+                    <img
+                        src="/images/products/<%= product.image %>"
+                        alt="Foto de <%= product.name %>"
                     />
                 </div>
-                <div class="product-buy">
-                        <button class="btn-product-edit" type="submit">EDITAR</button>
-                    </div>
-                </form>
-            </div>
 
+                <div class="form-box">
+                    <h2 class="form-tittle">EDITAR PRODUCTO</h2>
+                    <form
+                        action="/products/edit/<%= product.id %>?_method=PUT"
+                        enctype="multipart/form-data"
+                        method="POST"
+                        id="createForm"
+                        class="createForm"
+                    >
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input
+                                    id="name"
+                                    class="validate floating-input"
+                                    type="text"
+                                    placeholder="Nombre del producto"
+                                    name="name"
+                                    value="<%= product.name %>"
+                                />
+                                <label for="name" class="floating-label"
+                                    >Nombre del producto</label
+                                >
+                            </div>
+                            <div id="nameBorder" class="feedback-border"></div>
+                            <span id="nameFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input
+                                    id="description"
+                                    class="validate floating-input"
+                                    type="text"
+                                    placeholder="Descripción"
+                                    name="description"
+                                    value="<%= product.description %>"
+                                />
+                                <label for="description" class="floating-label"
+                                    >Descripción</label
+                                >
+                            </div>
+                            <div
+                                id="descriptionBorder"
+                                class="feedback-border"
+                            ></div>
+                            <span
+                                id="descriptionFeedback"
+                                class="feedback"
+                            ></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input
+                                    id="price"
+                                    class="validate floating-input"
+                                    type="number"
+                                    min="10"
+                                    placeholder="Precio"
+                                    name="price"
+                                    value="<%= product.price %>"
+                                />
+                                <label for="price" class="floating-label"
+                                    >Precio</label
+                                >
+                            </div>
+                            <div id="priceBorder" class="feedback-border"></div>
+                            <span id="priceFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input
+                                    id="discount"
+                                    class="validate floating-input"
+                                    type="number"
+                                    min="0"
+                                    placeholder="Descuento"
+                                    name="discount"
+                                    value="<%= product.discount %>"
+                                />
+                                <label for="discount" class="floating-label"
+                                    >Descuento</label
+                                >
+                            </div>
+                            <div
+                                id="discountBorder"
+                                class="feedback-border"
+                            ></div>
+                            <span id="discountFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <select
+                                    id="category"
+                                    class="validate floating-input"
+                                    type="text"
+                                    name="category"
+                                >
+                                <option value="consoles" <%= product.categoryId == "1" ? "selected" : "" %> >Consolas</option>
+                                <option value="accesories" <%= product.categoryId == "3" ? "selected" : "" %>>Accesorios</option>
+                                <option value="games" <%= product.categoryId == "2" ? "selected" : "" %>>Juegos</option>
+                                <option value="retro" <%= product.categoryId == "4" ? "selected" : "" %>>Retro</option>
+                                </select>
+                                <label
+                                    for="category"
+                                    class="floating-label selected"
+                                    >-</label
+                                >
+                            </div>
+                            <div
+                                id="categoryBorder"
+                                class="feedback-border"
+                            ></div>
+                            <span id="categoryFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <select
+                                    id="featured"
+                                    class="validate floating-input"
+                                    type="number"
+                                    name="featured"
+                                >
+                                <option value=1 <%= product.featured == 1 ? "selected" : "" %> >Producto destacado</option>
+                                <option value=0 <%= product.featured == 0 ? "selected" : "" %>>Producto no destacado</option>
+                                </select>
+                                <label
+                                    for="featured"
+                                    class="floating-label selected"
+                                    >-</label
+                                >
+                            </div>
+                            <div
+                                id="featuredBorder"
+                                class="feedback-border"
+                            ></div>
+                            <span id="featuredFeedback" class="feedback"></span>
+                        </label>
 
-        </section>
-    </main>
-
-
-
+                        <label class="box-label-form">
+                            <div>
+                                <input
+                                    id="photoEdit"
+                                    class="photo productPhoto photo-input validate form-control-file"
+                                    type="file"
+                                    name="image"
+                                    value="<%= product.image %>"
+                                />
+                            </div>
+                            <div
+                                id="photoEditBorder"
+                                class="feedback-border-photoEdit"
+                            ></div>
+                            <span id="photoEditFeedback" class="feedback"></span>
+                        </label>
+                        <button type="submit" class="btn">EDITAR</button>
+                    </form>
+                </div>
+            </section>
+        </main>
 
         <footer><%- include("partials/footer.ejs") %></footer>
-        
     </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <%- include("partials/head-base.ejs", {title: "Iniciar sesión"}) %>
-        <link rel="stylesheet" href="/css/contact.css" />
+        <link rel="stylesheet" href="/css/login-register-create.css" />
     </head>
 
     <body>
@@ -10,16 +10,35 @@
 
         <main>
             <section class="contact-back">
-                <div class="contact-form">
-                    <h2>CONTACTO</h2>
+                <div class="form-box">
+                    <h2 class="form-tittle">CONTACTO</h2>
                     <form action="/" method="POST">
-                        <input type="text" placeholder="Nombre" name="name" />
-                        <input type="email" placeholder="Email" name="email" />
-                        <textarea name="comment">
-Dejanos tu comentario...</textarea
-                        >
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input id="name" type="text" placeholder="Nombre" name="name" class="validate floating-input" />
+                                <label for="name" class="floating-label">Nombre</label>
+                            </div>
+                            <div id="nameBorder" class="feedback-border"></div>
+                            <span id="nameFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input id="email" type="email" placeholder="Email" name="email" class="validate floating-input" />
+                                <label for="email" class="floating-label">Email</label>
+                            </div>
+                            <div id="emailBorder" class="feedback-border"></div>
+                            <span id="emailFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <textarea name="comment">
+                                    Dejanos tu comentario...</textarea>
+                            </div>
+                            <div id="emailBorder" class="feedback-border"></div>
+                            <span id="emailFeedback" class="feedback"></span>
+                        </label>
 
-                        <button type="submit">Enviar comentario</button>
+                        <button class="btn" type="submit">Enviar comentario</button>
                     </form>
                 </div>
             </section>

@@ -35,68 +35,84 @@
                 <% } %>
     
             <section class="create-back">
-                <div class="create">
-                    <h2>CREAR PRODUCTO</h2>
+                <div class="form-box">
+                    <h2 class="form-tittle">CREAR PRODUCTO</h2>
                     <form action="/products/create" enctype="multipart/form-data" method="POST" id="createForm" class="createForm">
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
-                                <input id="name" class="validate floating-input-create" type="text" placeholder="Nombre del producto" name="name" />
-                                <label for="name" class="floating-label-create">Nombre del producto</label>
+                                <input id="name" class="validate floating-input" type="text" placeholder="Nombre del producto" name="name" />
+                                <label for="name" class="floating-label">Nombre del producto</label>
                             </div>
-                            <div id="nameBorder" class="feedback-border-create"></div>
+                            <div id="nameBorder" class="feedback-border"></div>
                             <span id="nameFeedback" class="feedback"></span>
                         </label>
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
-                                <input id="description" class="validate floating-input-create" type="text" placeholder="Descripción" name="description" />
-                                <label for="description" class="floating-label-create">Descripción</label>
+                                <input id="description" class="validate floating-input" type="text" placeholder="Descripción" name="description" />
+                                <label for="description" class="floating-label">Descripción</label>
                             </div>
-                            <div id="descriptionBorder" class="feedback-border-create"></div>
+                            <div id="descriptionBorder" class="feedback-border"></div>
                             <span id="descriptionFeedback" class="feedback"></span>
                         </label>
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
-                                <input id="price" class="validate floating-input-create" type="number" placeholder="Precio" name="price" />
-                                <label for="price" class="floating-label-create">Precio</label>
+                                <input id="price" class="validate floating-input" type="number" placeholder="Precio" name="price" />
+                                <label for="price" class="floating-label">Precio</label>
                             </div>
-                            <div id="priceBorder" class="feedback-border-create"></div>
+                            <div id="priceBorder" class="feedback-border"></div>
                             <span id="priceFeedback" class="feedback"></span>
                         </label>
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
-                                <input id="discount" class="validate floating-input-create" type="number" placeholder="Descuento" name="discount" />
-                                <label for="discount" class="floating-label-create">Descuento</label>
+                                <input id="discount" class="validate floating-input" type="number" placeholder="Descuento" name="discount" />
+                                <label for="discount" class="floating-label">Descuento</label>
                             </div>
-                            <div id="discountBorder" class="feedback-border-create"></div>
+                            <div id="discountBorder" class="feedback-border"></div>
                             <span id="discountFeedback" class="feedback"></span>
                         </label>
-                        <select id="category" class="validate floating-select-create" type="text" name="category">
-                            <option value="1">Consolas</option>
-                            <option value="2">Juegos</option>
-                            <option value="3">Accesorios</option>
-                            <option value="4">Retro</option>
-                        </select>
-                        <select id="featured" class="validate floating-select-create" type="number" name="featured">
-                            <option value="1">Producto destacado</option>
-                            <option value="2" selected>
-                                Producto no destacado
-                            </option>
-                        </select>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <select id="category" class="validate floating-input" type="text" name="category">
+                                    <option value="1">Consolas</option>
+                                    <option value="2">Juegos</option>
+                                    <option value="3">Accesorios</option>
+                                    <option value="4">Retro</option>
+                                </select>
+                                <label for="category" class="floating-label selected">-</label>
+
+                            </div>
+                            <div id="categoryBorder" class="feedback-border"></div>
+                            <span id="categoryFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <select id="featured" class="validate floating-input" type="number" name="featured">
+                                    <option value="1">Producto destacado</option>
+                                    <option value="2" selected>
+                                        Producto no destacado
+                                    </option>
+                                </select>
+                                <label for="featured" class="floating-label selected">-</label>
+                            </div>
+                            <div id="featuredBorder" class="feedback-border"></div>
+                            <span id="featuredFeedback" class="feedback"></span>
+
+                        </label>
                         
-                        <label class="cartel" for="photo"
-                            >Imagen de producto
-                            <input
-                                id="photo"
-                                class="photo"
-                                type="file"
-                                name="image"
-                                placeholder="Foto producto"
-                            />
+                        <label class="box-label-form">
+                            <div>
+                                <input
+                                    id="photo"
+                                    class="photo productPhoto photo-input validate form-control-file"
+                                    type="file"
+                                    name="image"
+                                />
+                            </div>
                             <div id="avatarBorder" class="feedback-border-avatar"></div>
                             <span id="avatarFeedback" class="feedback"></span>
 
                         </label>
-                        <button type="submit">CREAR</button>
+                        <button type="submit" class="btn">CREAR</button>
                     </form>
                 </div>
             </section>

@@ -35,10 +35,10 @@
             </ul>
             <% } %>
             <section class="register-back">
-                <div class="register">
-                    <h2 class="register-tittle">CREAR CUENTA</h2>
+                <div class="form-box">
+                    <h2 class="form-tittle">CREAR CUENTA</h2>
                 <form action="/users/register" method="POST" enctype="multipart/form-data" id="registerForm" class="registerForm" >
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="name" type="text" placeholder="Nombre y Apellido"name="name" class="validate floating-input" />
                                 <label for="name" class="floating-label">Nombre y Apellido</label>
@@ -47,7 +47,7 @@
                             <span id="nameFeedback" class="feedback"></span>
                         </label>
 
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="user" type="text" placeholder="Usuario" name="user" class="validate floating-input" />
                                 <label for="user" class="floating-label">Nombre de usuario</label>
@@ -56,7 +56,7 @@
                             <span id="userFeedback" class="feedback"></span>
                         </label>
 
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="email" type="email" placeholder="Email" name="email" class="validate floating-input" />
                                 <label for="email" class="floating-label">Email</label>
@@ -65,7 +65,7 @@
                             <span id="emailFeedback" class="feedback"></span>
                         </label>
 
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="address" type="text" placeholder="Domicilio" name="address" class="validate floating-input" />
                                 <label for="address" class="floating-label">Dirección</label>
@@ -74,7 +74,7 @@
                             <span id="addressFeedback" class="feedback"></span>
                         </label>
 
-                        <label >
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="password" type="password" placeholder="Contraseña" name="password" class="validate floating-input" />
                                 <label for="password" class="floating-label">Contraseña</label>
@@ -83,7 +83,7 @@
                             <span id="passwordFeedback" class="feedback"></span>
                         </label>
 
-                        <label>
+                        <label class="box-label-form">
                             <div class="field">
                                 <input id="password2" type="password" placeholder="Repetir contraseña" name="password2" class="validate floating-input" />
                                 <label for="password2" class="floating-label">Repita su contraseña</label>
@@ -94,13 +94,13 @@
 
                         <label class="avatar-container">
                             <div>
-                                <input id="avatar" type="file" class="userAvatar" name="avatar" class="avatar-input validate form-control-file" />
+                                <input id="avatar" type="file" name="avatar" class="userAvatar avatar-input validate form-control-file" />
                             </div>
                             <div id="avatarBorder" class="feedback-border-avatar"></div>
                             <span id="avatarFeedback" class="feedback"></span>
                         </label>
 
-                        <button type="submit" class="btn btn-primary">REGISTRARME</button>
+                        <button type="submit" class="btn">REGISTRARME</button>
                     </form>
                 </div>
             </section>

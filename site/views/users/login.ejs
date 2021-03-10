@@ -23,37 +23,43 @@
             </ul>
             <% } %>
             <section class="login-back">
-                <div class="login">
-                    <h2>INGRESAR</h2>
+                <div class="form-box">
+                    <h2 class="form-tittle">INGRESAR</h2>
                     <form action="/users/login" method="POST" id="registerForm">
-                        <input
-                            type="text"
-                            placeholder="Usuario"
-                            name="user"
-                            id="name"
-                        />
-                        <div id="nameFeedback" class="feedback"></div>
-                        <input
-                            type="password"
-                            placeholder="Contraseña"
-                            name="password"
-                            id="password"
-                        />
-                        <div id="nameFeedback" class="feedback"></div>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input
+                                    type="text"
+                                    placeholder="Usuario"
+                                    name="user"
+                                    id="user"
+                                    class="validate floating-input"
+                                />
+                                <label for="user" class="floating-label">Nombre de usuario</label>
+                            </div>
+                            <div id="userBorder" class="feedback-border"></div>
+                            <span id="userFeedback" class="feedback"></span>
+                        </label>
+                        <label class="box-label-form">
+                            <div class="field">
+                                <input id="password" type="password" placeholder="Contraseña" name="password" class="validate floating-input" />
+                                <label for="password" class="floating-label">Contraseña</label>
+                            </div>
+                            <div id="passwordBorder" class="feedback-border"></div>
+                            <span id="passwordFeedback" class="feedback"></span>
+                        </label>
                         <div class="remember">
                             <label for="remember">Recordar usuario</label>
                             <input type="checkbox" name="remember" checked />
                         </div>
-                        <button type="submit">INGRESAR</button>
+                        <button type="submit" class="btn">INGRESAR</button>
                     </form>
-                    <hr />
                     <div class="login-social">
                         <p>Ingresar con:</p>
                         <i class="fab fa-facebook fa-2x"></i>
                         <i class="fab fa-google fa-2x"></i>
                     </div>
-                    <hr />
-                    <a class="btn-register" href="/users/register"
+                    <a class="btn" href="/users/register"
                         >CREAR CUENTA</a
                     >
                 </div>

@@ -1,9 +1,4 @@
 
-.login input,
-.register input,
-.create input {
-    display: block;
-}
 
 .register-back {
     display: flex;
@@ -14,7 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    line-height: 0.5rem !important;
+    /* line-height: 0.5rem !important; */
 }
 .login-back {
     display: flex;
@@ -35,42 +30,22 @@
     background-image: url("../images/layout/banner-create.jpg");
     background-position: center;
     background-repeat: no-repeat;
-        background-size: cover;
+    background-size: cover;
 
 }
 
-
-.register {
+.contact-back {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    min-width: 250px;
-    max-width: 400px;
-    /* max-width: 50vw; */
-    /* height: 400px; */
-    /* height: 100vh; */
-    padding: 0px 20px 0px 20px;
-    background-color: #000000;
-    margin: auto;
-    height: 508px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/layout/banner-contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    min-width: 250px;
-    max-width: 400px;
-    /* max-width: 50vw; */
-    height: 400px;
-    padding: 0px 20px 20px 20px;
-    background-color: #000000;
-    margin: auto;
-}
-
-.create {
+.form-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,38 +57,30 @@
     background-color: #000000;
     margin: auto;
     height: 558px;
+    color: #f9ef64;
 
 }
 
-
-.register input,
-.create input,
-.create select {
+.form-box textarea {
+    height: 17vh;
+    margin: 8px 0px;
     width: 100%;
     background-color: #231f20;
-    color: #f9ef64;
-    padding-left: 10px;
-}
-.login input {
-    width: 100%;
-    background-color: #231f20;
-    color: #f9ef64;
-    padding-left: 10px;
-    line-height: 3em;
     border: none;
+    padding: 10px;
+    color: #f9ef64;
 }
+
 
 /* Floating label */
 .field {
     display: flex;
     flex-flow: column-reverse;
-    /* margin-bottom: 1em; */
+    margin-bottom: -7px;
 }
 
 .floating-label,
-.floating-label-create,
-.floating-input,
-.floating-input-create {
+.floating-input {
     transition: all 0.2s;
     touch-action: manipulation;
 }
@@ -126,71 +93,38 @@
     padding: 0;
     cursor: text;  
     height: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+    background-color: #231f20;
+    color: #f9ef64;
+    padding-left: 10px;
 }
 
-.floating-input-create {
-    border: 0;
-    /* border-bottom: 1px solid #ccc; */
-    font-family: inherit;
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
-    cursor: text;  
-    height: 28px;
+.box-label-form {
+    height: 64px;
 }
 
-.floating-select-create {
-    border: 0;
-    /* border-bottom: 1px solid #ccc; */
-    font-family: inherit;
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
-    cursor: text;  
-    height: 28px;
-    margin: 18px 0px;
-    border-bottom: 1px solid #ccc;
-}
+
 .feedback-border {
     position: relative;
     border-bottom: 1px solid #ccc;
     height: 1px;
     width: 100%;
-    bottom: 13px;
+    bottom: -4px;
 }
 
 .error-feedback-border {
     border-bottom: 1px solid red !important;
     content: "";
-    height: 2px;
     width: 100%;
     transition: transform .25s ease,
     -webkit-transform .25s ease;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    bottom: 13px;
+    bottom: -4px;
 
 }
-.feedback-border-create {
-    border-bottom: 1px solid #ccc;
-    height: 1px;
-    width: 100%;
-}
-
-.error-feedback-border-create {
-    border-bottom: 1px solid red !important;
-    content: "";
-    height: 2px;
-    width: 100%;
-    transition: transform .25s ease,
-    -webkit-transform .25s ease;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-
-}
-
-
 
 
 .feedback-border-avatar {
@@ -216,18 +150,16 @@
 
 }
 
-.userAvatar {
+.userAvatar, .productPhoto {
     margin-top:10px
 }
 
-.floating-input:focus,
-.floating-input-create:focus{
+.floating-input:focus {
     outline: 0;
     border-bottom: 1px solid #666;
 }
 
-.floating-label,
-.floating-label-create {
+.floating-label {
     letter-spacing: 0.05em;
     color: #f9ef64;
     font-size: 11px;
@@ -236,12 +168,16 @@
 
 }
 
-.register-tittle {
-    margin-bottom: 15px;
+.form-tittle {
+    margin-bottom: 4px;
+    color: #fbaaff;
 }
 
-.floating-input:placeholder-shown+.floating-label,
-.floating-input-create:placeholder-shown+.floating-label {
+.selected {
+    opacity: 0;
+}
+
+.floating-input:placeholder-shown+.floating-label {
     cursor: text;
     max-width: 66.66%;
     white-space: nowrap;
@@ -251,8 +187,7 @@
     margin-left: 10px;
 }
 
-.floating-input:placeholder-shown+.floating-label-create,
-.floating-input-create:placeholder-shown+.floating-label-create {
+.floating-input:placeholder-shown+.floating-label {
     cursor: text;
     max-width: 66.66%;
     white-space: nowrap;
@@ -264,16 +199,13 @@
 
 
 
-.floating-input::-webkit-input-placeholder,
-.floating-input-create::-webkit-input-placeholder {
+.floating-input::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
 }
 
 .floating-input:not(:placeholder-shown)+.floating-label,
-.floating-input:focus+.floating-label,
-.floating-input-create:not(:placeholder-shown)+.floating-label-create,
-.floating-input-create:focus+.floating-label-create {
+.floating-input:focus+.floating-label {
     transform: translate(0, 0) scale(1);
     cursor: pointer;
 }
@@ -286,13 +218,13 @@
 
 /* Idea: https: //css-tricks.com/float-labels-css/ */
 
-
+/* 
 .registerForm, .createForm {
     display:flex;
     flex-direction: column;
-}
+} */
 
-#avatar {
+#avatar, #photo {
     line-height: 2rem;
 }
 /* .avatar-container {
@@ -300,7 +232,7 @@
 } */
 .feedback {
     position: relative;
-    bottom: 10px;
+    bottom: 1px;
     font-size: 11px;
     line-height: 1em;
     color: red;
@@ -311,23 +243,22 @@
     transition: opacity .15s ease-out;
     text-align: left;
     display:inline-block;
-    height: 3px;
 }
 /* .feedback:hover {
     opacity: 1;
 } */
 
 
-.create .caja {
+/* .form-box .caja {
     margin: 8px 0px;
     width: 100%;
     background-color: #231f20;
     border: none;
     padding: 10px;
     color: #f9ef64;
-}
+} */
 
-.create textarea {
+/* .form-box textarea {
     margin: 0px 0px -5px 0px;
     width: 100%;
     background-color: #231f20;
@@ -336,18 +267,16 @@
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     color: #f9ef64;
-}
+} */
 
-.create .photo {
+/* .form-box .photo {
     border: none;
     color: #91d2be;
     padding: 5px;
-    position: absolute;
     top: 0;
-    opacity: 0;
-}
+} */
 
-.create .cartel {
+/* .form-box .cartel {
     top: 6px;
     border: none;
     color: #91d2be;
@@ -356,38 +285,12 @@
     position: relative;
     display: block;
     width: 150px;
-}
+} */
 
-.register input::placeholder,
-.login input::placeholder,
-.create input::placeholder,
-.create textarea::placeholder {
-    color: #f9ef64;
-}
 
-.register button,
-.login button {
-    margin-top: 8px;
-    border: none;
-    background-color: #231f20;
-    color: #91d2be;
-    padding: 5px;
-}
 
-.create button {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    border: none;
-    background-color: #231f20;
-    color: #91d2be;
-    padding: 5px;
-}
 
-.register h2,
-.login h2,
-.create h2 {
-    color: #fbaaff;
-}
+
 
 .terms {
     color: #fbaaff;
@@ -401,19 +304,16 @@
     margin: 5px;
 }
 
-.login a {
-    color: #fbaaff;
+.form-box a {
     text-decoration: none;
     font-size: 14px;
+    text-align: center;
 }
 
-.login p {
+.form-box p {
     margin-top: 1px;
 }
 
-.login hr {
-    margin: 6px 0;
-}
 
 .login-social, .remember {
     color: #f9ef64;
@@ -423,8 +323,13 @@
     margin: 10px 10px 15px 0px;
 }
 
+.login-social {
+    margin: 10px 0px 14px 0px;
+}
+
 .remember {
-    display: flex; 
+    display: flex;
+    margin: 10px 0px 29px 0px; 
 }
 
 .remember label {
@@ -432,13 +337,4 @@
     font-size: 14px;
 }
 
-.btn-register {
-    margin-top: 15px;
-    margin-bottom: 8px;
-    width: 110px;
-    border: none;
-    background-color: #231f20;
-    color: #91d2be !important;
-    padding: 5px;
-}
 

@@ -295,12 +295,13 @@ footer h4 {
 }
 
 .btn {
-    margin-top: 8px;
     margin-bottom: 8px;
     border: none;
     background-color: #231f20;
     color: #91d2be !important;
     padding: 5px;
+    width: 100%;
+    
 }
 
 .datos-contact {

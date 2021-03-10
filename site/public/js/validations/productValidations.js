@@ -3,11 +3,7 @@ let errors = [];
 window.addEventListener("load", () => {
     const form = document.getElementById("createForm");
 
-    
-    
     form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        
         errors = [];
         clearValidations();
 
@@ -32,35 +28,23 @@ window.addEventListener("load", () => {
         //     [
         //         validator.isNumber, {min: 0}, "Descuento?"],
         // ]);
-        const photoInput = document.getElementById("photo")
-        
+        const photoInput = document.getElementById("photo");
+
         validateFile(photoInput);
-        
-    
-    
-        
-            checkErrors();
 
-            
-            if (checkErrors()) {
-                event.preventDefault();
-            }
-  
-        
-        });
-    
-
-    
-
-
-
-    
+        checkErrors();
+        if (checkErrors()) {
+            event.preventDefault();
+        }
+    });
 });
 
 function clearValidations() {
     const arrayInputs = document.getElementsByClassName("validate");
     const arrayFeedbacks = document.getElementsByClassName("feedback");
-    const arrayBorder = document.getElementsByClassName("feedback-border-create")
+    const arrayBorder = document.getElementsByClassName(
+        "feedback-border-create"
+    );
 
     for (const input of arrayInputs) {
         input.classList.remove("is-invalid", "is-valid");
@@ -69,8 +53,8 @@ function clearValidations() {
         feedback.classList.remove("alert", "alert-danger");
         feedback.innerHTML = "";
     }
-    for (const border of arrayBorder){
-        border.classList.remove("error-feedback-border-create")
+    for (const border of arrayBorder) {
+        border.classList.remove("error-feedback-border-create");
     }
 }
 
@@ -109,7 +93,7 @@ function validateInput(inputId, validations) {
 
 function checkErrors() {
     if (errors.length > 0) {
-        console.log(errors)
+        console.log(errors);
 
         errors.forEach((e) => {
             const feedbackId = e.inputId + "Feedback";
@@ -120,7 +104,7 @@ function checkErrors() {
             // const floatingInput = document.getElementsByClassName("floating-input");
             // floatingInput.classlist.add("invalid-input")
             input.classList.add("is-invalid");
-            borderDiv.classList.add("error-feedback-border-create")
+            borderDiv.classList.add("error-feedback-border-create");
             feedbackDiv.innerHTML = e.msg;
             feedbackDiv.classList.add("alert-danger");
         });
@@ -130,47 +114,34 @@ function checkErrors() {
     return false;
 }
 
-
-
-function validateFile(photo){
-  const allowedExtensions =  ['jpg','png', 'jpeg', 'gif'],
+function validateFile(photo) {
+    const allowedExtensions = ["jpg", "png", "jpeg", "gif"],
         sizeLimit = 3000000; // 1 megabyte
 
-        const error = {
-            inputId: "photo",
-            msg: ""
-        };
-        
-        if (!photo.value){
-            error.msg = "Debe subir una imagen";
-            errors.push(error);
-            checkErrors();
-            return
-          } 
-  // destructuring file name and size from file object
-  const { name:fileName, size:fileSize } = photo.files[0];
+    const error = {
+        inputId: "photo",
+        msg: "",
+    };
 
-  /*
-  * if filename is apple.png, we split the string to get ["apple","png"]
-  * then apply the pop() method to return the file extension
-  *
-  */
-  const fileExtension = fileName.split(".").pop();
+    if (!photo.value) {
+        error.msg = "Debe subir una imagen";
+        errors.push(error);
+        checkErrors();
+        return;
+    }
+    const { name: fileName, size: fileSize } = photo.files[0];
 
-  /* 
-    check if the extension of the uploaded file is included 
-    in our array of allowed file extensions
-  */
-  if(!allowedExtensions.includes(fileExtension)){
-    error.msg = "La imagen debe ser en formato jpg, jpeg, png ó gif";
-    photo.value = null;
-  }else if(fileSize > sizeLimit){
-    error.msg = "La imagen debe ser de 3 mb como máximo";
-    photo.value = null;
-  } 
-  errors.push(error);
-  checkErrors();
+    const fileExtension = fileName.split(".").pop();
 
+    if (!allowedExtensions.includes(fileExtension)) {
+        error.msg = "La imagen debe ser en formato jpg, jpeg, png ó gif";
+        photo.value = null;
+        errors.push(error);
+        checkErrors();
+    } else if (fileSize > sizeLimit) {
+        error.msg = "La imagen debe ser de 3 mb como máximo";
+        photo.value = null;
+        errors.push(error);
+        checkErrors();
+    }
 }
-
-

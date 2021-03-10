@@ -53,10 +53,6 @@ window.addEventListener("load", () => {
                 { min: 8 },
                 "Tu contraseña tiene que tener al menos 8 caracteres!",
             ],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra minuscula!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra mayuscula!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos un simbolo!"],
-            // [validator.isLength, { min: 1 }, "Tiene que tener al menos un numero!"],
         ]);
         comparePassword(passwordInput, password2Input);
         checkErrors();

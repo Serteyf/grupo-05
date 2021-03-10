@@ -127,21 +127,20 @@ Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar 
 # Sprint 6
 
 ## Comenzar a hacer
-
-
+Testear toda la app para corregir posibles inconvenientes a causa de nuevas implementaciones.
 
 ## Hacer más
-
-
+Repasar los materiales y la documentación para resolever los inconvenientes que se nos presentan.
 
 ## Continuar haciendo
-
-
+Continuar planificando las tareas de la forma en la que lo estamos haciendo para llegar a tiempo con las entregas.
+Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
 
 ## Hacer menos
+En este sprint no vimos algo que tuvieramos que hacer menos. Manejamos los tiempos y las tareas de forma adecuada.
 
 
 ## Dejar de hacer
-
+Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar de hacer. El sprint lo pudimos llevar a cabo de forma correcta gracias al trabajo en conjunto y a la comunicación constante en el grupo.
 
 

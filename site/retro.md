@@ -105,11 +105,11 @@ Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar 
 
 ## Comenzar a hacer
 
-Comenzar a hacer es repasar  los materiales teóricos y consultar la documentación, ya que este sprint nos resultó uno de los mas dificiles a la hora de realizarlo, con conceptos que no teniamos tan interiorizados a la hora de implementarlos.
+Comenzar a hacer es repasar los materiales teóricos y consultar la documentación, ya que este sprint nos resultó uno de los mas dificiles a la hora de realizarlo, con conceptos que no teniamos tan interiorizados a la hora de implementarlos.
 
 ## Hacer más
 
-Mantener la comunicación frecuentemente, notificar y mantenernos al tanto de cualquier cambio realizado de forma individual y repasar mas los materiales que se nos presentan en el sprint. 
+Mantener la comunicación frecuentemente, notificar y mantenernos al tanto de cualquier cambio realizado de forma individual y repasar mas los materiales que se nos presentan en el sprint.
 
 ## Continuar haciendo
 
@@ -127,20 +127,22 @@ Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar 
 # Sprint 6
 
 ## Comenzar a hacer
-Testear toda la app para corregir posibles inconvenientes a causa de nuevas implementaciones.
+
+Realizar testeos luego de implementar nuevas funcionalidades que puedan generar inconvenientes, como lo fue reemplazar los datos en .JSON por una base de datos relacional.
 
 ## Hacer más
+
 Repasar los materiales y la documentación para resolever los inconvenientes que se nos presentan.
 
 ## Continuar haciendo
+
 Continuar planificando las tareas de la forma en la que lo estamos haciendo para llegar a tiempo con las entregas.
 Continuar realizando reuniones semanales y llevar un registro de todos los temas que se tratan en las mismas.
 
 ## Hacer menos
+
 En este sprint no vimos algo que tuvieramos que hacer menos. Manejamos los tiempos y las tareas de forma adecuada.
 
-
 ## Dejar de hacer
+
 Al igual que en "Hacer menos", acá tampoco vimos algo que tuvieramos que dejar de hacer. El sprint lo pudimos llevar a cabo de forma correcta gracias al trabajo en conjunto y a la comunicación constante en el grupo.
-
-

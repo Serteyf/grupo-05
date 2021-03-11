@@ -4,7 +4,11 @@
         <%- include("partials/head-base.ejs", {title: "Iniciar sesión"}) %>
         <link rel="stylesheet" href="/css/login-register-create.css" />
 
-        <script type="text/javascript" src="/js/validations/validator.min.js" defer></script>
+        <script
+            type="text/javascript"
+            src="/js/validations/validator.min.js"
+            defer
+        ></script>
         <script src="/js/validations/userLoginValidations.js" defer></script>
     </head>
 
@@ -22,27 +26,51 @@
             <section class="login-back">
                 <div class="form-box">
                     <h2 class="form-tittle">INGRESAR</h2>
-                    <form action="/users/login" method="POST" id="registerForm" class="registerForm">
+                    <form
+                        action="/users/login"
+                        method="POST"
+                        id="registerForm"
+                        class="registerForm"
+                    >
                         <label class="box-label-form">
                             <div class="field">
                                 <input
                                     type="text"
                                     placeholder="Usuario"
-                                    name="userLogin"
+                                    name="user"
                                     id="userLogin"
                                     class="validate floating-input"
                                 />
-                                <label for="userLogin" class="floating-label">Nombre de usuario</label>
+                                <label for="userLogin" class="floating-label"
+                                    >Nombre de usuario</label
+                                >
                             </div>
-                            <div id="userLoginBorder" class="feedback-border"></div>
-                            <span id="userLoginFeedback" class="feedback"></span>
+                            <div
+                                id="userLoginBorder"
+                                class="feedback-border"
+                            ></div>
+                            <span
+                                id="userLoginFeedback"
+                                class="feedback"
+                            ></span>
                         </label>
                         <label class="box-label-form">
                             <div class="field">
-                                <input id="password" type="password" placeholder="Contraseña" name="password" class="validate floating-input" />
-                                <label for="password" class="floating-label">Contraseña</label>
+                                <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="Contraseña"
+                                    name="password"
+                                    class="validate floating-input"
+                                />
+                                <label for="password" class="floating-label"
+                                    >Contraseña</label
+                                >
                             </div>
-                            <div id="passwordBorder" class="feedback-border"></div>
+                            <div
+                                id="passwordBorder"
+                                class="feedback-border"
+                            ></div>
                             <span id="passwordFeedback" class="feedback"></span>
                         </label>
                         <div class="remember">
@@ -56,9 +84,7 @@
                         <i class="fab fa-facebook fa-2x"></i>
                         <i class="fab fa-google fa-2x"></i>
                     </div>
-                    <a class="btn" href="/users/register"
-                        >CREAR CUENTA</a
-                    >
+                    <a class="btn" href="/users/register">CREAR CUENTA</a>
                 </div>
             </section>
         </main>

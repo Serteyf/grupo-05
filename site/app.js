@@ -30,7 +30,7 @@ app.use(rememberMiddleware)
 const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes");
 const productRoutes = require("./routes/productRoutes");
-const apiProducts = require("./routes/api/products");
+const productsApiRoutes = require("./routes/api/productsApiRotes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 
 app.listen(3000, () => {
@@ -41,7 +41,7 @@ app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productRoutes);
 app.use("/checkout", checkoutRoutes);
-app.use("/api/products", apiProducts);
+app.use("/api/products", productsApiRoutes);
 
 // Setea 'user' dentro de locals para usarla despues
 app.locals.user = null;

@@ -2,35 +2,58 @@ const toThousand = require("../../utils/toThousand");
 const db = require("../../database/models");
 
 productsController = {
-    list: (req, res) => {
-        db.Product.findAll({
-            include:[{association: "product_category"}],
-            raw: true,
-        })
-            .then((products) => {
-                // for (let i = 0; i < products.length; i++) {
-                //     products[i].setDataValue("endpoint", "/api/products/" + products[i].id)
-                // }
+    list: async (req, res) => {
+        const products = await db.Product.findAll({
+            include: [{ association: "product_category" }],
+        });
 
-                let answer = {
-                    meta: {
-                        status: 200,                //Acá puede ir cualquier cosa//
-                        total: products.length,
-                        url: "/api/products"
-                    },
-                    data: products
-                };
-                res.json(answer);
-            })
-           
+        const categoryProducts = async (catId) => {
+            const products = await db.Product.findAll({
+                where: {
+                    categoryId: catId,
+                },
+            });
+            return products;
+        };
+
+        const count = await db.Product.count();
+        const consoleCount = await categoryProducts(1);
+        const gamesCount = await categoryProducts(2);
+        const accesoriesCount = await categoryProducts(3);
+        const retroCount = await categoryProducts(4);
+
+        const countByCategory = {
+            consoles: consoleCount.length,
+            games: gamesCount.length,
+            accesories: accesoriesCount.length,
+            retro: retroCount.length,
+        };
+
+        products.forEach((product) =>
+            product.setDataValue("detail", "api/products/" + product.id)
+        );
+
+        res.json({
+            meta: {
+                status: 200,
+                count,
+                countByCategory,
+                url: "/api/products",
+            },
+            data: products,
+        });
     },
-    find: (req, res) => {
-        db.Product.findByPk(req.params.id, {include:[{association: "product_category"}]},
-        )
-            .then((products) => {
-                res.json(products);
-            })
-           
+    find: async (req, res) => {
+        const products = await db.Product.findByPk(req.params.id, {
+            include: [{ association: "product_category" }],
+        });
+
+        products.setDataValue(
+            "product-image",
+            "images/products/" + products.image
+        );
+
+        res.json(products);
     },
     // store: (req, res, next) => {
     //     db.Product.create({
@@ -44,9 +67,9 @@ productsController = {
     //         categoryId: req.body.category,
     //     });
 
-        // res.json({
-        //     status: 200
-        // });
+    // res.json({
+    //     status: 200
+    // });
 };
 
 module.exports = productsController;

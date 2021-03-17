@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
-const cookieParser = require('cookie-parser');
-const authenticateMiddleware = require('./middlewares/auth/authenticateMiddleware')
-const rememberMiddleware = require('./middlewares/rememberMiddleware')
+const cookieParser = require("cookie-parser");
+const authenticateMiddleware = require("./middlewares/auth/authenticateMiddleware");
+const rememberMiddleware = require("./middlewares/rememberMiddleware");
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -16,21 +16,22 @@ app.set("views", [
 
 app.use(express.static("public"));
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(methodOverride("_method"));
 
 app.use(session({ secret: "Mensaje secreto" }));
 
-app.use(cookieParser())
-app.use(authenticateMiddleware)
-app.use(rememberMiddleware)
+app.use(cookieParser());
+app.use(authenticateMiddleware);
+app.use(rememberMiddleware);
 
 const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes");
 const productRoutes = require("./routes/productRoutes");
-const productsApiRoutes = require("./routes/api/productsApiRotes");
+const productsApiRoutes = require("./routes/api/productsApiRoutes");
+const usersApiRoutes = require("./routes/api/usersApiRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 
 app.listen(3000, () => {
@@ -42,6 +43,7 @@ app.use("/users", usersRoutes);
 app.use("/products", productRoutes);
 app.use("/checkout", checkoutRoutes);
 app.use("/api/products", productsApiRoutes);
+app.use("/api/users", usersApiRoutes);
 
 // Setea 'user' dentro de locals para usarla despues
 app.locals.user = null;

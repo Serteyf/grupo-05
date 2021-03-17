@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = (models) => {
         User.belongsTo(models.UserCategory, {
-            as: "user_category",
+            as: "users_category",
             foreignKey: "categoryId",
         });
     };

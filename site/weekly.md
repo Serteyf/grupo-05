@@ -247,3 +247,18 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 ## Qué se va a hacer la semana próxima
 
 -   Comenzar a trabajar en el último sprint de React y APIs.
+
+# Reunión 17/03
+
+## Qué se hizo la semana pasada
+
+-   Se finalizó API de productos
+-   Se finalizó API de usuarios
+
+## Impedimentos con los cuales nos encontramos
+
+-   ...
+
+## Qué se va a hacer la semana próxima
+
+-   Comenzar a trabajar en el dashboard de React para posteriormente conectar los endpoints de la API y mostrar información de forma dinamica

@@ -262,3 +262,18 @@ Solucionar inconvenientes con multer y con la vista de edición de productos.
 ## Qué se va a hacer la semana próxima
 
 -   Comenzar a trabajar en el dashboard de React para posteriormente conectar los endpoints de la API y mostrar información de forma dinamica
+
+# Reunión 24/03
+
+## Qué se hizo la semana pasada
+
+-   Modificar API con endpoints necesarios para mostrar la informacion en el dashboard
+-   Conectar dashboard de React con la API y mostrar informacion general en las small cards
+
+## Impedimentos con los cuales nos encontramos
+
+-   Tuvimos iconvenientes a la hora de implementar CORS en el sitio, pero pudimos solucionarlo.
+
+## Qué se va a hacer la semana próxima
+
+-   Completar las tarjetas más especificas del dashboard con informacion de productos y usuarios restante

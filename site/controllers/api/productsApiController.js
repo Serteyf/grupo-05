@@ -48,13 +48,43 @@ productsController = {
             include: [{ association: "product_category" }],
         });
 
-        products.setDataValue(
-            "product-image",
-            "images/products/" + products.image
-        );
+        if (products !== null) {
+            products.setDataValue(
+                "product-image",
+                "images/products/" + products.image
+            );
+        }
 
         res.json(products);
     },
+
+    count: async (req, res) => {
+        const count = await db.Product.count();
+
+        res.json({
+            meta: {
+                count,
+            },
+            count,
+        });
+    },
+
+    totalPrice: async (req, res) => {
+        const products = await db.Product.findAll({});
+        let totalPrice = 0;
+
+        for (let i = 0; i < products.length; i++) {
+            totalPrice += products[i].price;
+        }
+
+        res.json({
+            meta: {
+                totalPrice,
+            },
+            totalPrice,
+        });
+    },
+
     // store: (req, res, next) => {
     //     db.Product.create({
     //         id: null,

@@ -25,9 +25,21 @@ usersController = {
             attributes: ["id", "user", "name", "email", "address", "avatar"],
         });
 
-        users.setDataValue("profile-image", "images/users/" + users.avatar);
+        if (users !== null) {
+            users.setDataValue("profile-image", "images/users/" + users.avatar);
+        }
 
         res.json(users);
+    },
+    count: async (req, res) => {
+        const count = await db.User.count();
+
+        res.json({
+            meta: {
+                count,
+            },
+            count,
+        });
     },
 };
 

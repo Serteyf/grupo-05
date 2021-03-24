@@ -5,6 +5,7 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const authenticateMiddleware = require("./middlewares/auth/authenticateMiddleware");
 const rememberMiddleware = require("./middlewares/rememberMiddleware");
+const cors = require("cors");
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -26,6 +27,8 @@ app.use(session({ secret: "Mensaje secreto" }));
 app.use(cookieParser());
 app.use(authenticateMiddleware);
 app.use(rememberMiddleware);
+
+app.use(cors());
 
 const mainRoutes = require("./routes/mainRoutes");
 const usersRoutes = require("./routes/usersRoutes");

@@ -30,6 +30,10 @@ Estudiante de programación web full stack y de traductorado en alemán. Soy un 
 
 Contador público apasionado por la tecnología y el desarrollo web. Trabajé en proyectos propios realizando posicionamiento orgánico en buscadores (SEO) y tuve la posibilidad de fundar una agencia de marketing digital enfocada en impulsar la digitalización de pequeñas empresas y emprendimientos locales.
 
+### **Federico Silva**
+
+Estudiante de programación y músico, entusiasta de la tecnología y de los videojuegos.
+
 ## Referentes del mercado que nos inspiran
 
 ### Hadriática (www.hadriatica.com)

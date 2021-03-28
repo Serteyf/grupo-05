@@ -34,8 +34,8 @@ header {
 }
 nav {
     position: absolute;
-    display: flex!important;
-    flex-direction: column!important;
+    display: flex !important;
+    flex-direction: column !important;
     justify-content: center;
     background-color: #3d4852;
     top: 85px;
@@ -225,6 +225,11 @@ nav ul li a:focus {
     text-align: center;
 }
 
+.product-card img {
+    height: 25vh;
+    object-fit: cover;
+}
+
 .product-card:hover {
     opacity: 85%;
     transition: all 1s;
@@ -301,7 +306,6 @@ footer h4 {
     color: #91d2be !important;
     padding: 5px;
     width: 100%;
-    
 }
 
 .datos-contact {
@@ -338,6 +342,24 @@ footer h4 {
 }
 
 /* MEDIA QUERIES */
+
+/* Medida de tarjetas de producto desde 375px */
+
+@media (min-width: 375px) {
+    .product-card img {
+        height: 30vh;
+        object-fit: cover;
+    }
+}
+
+/* Medida de tarjetas de producto desde 480px */
+
+@media (min-width: 480px) {
+    .product-card img {
+        height: 35vh;
+        object-fit: cover;
+    }
+}
 
 /* Barra de busqueda en pantallas desde 768px */
 

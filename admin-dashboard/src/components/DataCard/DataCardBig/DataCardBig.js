@@ -16,10 +16,7 @@ export default function DataCardBig(props) {
               alt="Categories"
             />
           </div>
-          <p>{props.value[0]}</p>
-          <p>{props.value[1]}</p>
-          <p>{props.value[2]}</p>
-          <p>{props.value[3]}</p>
+          <p>{props.value}</p>
         </div>
       </div>
     </div>

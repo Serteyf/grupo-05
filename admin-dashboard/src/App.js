@@ -30,6 +30,12 @@ class App extends Component {
           icon: "fa-user-check",
         },
       ],
+      bigCardsValues: [
+        {
+          title: "Productos por categoría",
+        },
+        { title: "Último producto cargado" },
+      ],
     };
   }
   async queryProductsAPI(endpoint) {
@@ -47,10 +53,50 @@ class App extends Component {
     const countResponse = await this.queryProductsAPI("count");
     return countResponse.count;
   }
+
   async getProductsTotalPrice() {
     const countResponse = await this.queryProductsAPI("total-price");
     return countResponse.totalPrice;
   }
+
+  async getProductsCategories() {
+    const countResponse = await this.queryProductsAPI("");
+    const productsCategories = countResponse.meta.countByCategory;
+    const consolesCount = `Consoles: ${productsCategories.consoles}`;
+    const gamesCount = `Games: ${productsCategories.games}`;
+    const accesoriesCount = `Accesories: ${productsCategories.accesories}`;
+    const retroCount = `Retro: ${productsCategories.retro}`;
+    const totalCountArray = [
+      consolesCount,
+      gamesCount,
+      accesoriesCount,
+      retroCount,
+    ];
+
+    return totalCountArray;
+  }
+
+  async getLastProduct() {
+    const countResponse = await this.queryProductsAPI("");
+    const lastProduct = countResponse.data[countResponse.data.length - 1];
+    const lastProductName = `Product: ${lastProduct.name},`;
+    const lastProductDescription = `Description: ${lastProduct.description}`;
+    const lastProductPrice = `Price: ${lastProduct.price}`;
+    const lastProductArray = [
+      lastProductName,
+      lastProductDescription,
+      lastProductPrice,
+    ];
+    return lastProductArray;
+  }
+
+  async getLastProductImage() {
+    const countResponse = await this.queryProductsAPI("");
+    const lastProduct = countResponse.data[countResponse.data.length - 1];
+    const lastProductImage = `http://localhost:3000/images/products/${lastProduct.image}`;
+    return lastProductImage;
+  }
+
   async getUsersCount() {
     const countResponse = await this.queryUsersAPI("count");
     return countResponse.count;
@@ -79,8 +125,22 @@ class App extends Component {
       },
     ];
 
+    const bigCardsValues = [
+      {
+        title: "Productos por categoría",
+        value: await await this.getProductsCategories(),
+        image: "",
+      },
+      {
+        title: "Último producto cargado",
+        value: await this.getLastProduct(),
+        image: (await this.getLastProductImage()).toString(),
+      },
+    ];
+
     this.setState({
       smallCardsValues,
+      bigCardsValues,
     });
   }
 
@@ -114,8 +174,16 @@ class App extends Component {
                   })}
                 </div>
                 <div className="row">
-                  <DataCardBig />
-                  <DataCardBig />
+                  {this.state.bigCardsValues.map((elem, index) => {
+                    return (
+                      <DataCardBig
+                        key={index}
+                        title={elem.title}
+                        value={elem.value}
+                        image={elem.image}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -18,17 +18,17 @@ function SideMenu() {
 
       <hr className="sidebar-divider my-0" />
 
-      <SideMenuLink />
+      <SideMenuLink title="General Information" />
 
       <hr className="sidebar-divider" />
 
       <div className="sidebar-heading">Actions</div>
 
-      <SideMenuLink />
+      <SideMenuLink title="Listed Products" />
 
-      <SideMenuLink />
+      <SideMenuLink title="Listed Users" />
 
-      <SideMenuLink />
+      <SideMenuLink title="More..." />
 
       <hr className="sidebar-divider d-none d-md-block" />
     </ul>
